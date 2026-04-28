@@ -1,0 +1,2482 @@
+[
+  {
+    "id": 1,
+    "line": "I enter the city as question.",
+    "status": "partial",
+    "coverage": 0.83,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 5,
+    "fragment_count": 0,
+    "miss_count": 1,
+    "chunk_id": 1,
+    "chunk_words": [
+      55,
+      274
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "enter",
+        "mode": "exact",
+        "picked": "enter"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city"
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as"
+      },
+      {
+        "token": "question",
+        "mode": "syn",
+        "picked": "questions"
+      }
+    ],
+    "preview": "Because conceivably each reader will already have in mind a set of ideas systematized or in the process of being systematized Conceivably each reader is looking for a system or has found his system The System is fashionable as much ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 2,
+    "line": "Urban reality names me, then erases me.",
+    "status": "weak",
+    "coverage": 0.29,
+    "soft_coverage": 0.43,
+    "token_count": 7,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 4,
+    "chunk_id": 5,
+    "chunk_words": [
+      275,
+      494
+    ],
+    "matches": [
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban"
+      },
+      {
+        "token": "reality",
+        "mode": "exact",
+        "picked": "reality"
+      },
+      {
+        "token": "names",
+        "mode": "frag",
+        "picked": "nam"
+      },
+      {
+        "token": "me",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "then",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "erases",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "me",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "critically analyse thoughts and activities related to urbanism It s aim is to allow its problems to enter into consciousness and political policies From the theoretical and practical situation of problems from the problematic concerning the city reality and possibilities ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 3,
+    "line": "At the edge, I learn outside first.",
+    "status": "weak",
+    "coverage": 0.43,
+    "soft_coverage": 0.43,
+    "token_count": 7,
+    "resolved_count": 3,
+    "fragment_count": 0,
+    "miss_count": 4,
+    "chunk_id": 8,
+    "chunk_words": [
+      440,
+      659
+    ],
+    "matches": [
+      {
+        "token": "at",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "edge",
+        "mode": "syn",
+        "picked": "outside"
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "learn",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "outside",
+        "mode": "exact",
+        "picked": "outside"
+      },
+      {
+        "token": "first",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "with it terms of industrial society if we want to define it Although urbanization and the problematic of the urban figure among the induced effects and not among the causes or inductive reason the preoccupation these words signify accentuate themselves ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 4,
+    "line": "Industrial days press against my breath.",
+    "status": "weak",
+    "coverage": 0.5,
+    "soft_coverage": 0.67,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 9,
+    "chunk_words": [
+      495,
+      714
+    ],
+    "matches": [
+      {
+        "token": "industrial",
+        "mode": "exact",
+        "picked": "industrial"
+      },
+      {
+        "token": "days",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "press",
+        "mode": "frag",
+        "picked": "pre"
+      },
+      {
+        "token": "against",
+        "mode": "exact",
+        "picked": "against"
+      },
+      {
+        "token": "my",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "breath",
+        "mode": "syn",
+        "picked": "life"
+      }
+    ],
+    "preview": "which arises around us This definition retains a feature which becomes capital Industrialization provides the point of departure for reflection upon our time Now the city existed prior to industrialization A remark banal in itself but whose implications have not ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 5,
+    "line": "I walk the induced streets.",
+    "status": "weak",
+    "coverage": 0.4,
+    "soft_coverage": 0.6,
+    "token_count": 5,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 12,
+    "chunk_words": [
+      660,
+      879
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "walk",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "induced",
+        "mode": "frag",
+        "picked": "ind"
+      },
+      {
+        "token": "streets",
+        "mode": "exact",
+        "picked": "streets"
+      }
+    ],
+    "preview": "bourgeoisie is born the city is already a powerful reality In Western Europe after the virtual disappearance of the antique city the decay of Roman influence the city took off again More or less nomadic merchants elected as centre of ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 6,
+    "line": "Use value flickers under exchange.",
+    "status": "partial",
+    "coverage": 0.6,
+    "soft_coverage": 0.8,
+    "token_count": 5,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 1,
+    "chunk_id": 13,
+    "chunk_words": [
+      715,
+      934
+    ],
+    "matches": [
+      {
+        "token": "use",
+        "mode": "exact",
+        "picked": "use"
+      },
+      {
+        "token": "value",
+        "mode": "exact",
+        "picked": "value"
+      },
+      {
+        "token": "flickers",
+        "mode": "frag",
+        "picked": "ers"
+      },
+      {
+        "token": "under",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "exchange",
+        "mode": "exact",
+        "picked": "exchange"
+      }
+    ],
+    "preview": "degraded cores functioned as accelerators for what remained of exchange economies maintained by wandering merchants From the growing surplus product of agriculture to the detriment of feudal lords cities accumulate riches objects treasures virtual capitals There already existed in these ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 7,
+    "line": "I keep what can be used, not sold.",
+    "status": "partial",
+    "coverage": 0.62,
+    "soft_coverage": 0.62,
+    "token_count": 8,
+    "resolved_count": 5,
+    "fragment_count": 0,
+    "miss_count": 3,
+    "chunk_id": 16,
+    "chunk_words": [
+      880,
+      1099
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "keep",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "what",
+        "mode": "exact",
+        "picked": "what"
+      },
+      {
+        "token": "can",
+        "mode": "exact",
+        "picked": "can"
+      },
+      {
+        "token": "be",
+        "mode": "exact",
+        "picked": "be"
+      },
+      {
+        "token": "used",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "sold",
+        "mode": "syn",
+        "picked": "exchange"
+      }
+    ],
+    "preview": "pleasure and prestige and enormous riches in money and objects A complex but contradictory reality Medieval cities at the height of their development centralize wealth powerful groups invest unproductively a large part of their wealth in the cities they dominate ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 8,
+    "line": "The centre calls itself order.",
+    "status": "partial",
+    "coverage": 0.6,
+    "soft_coverage": 0.8,
+    "token_count": 5,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 1,
+    "chunk_id": 17,
+    "chunk_words": [
+      935,
+      1154
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "centre",
+        "mode": "syn",
+        "picked": "centrality"
+      },
+      {
+        "token": "calls",
+        "mode": "frag",
+        "picked": "cal"
+      },
+      {
+        "token": "itself",
+        "mode": "exact",
+        "picked": "itself"
+      },
+      {
+        "token": "order",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "established exchange networks enabling the transfer of money When industrialization begins with the pre eminence of a specific bourgeoisie the entrepreneurs wealth has ceased to be mainly in real estate Agricultural production is no longer dominant and nor is landed ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 9,
+    "line": "I answer with a minor rhythm.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 18,
+    "chunk_words": [
+      990,
+      1209
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "answer",
+        "mode": "frag",
+        "picked": "ans"
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "minor",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "rhythm",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "capitalises enriched by commerce banking usury The outcome is that society as a whole made up of the city the country and the institutions which regulate their relations tend to constitute themselves as a network of cities with a certain ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 10,
+    "line": "Youth absorbs the city too fast.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 22,
+    "chunk_words": [
+      1210,
+      1429
+    ],
+    "matches": [
+      {
+        "token": "youth",
+        "mode": "frag",
+        "picked": "you"
+      },
+      {
+        "token": "absorbs",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city"
+      },
+      {
+        "token": "too",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "fast",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "prohibit class struggle On the contrary Violent contrasts between wealth and poverty conflicts between the powerful and the oppressed do not prevent either attachment to the city nor an active contribution to the beauty of the oeuvre In the urban ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 11,
+    "line": "I wear its signs, not its obedience.",
+    "status": "weak",
+    "coverage": 0.43,
+    "soft_coverage": 0.57,
+    "token_count": 7,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 24,
+    "chunk_words": [
+      1320,
+      1539
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "wear",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "its",
+        "mode": "exact",
+        "picked": "its"
+      },
+      {
+        "token": "signs",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "its",
+        "mode": "exact",
+        "picked": "its"
+      },
+      {
+        "token": "obedience",
+        "mode": "frag",
+        "picked": "nce"
+      }
+    ],
+    "preview": "embellishments festivities It is important to emphasize this paradox for it is not a well understood historical fact very oppressive societies were very creative and rich in producing oeuvres Later the production of products replaced the production of oeuvres and ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 12,
+    "line": "In the suburb I lose urban consciousness.",
+    "status": "weak",
+    "coverage": 0.43,
+    "soft_coverage": 0.57,
+    "token_count": 7,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 25,
+    "chunk_words": [
+      1375,
+      1594
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "suburb",
+        "mode": "frag",
+        "picked": "sub"
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "lose",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban"
+      },
+      {
+        "token": "consciousness",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "disappears The very notion of creation is blurred or degenerates by miniaturizing itself into making and creativity the do it yourself etc Which brings forth arguments to back up a thesis city and urban reality are related to use value ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 13,
+    "line": "In the core I return to encounter.",
+    "status": "weak",
+    "coverage": 0.43,
+    "soft_coverage": 0.57,
+    "token_count": 7,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 26,
+    "chunk_words": [
+      1430,
+      1649
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "core",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "return",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "encounter",
+        "mode": "frag",
+        "picked": "enc"
+      }
+    ],
+    "preview": "the city and urban reality which are refuges of use value the origins of a virtual predominance and revalorization of use In the urban system we are attempting to analyse action is exercized over specific conflicts between use value and ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 14,
+    "line": "Difference meets difference at speed.",
+    "status": "weak",
+    "coverage": 0.2,
+    "soft_coverage": 0.4,
+    "token_count": 5,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 29,
+    "chunk_words": [
+      1595,
+      1814
+    ],
+    "matches": [
+      {
+        "token": "difference",
+        "mode": "frag",
+        "picked": "nce"
+      },
+      {
+        "token": "meets",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "difference",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "at",
+        "mode": "exact",
+        "picked": "at"
+      },
+      {
+        "token": "speed",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "structures Historians since Marx have showed the fixed nature of guilds What perhaps remains to be shown is the tendency of the whole urban system towards a sort of crystallization and fixation Where this system consolidated itself capitalism and industrialization ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 15,
+    "line": "I hear centrality before I see it.",
+    "status": "weak",
+    "coverage": 0.29,
+    "soft_coverage": 0.43,
+    "token_count": 7,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 4,
+    "chunk_id": 34,
+    "chunk_words": [
+      1870,
+      2089
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "hear",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "centrality",
+        "mode": "exact",
+        "picked": "centrality"
+      },
+      {
+        "token": "before",
+        "mode": "frag",
+        "picked": "ore"
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "see",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "it",
+        "mode": "exact",
+        "picked": "it"
+      }
+    ],
+    "preview": "not remarkable that a part of the heavy metallurgical industry was established in the valley of the Moselle between two old cities Nancy and Metz the only real urban centres of this industrial region At the same time old cities ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 16,
+    "line": "The wall is text; the text is wall.",
+    "status": "weak",
+    "coverage": 0.5,
+    "soft_coverage": 0.5,
+    "token_count": 8,
+    "resolved_count": 4,
+    "fragment_count": 0,
+    "miss_count": 4,
+    "chunk_id": 35,
+    "chunk_words": [
+      1925,
+      2144
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "wall",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "text",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "text",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "wall",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "residences of economic and political leaders reservoirs of labour that is the places where can subsist the reserve army of labour as Marx calls it which weighs on wages and enables the growth of surplus value Moreover the city as ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 17,
+    "line": "I read what was prescribed to me.",
+    "status": "weak",
+    "coverage": 0.29,
+    "soft_coverage": 0.43,
+    "token_count": 7,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 4,
+    "chunk_id": 36,
+    "chunk_words": [
+      1980,
+      2199
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "read",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "what",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "was",
+        "mode": "exact",
+        "picked": "was"
+      },
+      {
+        "token": "prescribed",
+        "mode": "frag",
+        "picked": "pre"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "me",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "materials labour Since settlement outside of cities is not satisfactory for entrepreneurs as soon as it is possible industry comes closer to urban centres Inversely the city prior to industrialization accelerates the process in particular it enables the rapid growth ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 18,
+    "line": "Then I write back in fragments.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 37,
+    "chunk_words": [
+      2035,
+      2254
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "write",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "back",
+        "mode": "exact",
+        "picked": "back"
+      },
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "fragments",
+        "mode": "frag",
+        "picked": "fra"
+      }
+    ],
+    "preview": "industry As Marx explained urban concentrations have accompanied the concentration of capital Industry was to produce its own urban centres sometimes small cities and industrial agglomerations le Creusot at times medium sized Saint Etienne or gigantic the Ruhr considered as ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 19,
+    "line": "Near order / far order split my body.",
+    "status": "weak",
+    "coverage": 0.29,
+    "soft_coverage": 0.43,
+    "token_count": 7,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 4,
+    "chunk_id": 40,
+    "chunk_words": [
+      2200,
+      2419
+    ],
+    "matches": [
+      {
+        "token": "near",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "order",
+        "mode": "frag",
+        "picked": "ord"
+      },
+      {
+        "token": "far",
+        "mode": "exact",
+        "picked": "far"
+      },
+      {
+        "token": "order",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "split",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "my",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "body",
+        "mode": "syn",
+        "picked": "life"
+      }
+    ],
+    "preview": "cities in the way they are understood in France and in Europe are few New York Montreal San Francisco Nevertheless where there is a pre existent network of old cities industry assails it It appropriates this network and refashions it ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 20,
+    "line": "I become mediation among mediations.",
+    "status": "weak",
+    "coverage": 0.2,
+    "soft_coverage": 0.4,
+    "token_count": 5,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 41,
+    "chunk_words": [
+      2255,
+      2474
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "become",
+        "mode": "frag",
+        "picked": "ome"
+      },
+      {
+        "token": "mediation",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "among",
+        "mode": "exact",
+        "picked": "among"
+      },
+      {
+        "token": "mediations",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "ravages it It tends to break up the old cores by taking them over This does not prevent the extension of urban phenomena cities and agglomerations industrial towns and suburbs with the addition of shanty towns where industrialization is unable ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 21,
+    "line": "Class strategy redraws my route.",
+    "status": "weak",
+    "coverage": 0.0,
+    "soft_coverage": 0.2,
+    "token_count": 5,
+    "resolved_count": 0,
+    "fragment_count": 1,
+    "miss_count": 4,
+    "chunk_id": 42,
+    "chunk_words": [
+      2310,
+      2529
+    ],
+    "matches": [
+      {
+        "token": "class",
+        "mode": "frag",
+        "picked": "cla"
+      },
+      {
+        "token": "strategy",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "redraws",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "my",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "route",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "precisely a process with two aspects industrialization and urbanization growth and development economic production and social life The two aspects of this inseparable process have a unity and yet it is a conflictual process Historically there is a violent clash ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 22,
+    "line": "I return where I was pushed out.",
+    "status": "weak",
+    "coverage": 0.14,
+    "soft_coverage": 0.29,
+    "token_count": 7,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 5,
+    "chunk_id": 43,
+    "chunk_words": [
+      2365,
+      2584
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "return",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "where",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "was",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "pushed",
+        "mode": "frag",
+        "picked": "hed"
+      },
+      {
+        "token": "out",
+        "mode": "exact",
+        "picked": "out"
+      }
+    ],
+    "preview": "itself more and more difficult to grasp given that industrialization does not only produce firms workers and leaders of private enterprises but various offices banking financial technical and political This dialectical process far from being clear is also far from ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 23,
+    "line": "The right appears as cry first.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 46,
+    "chunk_words": [
+      2530,
+      2749
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "right",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "appears",
+        "mode": "frag",
+        "picked": "app"
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as"
+      },
+      {
+        "token": "cry",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "first",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "Yet the organizational core of the city remains very strong Its surroundings of new neighbourhoods and semi shanty towns inhabited by uprooted and disorganized people confer it an exorbitant power This almost shapeless gigantic agglomeration enables the holders of decision ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 24,
+    "line": "Then demand, then practice.",
+    "status": "weak",
+    "coverage": 0.0,
+    "soft_coverage": 0.25,
+    "token_count": 4,
+    "resolved_count": 0,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 47,
+    "chunk_words": [
+      2585,
+      2804
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "demand",
+        "mode": "frag",
+        "picked": "and"
+      },
+      {
+        "token": "then",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "practice",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "economy of the country closely depends on this network property speculation the creation of capitals by this means investments of these capitals into construction and so on and so forth It is this fragile network always in danger of breaking ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 25,
+    "line": "Not habitat: to inhabit.",
+    "status": "weak",
+    "coverage": 0.5,
+    "soft_coverage": 0.75,
+    "token_count": 4,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 1,
+    "chunk_id": 50,
+    "chunk_words": [
+      2750,
+      2969
+    ],
+    "matches": [
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "habitat",
+        "mode": "frag",
+        "picked": "tat"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "inhabit",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "of world commodity prices these being closely linked to industrialized countries and growth poles These phenomena are still dependent on industrialization An induced process which one could call the implosion explosion of the city is at present deepening The urban ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 26,
+    "line": "I refuse the logic of habitat.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 51,
+    "chunk_words": [
+      2805,
+      3024
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "refuse",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "logic",
+        "mode": "frag",
+        "picked": "log"
+      },
+      {
+        "token": "of",
+        "mode": "exact",
+        "picked": "of"
+      },
+      {
+        "token": "habitat",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "It happily crosses national boundaries the Megalopolis of Northern Europe extends from the Ruhr to the sea and even to English cities and from the Paris region to the Scandinavian countries The urban fabric of this territory becomes increasingly tight ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 27,
+    "line": "I claim the plastic space of living.",
+    "status": "partial",
+    "coverage": 0.71,
+    "soft_coverage": 0.71,
+    "token_count": 7,
+    "resolved_count": 5,
+    "fragment_count": 0,
+    "miss_count": 2,
+    "chunk_id": 56,
+    "chunk_words": [
+      3080,
+      3299
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "claim",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "plastic",
+        "mode": "exact",
+        "picked": "plastic"
+      },
+      {
+        "token": "space",
+        "mode": "syn",
+        "picked": "spaces"
+      },
+      {
+        "token": "of",
+        "mode": "exact",
+        "picked": "of"
+      },
+      {
+        "token": "living",
+        "mode": "exact",
+        "picked": "living"
+      }
+    ],
+    "preview": "was peasant life crafts small local shops Old ways of life become folklore If the same phenomena are analysed from the perspective of cities one can observe not only the extension of highly populated peripheries but also of banking commercial ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 28,
+    "line": "A cafe, a corner, a small centrality.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 0.71,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 61,
+    "chunk_words": [
+      3355,
+      3574
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "cafe",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "corner",
+        "mode": "frag",
+        "picked": "cor"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "small",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "centrality",
+        "mode": "syn",
+        "picked": "core"
+      }
+    ],
+    "preview": "Within the mesh of the urban fabric survive islets and islands of pure rurality often but not always poor areas peopled with ageing peasants badly integrated stripped of what had been the nobility of peasant life in times of greatest ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 29,
+    "line": "A place consumed / a place reclaimed.",
+    "status": "good",
+    "coverage": 1.0,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 6,
+    "fragment_count": 0,
+    "miss_count": 0,
+    "chunk_id": 62,
+    "chunk_words": [
+      3410,
+      3629
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "place",
+        "mode": "exact",
+        "picked": "place"
+      },
+      {
+        "token": "consumed",
+        "mode": "syn",
+        "picked": "consumption"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "place",
+        "mode": "exact",
+        "picked": "place"
+      },
+      {
+        "token": "reclaimed",
+        "mode": "syn",
+        "picked": "appropriated"
+      }
+    ],
+    "preview": "intensifies itself down to the most industrialized countries It interferes with other representations and other real relations town and country nature and artifice etc Here and there tensions become conflicts latent conflicts are accentuated and then what was hidden under ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 30,
+    "line": "The planner says coherence.",
+    "status": "weak",
+    "coverage": 0.25,
+    "soft_coverage": 0.5,
+    "token_count": 4,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 63,
+    "chunk_words": [
+      3465,
+      3684
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "planner",
+        "mode": "frag",
+        "picked": "pla"
+      },
+      {
+        "token": "says",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "coherence",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "erodes them or integrates them to its web These cores survive by transforming themselves There are still centres of intense urban life such as the Latin Quarter in Paris The aesthetic qualities of these urban cores play an important role ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 31,
+    "line": "I keep contradiction alive.",
+    "status": "weak",
+    "coverage": 0.0,
+    "soft_coverage": 0.25,
+    "token_count": 4,
+    "resolved_count": 0,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 64,
+    "chunk_words": [
+      3520,
+      3739
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "keep",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "contradiction",
+        "mode": "frag",
+        "picked": "con"
+      },
+      {
+        "token": "alive",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "appropriated for entertainments parades promenades festivities In this way the urban core becomes a high quality consumption product for foreigners tourists people from the outskirts and suburbanites It survives because of this double role as place of consumption and consumption ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 32,
+    "line": "I move through isotopies and breaks.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 67,
+    "chunk_words": [
+      3685,
+      3904
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "move",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "through",
+        "mode": "exact",
+        "picked": "through"
+      },
+      {
+        "token": "isotopies",
+        "mode": "frag",
+        "picked": "ies"
+      },
+      {
+        "token": "and",
+        "mode": "exact",
+        "picked": "and"
+      },
+      {
+        "token": "breaks",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "times to their tendencies and threatening horizons is it not the centre of decision making This centre gathering together training and information capacities of organization and institutional decision making appears as a project in the making of a new centrality ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 33,
+    "line": "Meaning leaks at every border.",
+    "status": "weak",
+    "coverage": 0.2,
+    "soft_coverage": 0.4,
+    "token_count": 5,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 68,
+    "chunk_words": [
+      3740,
+      3959
+    ],
+    "matches": [
+      {
+        "token": "meaning",
+        "mode": "frag",
+        "picked": "mea"
+      },
+      {
+        "token": "leaks",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "at",
+        "mode": "exact",
+        "picked": "at"
+      },
+      {
+        "token": "every",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "border",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "it denotes and justifies We have in fact a number of terms at least three in complex relations with each other definable by oppositions each on their own terms although not exhausted by these oppositions There is the rural and ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 34,
+    "line": "Urban language stutters, then sings.",
+    "status": "weak",
+    "coverage": 0.2,
+    "soft_coverage": 0.4,
+    "token_count": 5,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 72,
+    "chunk_words": [
+      3960,
+      4179
+    ],
+    "matches": [
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban"
+      },
+      {
+        "token": "language",
+        "mode": "frag",
+        "picked": "age"
+      },
+      {
+        "token": "stutters",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "then",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "sings",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "deteriorated sometimes rotting the urban core does not disappear If someone proclaims its end and its reabsorption into the fabric this is a postulate a statement without proof In the same way if someone proclaims the urgency of a restitution ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 35,
+    "line": "The system closes; I open.",
+    "status": "weak",
+    "coverage": 0.2,
+    "soft_coverage": 0.4,
+    "token_count": 5,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 73,
+    "chunk_words": [
+      4015,
+      4234
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "system",
+        "mode": "frag",
+        "picked": "tem"
+      },
+      {
+        "token": "closes",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "open",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "urban core has not given way to a new and well defined reality as the village allowed the city to be born And yet its reign seems to be ending Unless it asserts itself again even more strongly as centre ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 36,
+    "line": "The old core rots; desire persists.",
+    "status": "weak",
+    "coverage": 0.17,
+    "soft_coverage": 0.33,
+    "token_count": 6,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 4,
+    "chunk_id": 76,
+    "chunk_words": [
+      4180,
+      4399
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "old",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "core",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "rots",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "desire",
+        "mode": "frag",
+        "picked": "des"
+      },
+      {
+        "token": "persists",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "divided into strata partial groups various tendencies according to industrial sectors and local and national traditions In the middle of the nineteenth century in Paris the situation was somewhat like this The ruling bourgeoisie a non homogenous class after a ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 37,
+    "line": "I learn to occupy with care.",
+    "status": "weak",
+    "coverage": 0.5,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 0,
+    "miss_count": 3,
+    "chunk_id": 77,
+    "chunk_words": [
+      4235,
+      4454
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "learn",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "occupy",
+        "mode": "exact",
+        "picked": "occupy"
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with"
+      },
+      {
+        "token": "care",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "to this before the Revolution it is an aristocratic quarter despite the tendency of the capital and the wealthy to drift towards the west an area of gardens and private mansions It took but a few years during the s ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 38,
+    "line": "To occupy is to become legible.",
+    "status": "good",
+    "coverage": 0.83,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 5,
+    "fragment_count": 1,
+    "miss_count": 0,
+    "chunk_id": 78,
+    "chunk_words": [
+      4290,
+      4509
+    ],
+    "matches": [
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "occupy",
+        "mode": "exact",
+        "picked": "occupy"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "become",
+        "mode": "frag",
+        "picked": "ome"
+      },
+      {
+        "token": "legible",
+        "mode": "exact",
+        "picked": "legible"
+      }
+    ],
+    "preview": "shops occupy others tenements stores depots and warehouses firms replace parks and gardens Bourgeois ugliness the greed for gain visible and legible in the streets takes the place of a somewhat cold beauty and aristocratic luxury On the walls of ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 39,
+    "line": "To become legible is danger.",
+    "status": "partial",
+    "coverage": 0.6,
+    "soft_coverage": 0.8,
+    "token_count": 5,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 1,
+    "chunk_id": 79,
+    "chunk_words": [
+      4345,
+      4564
+    ],
+    "matches": [
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "become",
+        "mode": "frag",
+        "picked": "bec"
+      },
+      {
+        "token": "legible",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "danger",
+        "mode": "exact",
+        "picked": "danger"
+      }
+    ],
+    "preview": "It is impossible to make more perceptible this paradox of history which partially escaped Marx The progressive bourgeoisie taking charge of economic growth endowed with ideological instruments suited to rational growth moves towards democracy and replaces oppression by exploitation this ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 40,
+    "line": "I blur, reappear, blur again.",
+    "status": "weak",
+    "coverage": 0.0,
+    "soft_coverage": 0.2,
+    "token_count": 5,
+    "resolved_count": 0,
+    "fragment_count": 1,
+    "miss_count": 4,
+    "chunk_id": 80,
+    "chunk_words": [
+      4400,
+      4619
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "blur",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "reappear",
+        "mode": "frag",
+        "picked": "rea"
+      },
+      {
+        "token": "blur",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "again",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "retain this sense of the oeuvre including writers and painters think and see themselves as non bourgeois As for oppressors the masters of societies previous to the democratic bourgeoisie princes kings lords emperors they had a sense and a taste ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 41,
+    "line": "Art is not ornament; it is claim.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 0.71,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 81,
+    "chunk_words": [
+      4455,
+      4674
+    ],
+    "matches": [
+      {
+        "token": "art",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "ornament",
+        "mode": "frag",
+        "picked": "ent"
+      },
+      {
+        "token": "it",
+        "mode": "exact",
+        "picked": "it"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "claim",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "closely related to use value than to exchange value After the French bourgeoisie solidly entrenched in the city Paris possesses considerable influence but it sees itself hemmed in by the working class Peasants flock in settling around the barriers and ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 42,
+    "line": "A claim is a relation, not a logo.",
+    "status": "partial",
+    "coverage": 0.62,
+    "soft_coverage": 0.75,
+    "token_count": 8,
+    "resolved_count": 5,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 82,
+    "chunk_words": [
+      4510,
+      4729
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "claim",
+        "mode": "frag",
+        "picked": "cla"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "relation",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "logo",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "to the heart of the city They live in slums but also in tenements where the better off live on the ground floors and the workers on the upper ones In this disorder the workers threaten the parvenus a danger ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 43,
+    "line": "I gather others at the margin",
+    "status": "weak",
+    "coverage": 0.5,
+    "soft_coverage": 0.67,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 87,
+    "chunk_words": [
+      4785,
+      5004
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "gather",
+        "mode": "frag",
+        "picked": "her"
+      },
+      {
+        "token": "others",
+        "mode": "syn",
+        "picked": "people"
+      },
+      {
+        "token": "at",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "margin",
+        "mode": "syn",
+        "picked": "outskirts"
+      }
+    ],
+    "preview": "not for the beauty of views It is to comb Paris with machine guns The famous Baron makes no secret of it Later we will be greateful to him for having opened up Paris to traffic This was not the ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 44,
+    "line": "Margins turn centre for a minute.",
+    "status": "weak",
+    "coverage": 0.5,
+    "soft_coverage": 0.67,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 89,
+    "chunk_words": [
+      4895,
+      5114
+    ],
+    "matches": [
+      {
+        "token": "margins",
+        "mode": "frag",
+        "picked": "mar"
+      },
+      {
+        "token": "turn",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "centre",
+        "mode": "exact",
+        "picked": "centre"
+      },
+      {
+        "token": "for",
+        "mode": "exact",
+        "picked": "for"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "minute",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "of the return towards the urban centre of workers pushed out towards the outskirts and peripheries their reconquest of the city this belonging among other belongings this value this oeuvre which had been torn from them Act Two The goal ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 45,
+    "line": "In that minute, the city is ours.",
+    "status": "partial",
+    "coverage": 0.71,
+    "soft_coverage": 0.86,
+    "token_count": 7,
+    "resolved_count": 5,
+    "fragment_count": 1,
+    "miss_count": 1,
+    "chunk_id": 90,
+    "chunk_words": [
+      4950,
+      5169
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "that",
+        "mode": "exact",
+        "picked": "that"
+      },
+      {
+        "token": "minute",
+        "mode": "frag",
+        "picked": "ute"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "ours",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "the second half of the century influential people that is rich or powerful or both sometimes ideologues Le Play with ideas strongly marked by religions Catholic and Protestant sometimes informed politicians belonging to the centre right and who moreover do ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 46,
+    "line": "Then power writes over us again.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.33,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 0,
+    "miss_count": 4,
+    "chunk_id": 91,
+    "chunk_words": [
+      5005,
+      5224
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "exact",
+        "picked": "then"
+      },
+      {
+        "token": "power",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "writes",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "over",
+        "mode": "exact",
+        "picked": "over"
+      },
+      {
+        "token": "us",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "again",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "notion The Third Republic will insure its fortune that is its realization on the ground It will conceive the notion of habitat Until then to inhabit meant to take part in a social life a community village or city Urban ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 47,
+    "line": "We answer with another writing.",
+    "status": "weak",
+    "coverage": 0.4,
+    "soft_coverage": 0.6,
+    "token_count": 5,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 2,
+    "chunk_id": 94,
+    "chunk_words": [
+      5170,
+      5389
+    ],
+    "matches": [
+      {
+        "token": "we",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "answer",
+        "mode": "frag",
+        "picked": "ans"
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with"
+      },
+      {
+        "token": "another",
+        "mode": "exact",
+        "picked": "another"
+      },
+      {
+        "token": "writing",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "the pressure of circumstances to respond to the blind although motivated and directed growth of industrialization the massive arrival of peasants led to the urban centres by rural exodus The process has none the less been oriented by a strategy ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 48,
+    "line": "Not final: urban becoming.",
+    "status": "weak",
+    "coverage": 0.5,
+    "soft_coverage": 0.75,
+    "token_count": 4,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 1,
+    "chunk_id": 95,
+    "chunk_words": [
+      5225,
+      5444
+    ],
+    "matches": [
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "final",
+        "mode": "exact",
+        "picked": "final"
+      },
+      {
+        "token": "urban",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "becoming",
+        "mode": "frag",
+        "picked": "ing"
+      }
+    ],
+    "preview": "single aim No Class character seems that much deeper than several concerted actions centered around several objectives has nevertheless converged towards a final result It goes without saying that all these notables were not proposing to open up a means ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 49,
+    "line": "Right as practice, not gift.",
+    "status": "weak",
+    "coverage": 0.2,
+    "soft_coverage": 0.4,
+    "token_count": 5,
+    "resolved_count": 1,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 96,
+    "chunk_words": [
+      5280,
+      5499
+    ],
+    "matches": [
+      {
+        "token": "right",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "as",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "practice",
+        "mode": "frag",
+        "picked": "pra"
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "gift",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "the opposite They have none the less mobilized property wealth around the city the entrance without restriction into exchange and exchange value of the ground and housing This had speculative implications They were not proposing to demoralize the working classes ...",
+    "pass": "phase2.6_strict"
+  },
+  {
+    "id": 50,
+    "line": "Page for page: we still connect.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.5,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 1,
+    "miss_count": 3,
+    "chunk_id": 99,
+    "chunk_words": [
+      5445,
+      5664
+    ],
+    "matches": [
+      {
+        "token": "page",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "for",
+        "mode": "exact",
+        "picked": "for"
+      },
+      {
+        "token": "page",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "we",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "still",
+        "mode": "exact",
+        "picked": "still"
+      },
+      {
+        "token": "connect",
+        "mode": "frag",
+        "picked": "con"
+      }
+    ],
+    "preview": "production Little by little social consciousness ceased to refer to production and to focus on everyday life and consumption With suburbanization a process is set into motion which decentres the city Isolated from the city the proletariat will end its ...",
+    "pass": "phase2.6_strict"
+  }
+]

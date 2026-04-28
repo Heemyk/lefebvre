@@ -1,0 +1,2622 @@
+[
+  {
+    "id": 1,
+    "line": "I enter the city as question.",
+    "status": "good",
+    "token_coverage_exact_syn": 1.0,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 5,
+      "syn": 1,
+      "frag": 0,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "enter the",
+      "the city"
+    ],
+    "chunk_id": 0,
+    "chunk_words": [
+      0,
+      359
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i"
+      },
+      {
+        "token": "enter",
+        "mode": "exact",
+        "picked": "enter"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city"
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as"
+      },
+      {
+        "token": "question",
+        "mode": "syn",
+        "picked": "questions"
+      }
+    ],
+    "preview": "Preface Great things must be silenced or talked about with grandeur that is with cynicism and innocence I would claim as property and product of man all the beauty nobility which we have given to real or imaginary things Frederic ..."
+  },
+  {
+    "id": 2,
+    "line": "Urban reality names me, then erases me.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.43,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "urban reality"
+    ],
+    "chunk_id": 3,
+    "chunk_words": [
+      270,
+      629
+    ],
+    "matches": [
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban"
+      },
+      {
+        "token": "reality",
+        "mode": "exact",
+        "picked": "reality"
+      },
+      {
+        "token": "names",
+        "mode": "frag",
+        "picked": "na+es"
+      },
+      {
+        "token": "me",
+        "mode": "frag",
+        "picked": "me"
+      },
+      {
+        "token": "then",
+        "mode": "exact",
+        "picked": "then"
+      },
+      {
+        "token": "erases",
+        "mode": "frag",
+        "picked": "ses"
+      },
+      {
+        "token": "me",
+        "mode": "frag",
+        "picked": "me"
+      }
+    ],
+    "preview": "does not only propose to critically analyse thoughts and activities related to urbanism It s aim is to allow its problems to enter into consciousness and political policies From the theoretical and practical situation of problems from the problematic concerning ..."
+  },
+  {
+    "id": 3,
+    "line": "At the edge, I learn outside first.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.57,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "at the"
+    ],
+    "chunk_id": 18,
+    "chunk_words": [
+      1620,
+      1979
+    ],
+    "matches": [
+      {
+        "token": "at",
+        "mode": "exact",
+        "picked": "at"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "edge",
+        "mode": "frag",
+        "picked": "ed+ge"
+      },
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "learn",
+        "mode": "frag",
+        "picked": "le"
+      },
+      {
+        "token": "outside",
+        "mode": "exact",
+        "picked": "outside"
+      },
+      {
+        "token": "first",
+        "mode": "exact",
+        "picked": "first"
+      }
+    ],
+    "preview": "towards a sort of crystallization and fixation Where this system consolidated itself capitalism and industrialization came late in Germany in Italy a delay full of consequences There is therefore a certain discontinuity between an emerging industry and its historical conditions ..."
+  },
+  {
+    "id": 4,
+    "line": "Industrial days press against my breath.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.17,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 1,
+      "syn": 0,
+      "frag": 5,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 25,
+    "chunk_words": [
+      2250,
+      2609
+    ],
+    "matches": [
+      {
+        "token": "industrial",
+        "mode": "exact",
+        "picked": "industrial"
+      },
+      {
+        "token": "days",
+        "mode": "frag",
+        "picked": "da+ys"
+      },
+      {
+        "token": "press",
+        "mode": "frag",
+        "picked": "pr+ss"
+      },
+      {
+        "token": "against",
+        "mode": "frag",
+        "picked": "nst"
+      },
+      {
+        "token": "my",
+        "mode": "frag",
+        "picked": "my"
+      },
+      {
+        "token": "breath",
+        "mode": "frag",
+        "picked": "bre+ath"
+      }
+    ],
+    "preview": "city assaults it takes it ravages it It tends to break up the old cores by taking them over This does not prevent the extension of urban phenomena cities and agglomerations industrial towns and suburbs with the addition of shanty ..."
+  },
+  {
+    "id": 5,
+    "line": "I walk the induced streets.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.4,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 27,
+    "chunk_words": [
+      2430,
+      2789
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "walk",
+        "mode": "frag",
+        "picked": "wa"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "induced",
+        "mode": "exact",
+        "picked": "induced"
+      },
+      {
+        "token": "streets",
+        "mode": "frag",
+        "picked": "str"
+      }
+    ],
+    "preview": "agglomeration which parallels it on the mainland Mestre This city among the most beautiful cities bequeathed to us from pre industrial times is threatened not so much by physical deterioration due to the sea or to its subsidence as by ..."
+  },
+  {
+    "id": 6,
+    "line": "Use value flickers under exchange.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.8,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 0,
+      "frag": 1,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "use value"
+    ],
+    "chunk_id": 36,
+    "chunk_words": [
+      3240,
+      3599
+    ],
+    "matches": [
+      {
+        "token": "use",
+        "mode": "exact",
+        "picked": "use"
+      },
+      {
+        "token": "value",
+        "mode": "exact",
+        "picked": "value"
+      },
+      {
+        "token": "flickers",
+        "mode": "frag",
+        "picked": "fli+ers"
+      },
+      {
+        "token": "under",
+        "mode": "exact",
+        "picked": "under"
+      },
+      {
+        "token": "exchange",
+        "mode": "exact",
+        "picked": "exchange"
+      }
+    ],
+    "preview": "values The best known elements of the urban system of objects include water electricity gas butane in the countryside not to mention the car the television plastic utensils modern furniture which entail new demands with regard to services Among the ..."
+  },
+  {
+    "id": 7,
+    "line": "I keep what can be used, not sold.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.75,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 2,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "can be"
+    ],
+    "chunk_id": 40,
+    "chunk_words": [
+      3600,
+      3959
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "keep",
+        "mode": "frag",
+        "picked": "ep"
+      },
+      {
+        "token": "what",
+        "mode": "exact",
+        "picked": "what"
+      },
+      {
+        "token": "can",
+        "mode": "exact",
+        "picked": "can"
+      },
+      {
+        "token": "be",
+        "mode": "exact",
+        "picked": "be"
+      },
+      {
+        "token": "used",
+        "mode": "syn",
+        "picked": "use"
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "sold",
+        "mode": "syn",
+        "picked": "exchange"
+      }
+    ],
+    "preview": "gives a dull and mutilated version of what was the core of the old city at one and the same time commercial religious intellectual political and economic productive The notion and image of the commercial centre in fact date from ..."
+  },
+  {
+    "id": 8,
+    "line": "The centre calls itself order.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.6,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "the centre"
+    ],
+    "chunk_id": 40,
+    "chunk_words": [
+      3600,
+      3959
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "centre",
+        "mode": "exact",
+        "picked": "centre"
+      },
+      {
+        "token": "calls",
+        "mode": "frag",
+        "picked": "ca"
+      },
+      {
+        "token": "itself",
+        "mode": "exact",
+        "picked": "itself"
+      },
+      {
+        "token": "order",
+        "mode": "frag",
+        "picked": "or+er"
+      }
+    ],
+    "preview": "gives a dull and mutilated version of what was the core of the old city at one and the same time commercial religious intellectual political and economic productive The notion and image of the commercial centre in fact date from ..."
+  },
+  {
+    "id": 9,
+    "line": "I answer with a minor rhythm.",
+    "status": "partial",
+    "token_coverage_exact_syn": 0.33,
+    "token_coverage_with_fragments": 0.83,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 3,
+      "miss": 1
+    },
+    "phrase_hits": [
+      "with a"
+    ],
+    "chunk_id": 55,
+    "chunk_words": [
+      4950,
+      5309
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "answer",
+        "mode": "frag",
+        "picked": "ans+wer"
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "minor",
+        "mode": "frag",
+        "picked": "or"
+      },
+      {
+        "token": "rhythm",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "the second half of the century influential people that is rich or powerful or both sometimes ideologues Le Play with ideas strongly marked by religions Catholic and Protestant sometimes informed politicians belonging to the centre right and who moreover do ..."
+  },
+  {
+    "id": 10,
+    "line": "Youth absorbs the city too fast.",
+    "status": "partial",
+    "token_coverage_exact_syn": 0.33,
+    "token_coverage_with_fragments": 0.83,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 3,
+      "miss": 1
+    },
+    "phrase_hits": [
+      "the city"
+    ],
+    "chunk_id": 55,
+    "chunk_words": [
+      4950,
+      5309
+    ],
+    "matches": [
+      {
+        "token": "youth",
+        "mode": "frag",
+        "picked": "th"
+      },
+      {
+        "token": "absorbs",
+        "mode": "frag",
+        "picked": "rbs"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city"
+      },
+      {
+        "token": "too",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "fast",
+        "mode": "frag",
+        "picked": "st"
+      }
+    ],
+    "preview": "the second half of the century influential people that is rich or powerful or both sometimes ideologues Le Play with ideas strongly marked by religions Catholic and Protestant sometimes informed politicians belonging to the centre right and who moreover do ..."
+  },
+  {
+    "id": 11,
+    "line": "I wear its signs, not its obedience.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.43,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 55,
+    "chunk_words": [
+      4950,
+      5309
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "wear",
+        "mode": "frag",
+        "picked": "we+ar"
+      },
+      {
+        "token": "its",
+        "mode": "exact",
+        "picked": "its"
+      },
+      {
+        "token": "signs",
+        "mode": "frag",
+        "picked": "si+ns"
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "its",
+        "mode": "exact",
+        "picked": "its"
+      },
+      {
+        "token": "obedience",
+        "mode": "frag",
+        "picked": "nce"
+      }
+    ],
+    "preview": "the second half of the century influential people that is rich or powerful or both sometimes ideologues Le Play with ideas strongly marked by religions Catholic and Protestant sometimes informed politicians belonging to the centre right and who moreover do ..."
+  },
+  {
+    "id": 12,
+    "line": "In the suburb I lose urban consciousness.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.71,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 1,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "in the suburb",
+      "in the",
+      "the suburb"
+    ],
+    "chunk_id": 65,
+    "chunk_words": [
+      5850,
+      6209
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "suburb",
+        "mode": "syn",
+        "picked": "suburban"
+      },
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "lose",
+        "mode": "frag",
+        "picked": "lo+se"
+      },
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban"
+      },
+      {
+        "token": "consciousness",
+        "mode": "exact",
+        "picked": "consciousness"
+      }
+    ],
+    "preview": "not necessarily become a public service It surfaces into social consciousness as a right It is acknowledged in fact by the indignation raised by dramatic cases and by the discontent engendered by the crisis Yet it is not formally or ..."
+  },
+  {
+    "id": 13,
+    "line": "In the core I return to encounter.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.57,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 1,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "in the"
+    ],
+    "chunk_id": 70,
+    "chunk_words": [
+      6300,
+      6659
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "core",
+        "mode": "frag",
+        "picked": "co+re"
+      },
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "return",
+        "mode": "frag",
+        "picked": "ret"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "encounter",
+        "mode": "syn",
+        "picked": "meeting"
+      }
+    ],
+    "preview": "urban reality has disappeared streets squares monuments meeting places Even the cafe the bistro has encountered the resentment of the builders of those large housing estates their taste for asceticism the reduction of to inhabit to habitat They had to ..."
+  },
+  {
+    "id": 14,
+    "line": "Difference meets difference at speed.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.2,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 1,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 70,
+    "chunk_words": [
+      6300,
+      6659
+    ],
+    "matches": [
+      {
+        "token": "difference",
+        "mode": "frag",
+        "picked": "nce"
+      },
+      {
+        "token": "meets",
+        "mode": "frag",
+        "picked": "me+ts"
+      },
+      {
+        "token": "difference",
+        "mode": "frag",
+        "picked": "nce"
+      },
+      {
+        "token": "at",
+        "mode": "exact",
+        "picked": "at"
+      },
+      {
+        "token": "speed",
+        "mode": "frag",
+        "picked": "sp+ed"
+      }
+    ],
+    "preview": "urban reality has disappeared streets squares monuments meeting places Even the cafe the bistro has encountered the resentment of the builders of those large housing estates their taste for asceticism the reduction of to inhabit to habitat They had to ..."
+  },
+  {
+    "id": 15,
+    "line": "I hear centrality before I see it.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.57,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 1,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 70,
+    "chunk_words": [
+      6300,
+      6659
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "hear",
+        "mode": "frag",
+        "picked": "he+ar"
+      },
+      {
+        "token": "centrality",
+        "mode": "syn",
+        "picked": "centre"
+      },
+      {
+        "token": "before",
+        "mode": "exact",
+        "picked": "before"
+      },
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "see",
+        "mode": "exact",
+        "picked": "see"
+      },
+      {
+        "token": "it",
+        "mode": "exact",
+        "picked": "it"
+      }
+    ],
+    "preview": "urban reality has disappeared streets squares monuments meeting places Even the cafe the bistro has encountered the resentment of the builders of those large housing estates their taste for asceticism the reduction of to inhabit to habitat They had to ..."
+  },
+  {
+    "id": 16,
+    "line": "The wall is text; the text is wall.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 70,
+    "chunk_words": [
+      6300,
+      6659
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "wall",
+        "mode": "frag",
+        "picked": "ll"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "text",
+        "mode": "frag",
+        "picked": "te"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "text",
+        "mode": "frag",
+        "picked": "te"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "wall",
+        "mode": "frag",
+        "picked": "ll"
+      }
+    ],
+    "preview": "urban reality has disappeared streets squares monuments meeting places Even the cafe the bistro has encountered the resentment of the builders of those large housing estates their taste for asceticism the reduction of to inhabit to habitat They had to ..."
+  },
+  {
+    "id": 17,
+    "line": "I read what was prescribed to me.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.43,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "what was"
+    ],
+    "chunk_id": 86,
+    "chunk_words": [
+      7740,
+      8099
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "read",
+        "mode": "frag",
+        "picked": "re+ad"
+      },
+      {
+        "token": "what",
+        "mode": "exact",
+        "picked": "what"
+      },
+      {
+        "token": "was",
+        "mode": "exact",
+        "picked": "was"
+      },
+      {
+        "token": "prescribed",
+        "mode": "frag",
+        "picked": "pre"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "me",
+        "mode": "frag",
+        "picked": "me"
+      }
+    ],
+    "preview": "of a pencil drawing One can therefore identify the following The planning of men of good will architects and writers Their thinking and projects imply a certain philosophy Generally they associate themselves to an old classical and liberal humanism This ..."
+  },
+  {
+    "id": 18,
+    "line": "Then I write back in fragments.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 1,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 87,
+    "chunk_words": [
+      7830,
+      8189
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "exact",
+        "picked": "then"
+      },
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "write",
+        "mode": "frag",
+        "picked": "te"
+      },
+      {
+        "token": "back",
+        "mode": "frag",
+        "picked": "ba"
+      },
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "fragments",
+        "mode": "syn",
+        "picked": "fragmentary"
+      }
+    ],
+    "preview": "reflection the village the community the neighbourhood the townsman citizen who will be endowed with civic buildings etc They want to build buildings and cities to the human scale to its measure without conceiving that in the modern world man ..."
+  },
+  {
+    "id": 19,
+    "line": "Near order / far order split my body.",
+    "status": "partial",
+    "token_coverage_exact_syn": 0.57,
+    "token_coverage_with_fragments": 0.71,
+    "counts": {
+      "exact": 2,
+      "syn": 2,
+      "frag": 1,
+      "miss": 2
+    },
+    "phrase_hits": [],
+    "chunk_id": 96,
+    "chunk_words": [
+      8640,
+      8999
+    ],
+    "matches": [
+      {
+        "token": "near",
+        "mode": "frag",
+        "picked": "ne+ar"
+      },
+      {
+        "token": "order",
+        "mode": "exact",
+        "picked": "order"
+      },
+      {
+        "token": "far",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "order",
+        "mode": "exact",
+        "picked": "order"
+      },
+      {
+        "token": "split",
+        "mode": "syn",
+        "picked": "division"
+      },
+      {
+        "token": "my",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "body",
+        "mode": "syn",
+        "picked": "life"
+      }
+    ],
+    "preview": "can now be emphasized In order to take up a radically critical analysis and to deepen the urban problematic philosophy will be the starting point This will come as a surprise And yet has not frequent reference to philosophy been ..."
+  },
+  {
+    "id": 20,
+    "line": "I become mediation among mediations.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.4,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 103,
+    "chunk_words": [
+      9270,
+      9629
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "become",
+        "mode": "exact",
+        "picked": "become"
+      },
+      {
+        "token": "mediation",
+        "mode": "exact",
+        "picked": "mediation"
+      },
+      {
+        "token": "among",
+        "mode": "frag",
+        "picked": "am+ng"
+      },
+      {
+        "token": "mediations",
+        "mode": "frag",
+        "picked": "med+ons"
+      }
+    ],
+    "preview": "directed towards product The countryside both practical reality and representation will carry images of nature of being of the innate The city will carry images of effort of will of subjectivity of contemplation without these representations becoming disjointed from real ..."
+  },
+  {
+    "id": 21,
+    "line": "Class strategy redraws my route.",
+    "status": "weak",
+    "token_coverage_exact_syn": 0.2,
+    "token_coverage_with_fragments": 0.6,
+    "counts": {
+      "exact": 1,
+      "syn": 0,
+      "frag": 2,
+      "miss": 2
+    },
+    "phrase_hits": [],
+    "chunk_id": 118,
+    "chunk_words": [
+      10620,
+      10979
+    ],
+    "matches": [
+      {
+        "token": "class",
+        "mode": "exact",
+        "picked": "class"
+      },
+      {
+        "token": "strategy",
+        "mode": "frag",
+        "picked": "str"
+      },
+      {
+        "token": "redraws",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "my",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "route",
+        "mode": "frag",
+        "picked": "ro+te"
+      }
+    ],
+    "preview": "which cements the edifice by crowning it Consequently in the modern State the philosophical system becomes real in Hegel s philosophy the real acknowledge the rational The system has a double side philosophical and political Hegel discovers the historical moment ..."
+  },
+  {
+    "id": 22,
+    "line": "I return where I was pushed out.",
+    "status": "partial",
+    "token_coverage_exact_syn": 0.14,
+    "token_coverage_with_fragments": 0.71,
+    "counts": {
+      "exact": 1,
+      "syn": 0,
+      "frag": 4,
+      "miss": 2
+    },
+    "phrase_hits": [],
+    "chunk_id": 118,
+    "chunk_words": [
+      10620,
+      10979
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "return",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "where",
+        "mode": "frag",
+        "picked": "wh+re"
+      },
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "was",
+        "mode": "exact",
+        "picked": "was"
+      },
+      {
+        "token": "pushed",
+        "mode": "frag",
+        "picked": "hed"
+      },
+      {
+        "token": "out",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "which cements the edifice by crowning it Consequently in the modern State the philosophical system becomes real in Hegel s philosophy the real acknowledge the rational The system has a double side philosophical and political Hegel discovers the historical moment ..."
+  },
+  {
+    "id": 23,
+    "line": "The right appears as cry first.",
+    "status": "partial",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 0.83,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 2,
+      "miss": 1
+    },
+    "phrase_hits": [],
+    "chunk_id": 119,
+    "chunk_words": [
+      10710,
+      11069
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "right",
+        "mode": "exact",
+        "picked": "right"
+      },
+      {
+        "token": "appears",
+        "mode": "frag",
+        "picked": "app"
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as"
+      },
+      {
+        "token": "cry",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "first",
+        "mode": "frag",
+        "picked": "fi+st"
+      }
+    ],
+    "preview": "and a becoming of the world of philosophy An initial repercussion there can no longer be a divide between philosophy and reality historical social political A second repercussion the philosopher no longer has independence he accomplishes a public function as ..."
+  },
+  {
+    "id": 24,
+    "line": "Then demand, then practice.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.75,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 1,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 133,
+    "chunk_words": [
+      11970,
+      12329
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "exact",
+        "picked": "then"
+      },
+      {
+        "token": "demand",
+        "mode": "frag",
+        "picked": "and"
+      },
+      {
+        "token": "then",
+        "mode": "exact",
+        "picked": "then"
+      },
+      {
+        "token": "practice",
+        "mode": "exact",
+        "picked": "practice"
+      }
+    ],
+    "preview": "to find the global reminds us strangely of philosophy when it is not openly philosophical On the ocher hand the partial offers more positive but scattered facts Is it possible to extract from fragmentary sciences a science of the city ..."
+  },
+  {
+    "id": 25,
+    "line": "Not habitat: to inhabit.",
+    "status": "partial",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 0.75,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 1,
+      "miss": 1
+    },
+    "phrase_hits": [],
+    "chunk_id": 133,
+    "chunk_words": [
+      11970,
+      12329
+    ],
+    "matches": [
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "habitat",
+        "mode": "frag",
+        "picked": "tat"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "inhabit",
+        "mode": "miss",
+        "picked": ""
+      }
+    ],
+    "preview": "to find the global reminds us strangely of philosophy when it is not openly philosophical On the ocher hand the partial offers more positive but scattered facts Is it possible to extract from fragmentary sciences a science of the city ..."
+  },
+  {
+    "id": 26,
+    "line": "I refuse the logic of habitat.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.33,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 133,
+    "chunk_words": [
+      11970,
+      12329
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "refuse",
+        "mode": "frag",
+        "picked": "ref+use"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "logic",
+        "mode": "frag",
+        "picked": "lo+ic"
+      },
+      {
+        "token": "of",
+        "mode": "exact",
+        "picked": "of"
+      },
+      {
+        "token": "habitat",
+        "mode": "frag",
+        "picked": "tat"
+      }
+    ],
+    "preview": "to find the global reminds us strangely of philosophy when it is not openly philosophical On the ocher hand the partial offers more positive but scattered facts Is it possible to extract from fragmentary sciences a science of the city ..."
+  },
+  {
+    "id": 27,
+    "line": "I claim the plastic space of living.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.57,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 134,
+    "chunk_words": [
+      12060,
+      12419
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "claim",
+        "mode": "exact",
+        "picked": "claim"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "plastic",
+        "mode": "frag",
+        "picked": "pla+tic"
+      },
+      {
+        "token": "space",
+        "mode": "exact",
+        "picked": "space"
+      },
+      {
+        "token": "of",
+        "mode": "exact",
+        "picked": "of"
+      },
+      {
+        "token": "living",
+        "mode": "frag",
+        "picked": "ing"
+      }
+    ],
+    "preview": "a series of correlations The subject is suppressed Or the continues to assert the existence of the global one approaches and locates it either by extrapolations in the name of a discipline or by wagering on an interdisciplinary tactic One ..."
+  },
+  {
+    "id": 28,
+    "line": "A cafe, a corner, a small centrality.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.57,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 1,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 144,
+    "chunk_words": [
+      12960,
+      13319
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "cafe",
+        "mode": "frag",
+        "picked": "ca+fe"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "corner",
+        "mode": "frag",
+        "picked": "cor+ner"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "small",
+        "mode": "frag",
+        "picked": "sm+ll"
+      },
+      {
+        "token": "centrality",
+        "mode": "syn",
+        "picked": "centre"
+      }
+    ],
+    "preview": "remains for a particular philosophy of the city the symbol of urban society in general This is a typically ideological extrapolation To this ideology these philosophers add partial knowledge this purely ideological operation consisting in a passage a leap from ..."
+  },
+  {
+    "id": 29,
+    "line": "A place consumed / a place reclaimed.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.67,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 0,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 154,
+    "chunk_words": [
+      13860,
+      14219
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "place",
+        "mode": "exact",
+        "picked": "place"
+      },
+      {
+        "token": "consumed",
+        "mode": "frag",
+        "picked": "con+med"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "place",
+        "mode": "exact",
+        "picked": "place"
+      },
+      {
+        "token": "reclaimed",
+        "mode": "frag",
+        "picked": "rec+med"
+      }
+    ],
+    "preview": "urban phenomena The city always had relations with society as a whole with its constituting elements countryside and agriculture offensive and defensive force political power States etc and with its history it changes when society as a whole changes Yet ..."
+  },
+  {
+    "id": 30,
+    "line": "The planner says coherence.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 1,
+      "syn": 1,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 166,
+    "chunk_words": [
+      14940,
+      15299
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "planner",
+        "mode": "syn",
+        "picked": "planning"
+      },
+      {
+        "token": "says",
+        "mode": "frag",
+        "picked": "sa+ys"
+      },
+      {
+        "token": "coherence",
+        "mode": "frag",
+        "picked": "nce"
+      }
+    ],
+    "preview": "environment Social relations are achieved from the sensible They cannot be reduced to this sensible world and yet they do not float in air they do not disappear into transcendence If social reality suggests forms and relations if it cannot ..."
+  },
+  {
+    "id": 31,
+    "line": "I keep contradiction alive.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.0,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 0,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 166,
+    "chunk_words": [
+      14940,
+      15299
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "keep",
+        "mode": "frag",
+        "picked": "ep"
+      },
+      {
+        "token": "contradiction",
+        "mode": "frag",
+        "picked": "con+ion"
+      },
+      {
+        "token": "alive",
+        "mode": "frag",
+        "picked": "al+ve"
+      }
+    ],
+    "preview": "environment Social relations are achieved from the sensible They cannot be reduced to this sensible world and yet they do not float in air they do not disappear into transcendence If social reality suggests forms and relations if it cannot ..."
+  },
+  {
+    "id": 32,
+    "line": "I move through isotopies and breaks.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 1,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 166,
+    "chunk_words": [
+      14940,
+      15299
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "move",
+        "mode": "frag",
+        "picked": "mo+ve"
+      },
+      {
+        "token": "through",
+        "mode": "exact",
+        "picked": "through"
+      },
+      {
+        "token": "isotopies",
+        "mode": "frag",
+        "picked": "iso+ies"
+      },
+      {
+        "token": "and",
+        "mode": "exact",
+        "picked": "and"
+      },
+      {
+        "token": "breaks",
+        "mode": "syn",
+        "picked": "discontinuities"
+      }
+    ],
+    "preview": "environment Social relations are achieved from the sensible They cannot be reduced to this sensible world and yet they do not float in air they do not disappear into transcendence If social reality suggests forms and relations if it cannot ..."
+  },
+  {
+    "id": 33,
+    "line": "Meaning leaks at every border.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.2,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 1,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 181,
+    "chunk_words": [
+      16290,
+      16649
+    ],
+    "matches": [
+      {
+        "token": "meaning",
+        "mode": "frag",
+        "picked": "ing"
+      },
+      {
+        "token": "leaks",
+        "mode": "frag",
+        "picked": "le"
+      },
+      {
+        "token": "at",
+        "mode": "exact",
+        "picked": "at"
+      },
+      {
+        "token": "every",
+        "mode": "frag",
+        "picked": "ev+ry"
+      },
+      {
+        "token": "border",
+        "mode": "frag",
+        "picked": "der"
+      }
+    ],
+    "preview": "persist in many small or medium sized towns Many urban centres which today perpetuate or protect the image of centrality which might have disappeared without them are of very ancient origins This can explain without inasmuch legitimizing the illusion of ..."
+  },
+  {
+    "id": 34,
+    "line": "Urban language stutters, then sings.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.4,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "urban language"
+    ],
+    "chunk_id": 183,
+    "chunk_words": [
+      16470,
+      16829
+    ],
+    "matches": [
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban"
+      },
+      {
+        "token": "language",
+        "mode": "exact",
+        "picked": "language"
+      },
+      {
+        "token": "stutters",
+        "mode": "frag",
+        "picked": "ers"
+      },
+      {
+        "token": "then",
+        "mode": "frag",
+        "picked": "th+en"
+      },
+      {
+        "token": "sings",
+        "mode": "frag",
+        "picked": "si"
+      }
+    ],
+    "preview": "space reduced to a residential function to that of a commercial centrality which brought a difference an enrichment But planners were only rediscovering the medieval city laid bare of its historical relation to the countryside of the struggle between the ..."
+  },
+  {
+    "id": 35,
+    "line": "The system closes; I open.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.4,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 183,
+    "chunk_words": [
+      16470,
+      16829
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "system",
+        "mode": "exact",
+        "picked": "system"
+      },
+      {
+        "token": "closes",
+        "mode": "frag",
+        "picked": "ses"
+      },
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "open",
+        "mode": "frag",
+        "picked": "op+en"
+      }
+    ],
+    "preview": "space reduced to a residential function to that of a commercial centrality which brought a difference an enrichment But planners were only rediscovering the medieval city laid bare of its historical relation to the countryside of the struggle between the ..."
+  },
+  {
+    "id": 36,
+    "line": "The old core rots; desire persists.",
+    "status": "partial",
+    "token_coverage_exact_syn": 0.33,
+    "token_coverage_with_fragments": 0.83,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 3,
+      "miss": 1
+    },
+    "phrase_hits": [],
+    "chunk_id": 191,
+    "chunk_words": [
+      17190,
+      17549
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "old",
+        "mode": "miss",
+        "picked": ""
+      },
+      {
+        "token": "core",
+        "mode": "frag",
+        "picked": "co+re"
+      },
+      {
+        "token": "rots",
+        "mode": "frag",
+        "picked": "ro+ts"
+      },
+      {
+        "token": "desire",
+        "mode": "exact",
+        "picked": "desire"
+      },
+      {
+        "token": "persists",
+        "mode": "frag",
+        "picked": "per"
+      }
+    ],
+    "preview": "ideology At this point the city should be defined If it is true that the concept emerges little by little from these ideologies which convey it it must be conceived during this progress We therefore here propose a first definition ..."
+  },
+  {
+    "id": 37,
+    "line": "I learn to occupy with care.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.33,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 0,
+      "frag": 4,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 202,
+    "chunk_words": [
+      18180,
+      18539
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "learn",
+        "mode": "frag",
+        "picked": "le"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "occupy",
+        "mode": "frag",
+        "picked": "occ"
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with"
+      },
+      {
+        "token": "care",
+        "mode": "frag",
+        "picked": "ca+re"
+      }
+    ],
+    "preview": "and at the specific level by the prefecture of police and also by neighbourhood police stations without forgetting various police agencies acting either at a global level or in the subterranean shadow Religious ideology is signified at the highest level ..."
+  },
+  {
+    "id": 38,
+    "line": "To occupy is to become legible.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.67,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 4,
+      "syn": 0,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 204,
+    "chunk_words": [
+      18360,
+      18719
+    ],
+    "matches": [
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "occupy",
+        "mode": "frag",
+        "picked": "occ"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "become",
+        "mode": "exact",
+        "picked": "become"
+      },
+      {
+        "token": "legible",
+        "mode": "frag",
+        "picked": "leg+ble"
+      }
+    ],
+    "preview": "voids It is so true that habitat does not make up the city and that it cannot be defined by this isolated function At the ecological level habitation becomes essential The city envelops it it is form enveloping chis space ..."
+  },
+  {
+    "id": 39,
+    "line": "To become legible is danger.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.6,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 213,
+    "chunk_words": [
+      19170,
+      19529
+    ],
+    "matches": [
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to"
+      },
+      {
+        "token": "become",
+        "mode": "frag",
+        "picked": "bec+ome"
+      },
+      {
+        "token": "legible",
+        "mode": "frag",
+        "picked": "ble"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "danger",
+        "mode": "exact",
+        "picked": "danger"
+      }
+    ],
+    "preview": "This is not without a great naivety If it is true that a Bororo village signifies and that the Greek city is full of meaning are we to build vast Bororo villages full of signs of Modernity Or restore the ..."
+  },
+  {
+    "id": 40,
+    "line": "I blur, reappear, blur again.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.0,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 0,
+      "syn": 0,
+      "frag": 5,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 213,
+    "chunk_words": [
+      19170,
+      19529
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "blur",
+        "mode": "frag",
+        "picked": "bl+ur"
+      },
+      {
+        "token": "reappear",
+        "mode": "frag",
+        "picked": "rea+ear"
+      },
+      {
+        "token": "blur",
+        "mode": "frag",
+        "picked": "bl+ur"
+      },
+      {
+        "token": "again",
+        "mode": "frag",
+        "picked": "ag+in"
+      }
+    ],
+    "preview": "This is not without a great naivety If it is true that a Bororo village signifies and that the Greek city is full of meaning are we to build vast Bororo villages full of signs of Modernity Or restore the ..."
+  },
+  {
+    "id": 41,
+    "line": "Art is not ornament; it is claim.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.71,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 5,
+      "syn": 0,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "is not",
+      "it is"
+    ],
+    "chunk_id": 213,
+    "chunk_words": [
+      19170,
+      19529
+    ],
+    "matches": [
+      {
+        "token": "art",
+        "mode": "exact",
+        "picked": "art"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "ornament",
+        "mode": "frag",
+        "picked": "ent"
+      },
+      {
+        "token": "it",
+        "mode": "exact",
+        "picked": "it"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "claim",
+        "mode": "frag",
+        "picked": "cl+im"
+      }
+    ],
+    "preview": "This is not without a great naivety If it is true that a Bororo village signifies and that the Greek city is full of meaning are we to build vast Bororo villages full of signs of Modernity Or restore the ..."
+  },
+  {
+    "id": 42,
+    "line": "A claim is a relation, not a logo.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.75,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 6,
+      "syn": 0,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "not a"
+    ],
+    "chunk_id": 223,
+    "chunk_words": [
+      20070,
+      20429
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "claim",
+        "mode": "frag",
+        "picked": "cl+im"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "relation",
+        "mode": "exact",
+        "picked": "relation"
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "logo",
+        "mode": "frag",
+        "picked": "lo+go"
+      }
+    ],
+    "preview": "and perceive themselves according to this coercive rationality At the same time and at the same stroke the sector of owner occupation becomes the reference by which habitat and daily life are appreciated that practice is cloaked in make believe ..."
+  },
+  {
+    "id": 43,
+    "line": "I gather others at the margin",
+    "status": "good",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 1,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "at the"
+    ],
+    "chunk_id": 224,
+    "chunk_words": [
+      20160,
+      20519
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "frag",
+        "picked": "i"
+      },
+      {
+        "token": "gather",
+        "mode": "frag",
+        "picked": "her"
+      },
+      {
+        "token": "others",
+        "mode": "syn",
+        "picked": "groups"
+      },
+      {
+        "token": "at",
+        "mode": "exact",
+        "picked": "at"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "margin",
+        "mode": "frag",
+        "picked": "gin"
+      }
+    ],
+    "preview": "towards a system of significations which they often call planning it is not impossible for analysts of urban reality grouping together their piecemeal facts to constitute a somewhat different system of significations that they can also baptize planning while they ..."
+  },
+  {
+    "id": 44,
+    "line": "Margins turn centre for a minute.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.67,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 1,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "for a"
+    ],
+    "chunk_id": 224,
+    "chunk_words": [
+      20160,
+      20519
+    ],
+    "matches": [
+      {
+        "token": "margins",
+        "mode": "frag",
+        "picked": "ins"
+      },
+      {
+        "token": "turn",
+        "mode": "exact",
+        "picked": "turn"
+      },
+      {
+        "token": "centre",
+        "mode": "syn",
+        "picked": "centrality"
+      },
+      {
+        "token": "for",
+        "mode": "exact",
+        "picked": "for"
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a"
+      },
+      {
+        "token": "minute",
+        "mode": "frag",
+        "picked": "min+ute"
+      }
+    ],
+    "preview": "towards a system of significations which they often call planning it is not impossible for analysts of urban reality grouping together their piecemeal facts to constitute a somewhat different system of significations that they can also baptize planning while they ..."
+  },
+  {
+    "id": 45,
+    "line": "In that minute, the city is ours.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.86,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 5,
+      "syn": 1,
+      "frag": 1,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "the city"
+    ],
+    "chunk_id": 241,
+    "chunk_words": [
+      21690,
+      22049
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in"
+      },
+      {
+        "token": "that",
+        "mode": "exact",
+        "picked": "that"
+      },
+      {
+        "token": "minute",
+        "mode": "syn",
+        "picked": "moment"
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the"
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city"
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is"
+      },
+      {
+        "token": "ours",
+        "mode": "frag",
+        "picked": "ou+rs"
+      }
+    ],
+    "preview": "market exchange value and a rising capitalism This critical point is located in Western Europe around the sixteenth century Soon it is the arrival of the industrial city with its implications emigration of dispossed and disaggregated peasant populations cowards the ..."
+  },
+  {
+    "id": 46,
+    "line": "Then power writes over us again.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 241,
+    "chunk_words": [
+      21690,
+      22049
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "exact",
+        "picked": "then"
+      },
+      {
+        "token": "power",
+        "mode": "frag",
+        "picked": "po+er"
+      },
+      {
+        "token": "writes",
+        "mode": "frag",
+        "picked": "tes"
+      },
+      {
+        "token": "over",
+        "mode": "exact",
+        "picked": "over"
+      },
+      {
+        "token": "us",
+        "mode": "exact",
+        "picked": "us"
+      },
+      {
+        "token": "again",
+        "mode": "frag",
+        "picked": "ag+in"
+      }
+    ],
+    "preview": "market exchange value and a rising capitalism This critical point is located in Western Europe around the sixteenth century Soon it is the arrival of the industrial city with its implications emigration of dispossed and disaggregated peasant populations cowards the ..."
+  },
+  {
+    "id": 47,
+    "line": "We answer with another writing.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.6,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 244,
+    "chunk_words": [
+      21960,
+      22319
+    ],
+    "matches": [
+      {
+        "token": "we",
+        "mode": "frag",
+        "picked": "we"
+      },
+      {
+        "token": "answer",
+        "mode": "exact",
+        "picked": "answer"
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with"
+      },
+      {
+        "token": "another",
+        "mode": "exact",
+        "picked": "another"
+      },
+      {
+        "token": "writing",
+        "mode": "frag",
+        "picked": "ing"
+      }
+    ],
+    "preview": "neighbourhood and thus the domain of the architect to the general level scale of land use planning planned industrial production global urbanization passing over the city and the urban Mediation is placed into parentheses and the specific level is omitted ..."
+  },
+  {
+    "id": 48,
+    "line": "Not final: urban becoming.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.75,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 1,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 244,
+    "chunk_words": [
+      21960,
+      22319
+    ],
+    "matches": [
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "final",
+        "mode": "frag",
+        "picked": "fi+al"
+      },
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban"
+      },
+      {
+        "token": "becoming",
+        "mode": "exact",
+        "picked": "becoming"
+      }
+    ],
+    "preview": "neighbourhood and thus the domain of the architect to the general level scale of land use planning planned industrial production global urbanization passing over the city and the urban Mediation is placed into parentheses and the specific level is omitted ..."
+  },
+  {
+    "id": 49,
+    "line": "Right as practice, not gift.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.6,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 2,
+      "syn": 1,
+      "frag": 2,
+      "miss": 0
+    },
+    "phrase_hits": [],
+    "chunk_id": 246,
+    "chunk_words": [
+      22140,
+      22499
+    ],
+    "matches": [
+      {
+        "token": "right",
+        "mode": "frag",
+        "picked": "ri"
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as"
+      },
+      {
+        "token": "practice",
+        "mode": "syn",
+        "picked": "practical"
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not"
+      },
+      {
+        "token": "gift",
+        "mode": "frag",
+        "picked": "gi"
+      }
+    ],
+    "preview": "to themselves that is communications which do not go through existing networks and through institutions namely at the inferior level the immediate relations and at the superior level the political relations resulting from knowledge The answer given to reformist continuism ..."
+  },
+  {
+    "id": 50,
+    "line": "Page for page: we still connect.",
+    "status": "good",
+    "token_coverage_exact_syn": 0.5,
+    "token_coverage_with_fragments": 1.0,
+    "counts": {
+      "exact": 3,
+      "syn": 0,
+      "frag": 3,
+      "miss": 0
+    },
+    "phrase_hits": [
+      "we still"
+    ],
+    "chunk_id": 252,
+    "chunk_words": [
+      22680,
+      23039
+    ],
+    "matches": [
+      {
+        "token": "page",
+        "mode": "frag",
+        "picked": "pa+ge"
+      },
+      {
+        "token": "for",
+        "mode": "exact",
+        "picked": "for"
+      },
+      {
+        "token": "page",
+        "mode": "frag",
+        "picked": "pa+ge"
+      },
+      {
+        "token": "we",
+        "mode": "exact",
+        "picked": "we"
+      },
+      {
+        "token": "still",
+        "mode": "exact",
+        "picked": "still"
+      },
+      {
+        "token": "connect",
+        "mode": "frag",
+        "picked": "con+ect"
+      }
+    ],
+    "preview": "these urban freedoms very early on In Europe as elsewhere one cannot attribute only to the growth of cities or only to problems of traffic difficulties which are both different and comparable Here and there from one part or another ..."
+  }
+]

@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRF//FITI — PORTFOLIO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=VT323&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+@font-face{
+  font-family:'FiveCent';
+  src:url('./5cent/5cent.otf') format('opentype');
+}
+@font-face{
+  font-family:'Underground';
+  src:url('./08underground/08_Underground.otf') format('opentype');
+}
+@font-face{
+  font-family:'BBoy';
+  src:url('./bboy/B-Boy.otf') format('opentype');
+}
+@font-face{
+  font-family:'RaseBasic';
+  src:url('./rasebasic_free/RaseBasic_Free/RaseBasic.otf') format('opentype');
+}
+@font-face{
+  font-family:'Scrawler3rd';
+  src:url('./scrawler3rd_free/Scrawler3rd_Free/Scrawler_3rd.otf') format('opentype');
+}
+@font-face{
+  font-family:'StencilDamage';
+  src:url('./stencilfont_free/StencilFont_Free/Stencil_Damage.otf') format('opentype');
+}
+@font-face{
+  font-family:'WildBasic';
+  src:url('./wildbasics_free/WildBasics_Free/WildBasic.otf') format('opentype');
+}
+
+:root{
+  --fx:50vw;
+  --fy:50vh;
+}
+
+html,body{
+  width:100vw;height:100vh;overflow:hidden;
+  background:#0a0907;
+  cursor:none;
+  -webkit-font-smoothing:antialiased;
+}
+
+#viewport{position:fixed;inset:0;overflow:hidden}
+
+#wall-track{
+  position:absolute;top:0;left:0;height:100%;
+  will-change:transform;
+}
+
+#wall{display:block;position:absolute;top:0;left:0;z-index:1}
+
+#spindles{
+  display:block;position:fixed;inset:0;
+  width:100%;height:100%;pointer-events:none;z-index:13;
+}
+
+#overlay{
+  position:absolute;top:0;left:0;
+  height:100vh;pointer-events:none;
+  z-index:14;
+}
+
+#ascii-wall{
+  position:fixed;inset:0;z-index:3;pointer-events:none;
+  color:rgba(116,95,68,.14);
+  font-family:'VT323',monospace;
+  font-size:11px;line-height:1.02;letter-spacing:.08em;
+  white-space:pre;overflow:hidden;
+  mix-blend-mode:soft-light;
+  filter:blur(.22px);
+}
+
+/* Faint brick lattice: must match JS BRICK_W × BRICK_H stagger (abab) */
+#brick-veil{
+  position:fixed;inset:0;z-index:5;pointer-events:none;
+  mix-blend-mode:multiply;
+  opacity:1;
+}
+#brick-halftone{
+  position:fixed;inset:0;z-index:6;pointer-events:none;
+  mix-blend-mode:multiply;
+  opacity:.17;
+  background-image:
+    radial-gradient(circle at 18% 22%,rgba(0,0,0,.35) .45px,transparent 1.1px),
+    radial-gradient(circle at 72% 58%,rgba(0,0,0,.28) .4px,transparent 1px),
+    radial-gradient(circle at 48% 78%,rgba(0,0,0,.22) .35px,transparent .9px);
+  background-size:240px 58px,240px 58px,240px 58px;
+  background-position:0 0,-120px 29px,60px 14px;
+}
+
+/* Occulting darkness: cursor = cone of light (see-through center) */
+#flashlight-occlusion{
+  position:fixed;inset:0;z-index:40;pointer-events:none;
+  background:
+    radial-gradient(ellipse min(140px,24vw) min(170px,28vh) at var(--fx) var(--fy),
+      rgba(255,248,235,.085) 0%,
+      rgba(255,248,235,0) 52%),
+    radial-gradient(ellipse min(340px,48vw) min(400px,52vh) at var(--fx) var(--fy),
+      rgba(3,2,4,0) 0%,
+      rgba(3,2,4,.06) 9%,
+      rgba(2,2,3,.34) 32%,
+      rgba(1,1,2,.74) 58%,
+      rgba(0,0,0,.9) 100%);
+}
+
+#tweaks-panel{cursor:auto!important}
+
+/* ── BEN-DAY DOT OVERLAY ── */
+.benday{
+  position:fixed;inset:0;pointer-events:none;z-index:10;
+  background-image:radial-gradient(circle,rgba(0,0,0,.52) 1.3px,transparent 1.3px);
+  background-size:5px 5px;
+  mix-blend-mode:multiply;
+}
+
+/* ── CRT SCANLINES ── */
+.scanlines{
+  position:fixed;inset:0;pointer-events:none;z-index:11;
+  background:repeating-linear-gradient(
+    180deg,transparent 0,transparent 2px,
+    rgba(0,0,0,.04) 2px,rgba(0,0,0,.04) 4px
+  );
+}
+
+/* ── VIGNETTE ── */
+.vignette{
+  position:fixed;inset:0;pointer-events:none;z-index:9;
+  background:radial-gradient(ellipse 80% 80% at center,
+    transparent 45%,rgba(0,0,0,.55) 100%);
+}
+
+/* ── FILM GRAIN CANVAS ── */
+#grain{
+  position:fixed;inset:0;pointer-events:none;z-index:12;
+  opacity:.06;mix-blend-mode:overlay;
+}
+
+/* ── PROGRESS BAR ── */
+#progress{
+  position:fixed;bottom:0;left:0;height:2px;z-index:50;
+  background:oklch(78% .28 215);
+  box-shadow:0 0 10px oklch(78% .28 215);
+  width:0;transition:width .05s linear;
+}
+
+/* ── SCROLL HINT ── */
+#hint{
+  position:fixed;bottom:22px;left:50%;
+  transform:translateX(-50%);z-index:50;
+  font-family:'VT323',monospace;font-size:15px;
+  color:rgba(200,170,130,.42);letter-spacing:.42em;
+  text-transform:uppercase;pointer-events:none;
+  transition:opacity 1.4s ease;
+}
+
+/* ── LOADING SCREEN ── */
+#loading{
+  position:fixed;inset:0;z-index:200;
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:16px;
+  background:#0a0907;
+  font-family:'VT323',monospace;font-size:18px;
+  color:rgba(165,138,100,.5);letter-spacing:.4em;
+  transition:opacity .9s ease;
+}
+#loading.done{opacity:0;pointer-events:none}
+#loading-bar{
+  width:200px;height:1px;
+  background:rgba(165,138,100,.15);position:relative;
+}
+#loading-bar::after{
+  content:'';position:absolute;top:0;left:0;height:100%;
+  background:oklch(78% .28 215);
+  box-shadow:0 0 8px oklch(78% .28 215);
+  animation:loadprogress 1.8s ease-out forwards;
+}
+@keyframes loadprogress{from{width:0}to{width:100%}}
+
+#mode-toggle{
+  position:fixed;top:18px;right:18px;z-index:410;
+  width:22px;height:22px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.92);
+  background:#fff;cursor:pointer;
+  box-shadow:0 0 0 1px rgba(0,0,0,.18), 0 0 14px rgba(255,255,255,.2);
+}
+#mode-toggle:focus-visible{outline:2px solid oklch(78% .28 215);outline-offset:2px}
+
+body.light-mode{
+  background:#f4eddc;
+  cursor:default;
+}
+body.light-mode #ascii-wall,
+body.light-mode #brick-veil,
+body.light-mode #brick-halftone,
+body.light-mode .benday,
+body.light-mode .scanlines,
+body.light-mode .vignette,
+body.light-mode #grain,
+body.light-mode #flashlight-occlusion,
+body.light-mode #overlay,
+body.light-mode #spindles,
+body.light-mode #hint,
+body.light-mode #progress{
+  display:none !important;
+}
+body.light-mode #mode-toggle{
+  background:#4e4e4e;
+  border-color:rgba(54,54,54,.96);
+  box-shadow:0 0 0 2px rgba(0,0,0,.35), 0 0 0 5px rgba(255,255,255,.65);
+}
+
+/* ══ GLITCH KEYFRAMES ══ */
+@keyframes glitch-a{
+  0%,91%,100%{clip-path:none;transform:translate(0,0)}
+  92%{clip-path:polygon(0 12%,100% 12%,100% 42%,0 42%);transform:translate(-5px,1px)}
+  93%{clip-path:polygon(0 58%,100% 58%,100% 84%,0 84%);transform:translate(4px,-1px)}
+  94%{clip-path:polygon(0 4%,100% 4%,100% 22%,0 22%);transform:translate(-2px,2px)}
+  95%{clip-path:none;transform:translate(3px,0)}
+  96%{clip-path:polygon(0 38%,100% 38%,100% 68%,0 68%);transform:translate(-3px,-2px)}
+  97%{clip-path:none;transform:translate(1px,0)}
+}
+@keyframes glitch-b{
+  0%,91%,100%{transform:translate(0,0);filter:none}
+  92%{transform:translate(6px,0);filter:hue-rotate(55deg)}
+  93%{transform:translate(-6px,1px);filter:hue-rotate(175deg)}
+  95%{transform:translate(2px,-1px);filter:none}
+}
+[data-glitch-a]{
+  animation:glitch-a var(--glitch-dur-a, 9.2s) infinite;
+  animation-delay:var(--glitch-delay-a, 0s);
+}
+[data-glitch-b]{
+  animation:glitch-b var(--glitch-dur-b, 8.4s) infinite;
+  animation-delay:var(--glitch-delay-b, 0.12s);
+}
+</style>
+</head>
+<body>
+
+<div id="viewport">
+  <div id="wall-track">
+    <canvas id="wall"></canvas>
+    <canvas id="spindles"></canvas>
+    <div id="overlay"></div>
+  </div>
+</div>
+
+<pre id="ascii-wall"></pre>
+<canvas id="brick-veil" aria-hidden="true"></canvas>
+<div id="brick-halftone" aria-hidden="true"></div>
+<div class="benday"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<canvas id="grain"></canvas>
+<div id="flashlight-occlusion" aria-hidden="true"></div>
+<div id="progress"></div>
+<div id="hint">← SCROLL THE WALL →</div>
+<button id="mode-toggle" type="button" aria-label="Toggle light mode"></button>
+<div id="loading">
+  <span>RENDERING THE WALL</span>
+  <div id="loading-bar"></div>
+</div>
+
+<script type="module">
+import { prepareWithSegments, layoutWithLines }
+  from 'https://esm.sh/@chenglou/pretext';
+
+const WALL_COLOR = { r: 158, g: 130, b: 96 };
+const WALL_TEXT_TOP_COLOR = `rgba(${WALL_COLOR.r},${WALL_COLOR.g},${WALL_COLOR.b},0.92)`;
+const BRICK_W = 240;
+const BRICK_H = 58;
+const BRICK_PAD_X = 14;
+const BRICK_PAD_Y = 10;
+const BASE_LINE_H = 18;
+let brickW = BRICK_W;
+let brickH = BRICK_H;
+let brickPadX = BRICK_PAD_X;
+let brickPadY = BRICK_PAD_Y;
+let wallLineH = BASE_LINE_H;
+const PHASE_TO_LINE = 0.18;
+/** Legible wall substrate (Lefebvre corpus) — not graffiti faces */
+const WALL_BODY_FONT = '17px "Crimson Pro", Georgia, "Times New Roman", serif';
+const PHASE_CYCLE = 5400;
+
+function wrap(n, max) {
+  return ((n % max) + max) % max;
+}
+
+function mkRng(seed) {
+  let a = seed | 0;
+  return () => {
+    a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t ^= t + Math.imul(t ^ t >>> 7, 61 | t);
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+async function loadCorpus() {
+  try {
+    const res = await fetch('./text.txt', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`Failed to load text: ${res.status}`);
+    const raw = await res.text();
+    return raw
+      .replace(/^#.*$/gm, ' ')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  } catch (err) {
+    console.warn(err);
+    return 'The right to the city is a cry and a demand. The wall is written, overwritten, and reclaimed.';
+  }
+}
+
+const wall = document.getElementById('wall');
+const ctx = wall.getContext('2d');
+const spCanvas = document.getElementById('spindles');
+const spCtx = spCanvas.getContext('2d');
+const overlay = document.getElementById('overlay');
+const track = document.getElementById('wall-track');
+const progressBar = document.getElementById('progress');
+const hint = document.getElementById('hint');
+const flashlightOcclusion = document.getElementById('flashlight-occlusion');
+
+let vw = window.innerWidth;
+let vh = window.innerHeight;
+let phase = 0;
+let targetPhase = 0;
+let banks = [];
+let corpus = '';
+let lastWheelMs = 0;
+let inputLocked = false;
+let holdZoomActive = false;
+let releaseAnimating = false;
+let holdAnchorWorld = { x: 0, y: 0 };
+let pointerClient = { x: 0, y: 0 };
+let camScale = 1;
+let camTx = 0;
+let camTy = 0;
+let targetCamScale = 1;
+let targetCamTx = 0;
+let targetCamTy = 0;
+let holdPanX = 0;
+let holdPanY = 0;
+let lightMode = false;
+let torchBrightness = 1;
+let wallCache = document.createElement('canvas');
+let wallCacheCtx = wallCache.getContext('2d');
+let wallCacheValid = false;
+let lastPaintedPhase = null;
+const PHASE_EPS = 0.35;
+const ZOOM_HOLD_SCALE = 2;
+/** Single-corpus pretext handle — indices align with \`corpus\` after loadCorpus() */
+let wallPrepared = null;
+let SPINDLE_LIBRARY = [];
+let SPINDLE_CURATED_ROWS = [];
+let CORPUS_WORDS = [];
+let CORPUS_WORD_LOOKUP = new Map();
+const STRICT_PHASE_SAMPLES_PER_LINE = 13;
+const STRICT_GLOBAL_PHASE_SAMPLES = 420;
+const STRICT_MAX_FRAGMENTS_PER_LINE = 1;
+/** Reused offscreen buffer for brick fBm noise (dimension sw×sh). */
+let _brickNoiseOff = null;
+
+function resizeWall() {
+  vw = window.innerWidth;
+  vh = window.innerHeight;
+  updateBrickMetrics();
+  wall.width = vw;
+  wall.height = vh;
+  spCanvas.width = vw;
+  spCanvas.height = vh;
+  track.style.cssText = `position:absolute;inset:0;height:${vh}px;width:${vw}px;`;
+  overlay.style.cssText = `position:absolute;inset:0;height:${vh}px;width:${vw}px;pointer-events:none;`;
+  drawBrickVeil();
+}
+
+function updateBrickMetrics() {
+  // Keep a consistent wall grid around 8 x 12 (roughly), adapting only on small viewports.
+  let cols = 8;
+  let rows = 12;
+  if (vw < 1200) cols = Math.max(6, Math.min(8, Math.round(vw / 170)));
+  if (vh < 760) rows = Math.max(9, Math.min(12, Math.round(vh / 70)));
+  brickW = Math.round(vw / cols);
+  brickH = Math.round(vh / rows);
+  brickH = Math.max(46, Math.min(82, brickH));
+  brickPadX = Math.round(Math.max(12, brickW * 0.058));
+  brickPadY = Math.round(Math.max(8, brickH * 0.17));
+  wallLineH = Math.round(Math.max(16, Math.min(24, brickH * 0.31)));
+
+  const halftone = document.getElementById('brick-halftone');
+  if (halftone) {
+    halftone.style.backgroundSize = `${brickW}px ${brickH}px,${brickW}px ${brickH}px,${brickW}px ${brickH}px`;
+    halftone.style.backgroundPosition = `0 0,${-Math.round(brickW / 2)}px ${Math.round(brickH / 2)}px,${Math.round(brickW * 0.25)}px ${Math.round(brickH * 0.24)}px`;
+  }
+}
+
+function buildCorpusWordIndex(corpusStr) {
+  const out = [];
+  CORPUS_WORD_LOOKUP = new Map();
+  const rx = /[A-Za-z']+/g;
+  let m;
+  while ((m = rx.exec(corpusStr))) {
+    const word = m[0].toLowerCase();
+    const node = {
+      word,
+      start: m.index,
+      end: m.index + m[0].length,
+    };
+    out.push({
+      word,
+      start: m.index,
+      end: m.index + m[0].length,
+    });
+    if (!CORPUS_WORD_LOOKUP.has(word)) CORPUS_WORD_LOOKUP.set(word, []);
+    CORPUS_WORD_LOOKUP.get(word).push(node);
+  }
+  return out;
+}
+
+async function loadCuratedSpindleRows() {
+  try {
+    const res = await fetch('./spindle_phase2_5_manual_curated.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    return Array.isArray(rows) ? rows : [];
+  } catch (err) {
+    console.warn('Could not load curated spindle JSON, using empty spindle set.', err);
+    return [];
+  }
+}
+
+function findWordAnchorInWindow(word, usedKeys, windowStartWord, windowEndWord) {
+  for (let i = 0; i < CORPUS_WORDS.length; i++) {
+    const cw = CORPUS_WORDS[i];
+    if (i < windowStartWord || i > windowEndWord) continue;
+    if (cw.word !== word) continue;
+    const key = `${cw.start}:${cw.end}`;
+    if (usedKeys.has(key)) continue;
+    return { corpusStart: cw.start, corpusEnd: cw.end, key };
+  }
+  return null;
+}
+
+function normalizePickedToken(matchObj) {
+  const raw = (matchObj?.picked || '').trim().toLowerCase();
+  if (!raw) return '';
+  // Join encoded fragments like "cl+im" -> "clim".
+  return raw.replace(/\+/g, '').replace(/[^a-z']/g, '');
+}
+
+function normalizeWordToken(s) {
+  return (s || '').toLowerCase().replace(/[^a-z']/g, '');
+}
+
+function findVisibleAnchorByToken(token, phaseVal, lines, usedKeys, mctx) {
+  const list = CORPUS_WORD_LOOKUP.get(token);
+  if (!list?.length) return null;
+  for (const cw of list) {
+    const key = `${cw.start}:${cw.end}`;
+    if (usedKeys.has(key)) continue;
+    const rect = findAnchorScreenRect(corpus, cw.start, cw.end, phaseVal, lines, mctx);
+    if (!rect) continue;
+    return { corpusStart: cw.start, corpusEnd: cw.end, key };
+  }
+  return null;
+}
+
+function findVisibleAnchorByFragment(fragment, phaseVal, lines, usedKeys, mctx) {
+  if (!fragment || fragment.length < 1) return null;
+  const frag = fragment.toLowerCase();
+  for (const cw of CORPUS_WORDS) {
+    if (!cw.word.includes(frag)) continue;
+    const key = `${cw.start}:${cw.end}`;
+    if (usedKeys.has(key)) continue;
+    const rect = findAnchorScreenRect(corpus, cw.start, cw.end, phaseVal, lines, mctx);
+    if (!rect) continue;
+    return { corpusStart: cw.start, corpusEnd: cw.end, key };
+  }
+  return null;
+}
+
+function splitTokenToFragments(token) {
+  const t = normalizeWordToken(token);
+  if (!t) return [];
+  if (t.length <= 3) return [t];
+  const out = [];
+  let i = 0;
+  while (i < t.length) {
+    let n = 3;
+    const remain = t.length - i;
+    // Avoid 1-char trailing fragment; fold it into previous chunk.
+    if (remain === 4) n = 2;
+    if (remain <= 3) n = remain;
+    out.push(t.slice(i, i + n));
+    i += n;
+  }
+  return out.filter(f => f.length >= 2);
+}
+
+function buildLooseFragmentCandidates(token, picked) {
+  const t = normalizeWordToken(token);
+  const p = normalizeWordToken(picked);
+  const set = new Set();
+  const add = v => { if (v) set.add(v); };
+  add(p);
+  add(t);
+  for (const f of splitTokenToFragments(p || t)) add(f);
+  const src = p || t;
+  // add bigrams as extra fallback fragment anchors
+  for (let i = 0; i < src.length - 1; i++) add(src.slice(i, i + 2));
+  // final fallback: single letters
+  for (let i = 0; i < src.length; i++) add(src.slice(i, i + 1));
+  return Array.from(set);
+}
+
+function buildPhaseSamples(startU, endU, n) {
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    const t = n <= 1 ? 0.5 : (i / (n - 1));
+    out.push((startU + (endU - startU) * t) * PHASE_CYCLE);
+  }
+  return out;
+}
+
+function resolveRowAtPhaseStrict(row, phaseVal, lines, mctx, maxFragments) {
+  if (!Array.isArray(row.matches) || !row.matches.length) return null;
+  const used = new Set();
+  const anchors = [];
+  let fragCount = 0;
+  let missCount = 0;
+
+  for (const m of row.matches) {
+    const token = normalizeWordToken(m.token);
+    if (!token) return null;
+    const picked = normalizePickedToken(m);
+
+    let a = findVisibleAnchorByToken(token, phaseVal, lines, used, mctx);
+    if (!a && picked && picked !== token) {
+      a = findVisibleAnchorByToken(picked, phaseVal, lines, used, mctx);
+    }
+
+    // If full word is unavailable, compose the word from multiple fragment anchors.
+    if (!a) {
+      const fragSeed = normalizeWordToken((m.picked || '').split('+')[0]) || token;
+      const pieces = splitTokenToFragments(fragSeed);
+      const pieceAnchors = [];
+      for (let pi = 0; pi < pieces.length; pi++) {
+        if (fragCount >= maxFragments) break;
+        const piece = pieces[pi];
+        const pa = findVisibleAnchorByFragment(piece, phaseVal, lines, used, mctx);
+        if (!pa) {
+          pieceAnchors.length = 0;
+          break;
+        }
+        pieceAnchors.push({
+          corpusStart: pa.corpusStart,
+          corpusEnd: pa.corpusEnd,
+          label: pi === 0 ? token : '',
+        });
+        used.add(pa.key);
+        fragCount++;
+      }
+      if (pieceAnchors.length === pieces.length && pieceAnchors.length) {
+        anchors.push(...pieceAnchors);
+        continue;
+      }
+    }
+
+    // Last resort: loose fragment search (bigrams/chars) so every token can still anchor.
+    if (!a) {
+      const loose = buildLooseFragmentCandidates(token, m.picked || '');
+      for (const frag of loose) {
+        const la = findVisibleAnchorByFragment(frag, phaseVal, lines, used, mctx);
+        if (!la) continue;
+        a = la;
+        fragCount++;
+        break;
+      }
+    }
+
+    if (!a) { missCount++; return null; }
+    anchors.push({ corpusStart: a.corpusStart, corpusEnd: a.corpusEnd, label: token });
+    used.add(a.key);
+  }
+
+  if (anchors.length < 2 || missCount > 0) return null;
+  return { anchors, fragCount, missCount: 0 };
+}
+
+function clampCameraTranslation(tx, ty, scale) {
+  const minTx = vw - vw * scale;
+  const minTy = vh - vh * scale;
+  return {
+    tx: Math.max(minTx, Math.min(0, tx)),
+    ty: Math.max(minTy, Math.min(0, ty)),
+  };
+}
+
+function viewportToWorld(clientX, clientY) {
+  return {
+    x: (clientX - camTx) / camScale,
+    y: (clientY - camTy) / camScale,
+  };
+}
+
+function setCameraTargetForHoldFromWorld(worldX, worldY) {
+  holdAnchorWorld = { x: worldX, y: worldY };
+  holdPanX = 0;
+  holdPanY = 0;
+  targetCamScale = ZOOM_HOLD_SCALE;
+  const centeredTx = vw * 0.5 - worldX * ZOOM_HOLD_SCALE;
+  const centeredTy = vh * 0.5 - worldY * ZOOM_HOLD_SCALE;
+  const clamped = clampCameraTranslation(centeredTx, centeredTy, ZOOM_HOLD_SCALE);
+  targetCamTx = clamped.tx;
+  targetCamTy = clamped.ty;
+}
+
+function resetCameraTarget() {
+  targetCamScale = 1;
+  targetCamTx = 0;
+  targetCamTy = 0;
+  holdPanX = 0;
+  holdPanY = 0;
+}
+
+function applyCameraTransform() {
+  track.style.transformOrigin = '0 0';
+  track.style.transform = `translate3d(${camTx.toFixed(2)}px, ${camTy.toFixed(2)}px, 0) scale(${camScale.toFixed(4)})`;
+}
+
+function setLightMode(on) {
+  lightMode = on;
+  document.body.classList.toggle('light-mode', on);
+  if (on) {
+    inputLocked = false;
+    holdZoomActive = false;
+    releaseAnimating = false;
+    camScale = 1;
+    camTx = 0;
+    camTy = 0;
+    targetCamScale = 1;
+    targetCamTx = 0;
+    targetCamTy = 0;
+    applyCameraTransform();
+  }
+  wallCacheValid = false;
+  lastPaintedPhase = null;
+  if (on) {
+    spCtx.clearRect(0, 0, vw, vh);
+  } else {
+    buildSpindleLibrary();
+  }
+}
+
+function setTorchBrightness(v) {
+  torchBrightness = Math.max(0.35, Math.min(2.2, v));
+  if (!flashlightOcclusion) return;
+  const b = torchBrightness;
+  const centerA = (0.085 * b).toFixed(4);
+  const innerA = (0.06 / b).toFixed(4);
+  const midA = (0.34 / b).toFixed(4);
+  const outerA = (0.74 / b).toFixed(4);
+  const edgeA = (0.9 / b).toFixed(4);
+  flashlightOcclusion.style.background = `
+    radial-gradient(ellipse min(140px,24vw) min(170px,28vh) at var(--fx) var(--fy),
+      rgba(255,248,235,${centerA}) 0%,
+      rgba(255,248,235,0) 52%),
+    radial-gradient(ellipse min(340px,48vw) min(400px,52vh) at var(--fx) var(--fy),
+      rgba(3,2,4,0) 0%,
+      rgba(3,2,4,${innerA}) 9%,
+      rgba(2,2,3,${midA}) 32%,
+      rgba(1,1,2,${outerA}) 58%,
+      rgba(0,0,0,${edgeA}) 100%)`;
+}
+
+function updateHoldPanTarget() {
+  // Pan only when fully zoomed in and still held.
+  if (!holdZoomActive) return;
+  if (Math.abs(camScale - ZOOM_HOLD_SCALE) > 0.015) return;
+
+  const cx = vw * 0.5;
+  const cy = vh * 0.5;
+  const dx = pointerClient.x - cx;
+  const dy = pointerClient.y - cy;
+
+  // Browser-shaped oval deadzone in the center.
+  const deadzoneRx = vw * 0.22;
+  const deadzoneRy = vh * 0.18;
+  const norm = (dx * dx) / (deadzoneRx * deadzoneRx) + (dy * dy) / (deadzoneRy * deadzoneRy);
+  if (norm <= 1) {
+    holdPanX *= 0.8;
+    holdPanY *= 0.8;
+  } else {
+    const edge = Math.min(1, (Math.sqrt(norm) - 1) / 1.75);
+    const maxPanX = vw * 0.22;
+    const maxPanY = vh * 0.16;
+    holdPanX = -(dx / (vw * 0.5)) * maxPanX * edge;
+    holdPanY = -(dy / (vh * 0.5)) * maxPanY * edge;
+  }
+
+  const centeredTx = vw * 0.5 - holdAnchorWorld.x * ZOOM_HOLD_SCALE;
+  const centeredTy = vh * 0.5 - holdAnchorWorld.y * ZOOM_HOLD_SCALE;
+  const clamped = clampCameraTranslation(
+    centeredTx + holdPanX,
+    centeredTy + holdPanY,
+    ZOOM_HOLD_SCALE,
+  );
+  targetCamTx = clamped.tx;
+  targetCamTy = clamped.ty;
+}
+
+/** Smooth value noise → layered fBm (Perlin-like shading, cheap & stable). */
+function noiseHash(ix, iy, seed) {
+  let n = seed ^ ix * 374761393 ^ iy * 668265263;
+  n = Math.imul(n ^ (n >>> 13), 1274126177);
+  return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
+}
+
+function smoothValueNoise(x, y, seed) {
+  const x0 = Math.floor(x);
+  const y0 = Math.floor(y);
+  const xf = x - x0;
+  const yf = y - y0;
+  const sx = xf * xf * (3 - 2 * xf);
+  const sy = yf * yf * (3 - 2 * yf);
+  const n00 = noiseHash(x0, y0, seed);
+  const n10 = noiseHash(x0 + 1, y0, seed);
+  const n01 = noiseHash(x0, y0 + 1, seed);
+  const n11 = noiseHash(x0 + 1, y0 + 1, seed);
+  const nx0 = n00 + sx * (n10 - n00);
+  const nx1 = n01 + sx * (n11 - n01);
+  return nx0 + sy * (nx1 - nx0);
+}
+
+function fbm2(x, y, seed, octaves = 4) {
+  let sum = 0;
+  let amp = 0.52;
+  let freq = 1;
+  let norm = 0;
+  for (let o = 0; o < octaves; o++) {
+    sum += amp * smoothValueNoise(x * freq, y * freq, seed + o * 1013904223);
+    norm += amp;
+    amp *= 0.53;
+    freq *= 2.03;
+  }
+  return sum / norm;
+}
+
+/**
+ * Sub-subliminal brick lattice: same cell math as drawWall (BRICK_W × BRICK_H, staggered courses).
+ */
+function drawBrickVeil() {
+  const cv = document.getElementById('brick-veil');
+  if (!cv || vw < 1) return;
+  cv.width = vw;
+  cv.height = vh;
+  const b = cv.getContext('2d');
+  b.clearRect(0, 0, vw, vh);
+  const rows = Math.ceil(vh / brickH) + 2;
+  const cols = Math.ceil(vw / brickW) + 3;
+  const rng = mkRng(0xB218AC);
+
+  b.lineWidth = 2.4;
+  b.strokeStyle = 'rgba(16,12,9,0.11)';
+  for (let row = 0; row < rows; row++) {
+    const y = row * brickH - brickH;
+    const by = y + brickH + 0.5;
+    // Draw mortar as short, rough segments so jaggedness is clearly visible.
+    for (let sx = 0; sx < vw; sx += 10) {
+      const x2 = Math.min(vw, sx + 10);
+      const s0 = (sx / 10) | 0;
+      const s1 = s0 + 1;
+      const j0 = (noiseHash(s0, row, 0x73491) - 0.5) * 3.25;
+      const j1 = (noiseHash(s1, row, 0x73491) - 0.5) * 3.25;
+      const a = 0.11 + noiseHash(s0, row, 0x82213) * 0.075;
+      b.strokeStyle = `rgba(16,12,9,${a})`;
+      b.beginPath();
+      b.moveTo(sx, by + j0);
+      b.lineTo(x2, by + j1);
+      b.stroke();
+    }
+  }
+
+  for (let row = 0; row < rows; row++) {
+    const y = row * brickH - brickH;
+    const rowOffset = row % 2 === 0 ? 0 : -brickW / 2;
+    for (let col = 0; col < cols; col++) {
+      const x = col * brickW + rowOffset - brickW;
+      const brickNoise = smoothValueNoise(col * 0.37, row * 0.41, 0x51AC1);
+      // Per-brick impurity wash (very subtle) keyed by brick coordinates.
+      b.fillStyle = `rgba(0,0,0,${0.008 + brickNoise * 0.012})`;
+      b.fillRect(x, y, brickW, brickH);
+
+      // Vertical mortar with slight x jitter segments to avoid perfectly straight edges.
+      const vx = x + brickW - 1.5;
+      b.lineWidth = 2.3;
+      for (let sy = 0; sy < brickH; sy += 5) {
+        const y1 = y + sy;
+        const y2 = Math.min(y + brickH, y + sy + 5);
+        const k = (sy / 5) | 0;
+        const jx1 = (noiseHash(col, row * 17 + k, 0x91adf) - 0.5) * 2.7;
+        const jx2 = (noiseHash(col, row * 17 + k + 1, 0x91adf) - 0.5) * 2.7;
+        const jy1 = (noiseHash(col, row * 19 + k, 0x5ab31) - 0.5) * 1.05;
+        const jy2 = (noiseHash(col, row * 19 + k + 1, 0x5ab31) - 0.5) * 1.05;
+        const va = 0.066 + brickNoise * 0.032 + noiseHash(col, row * 31 + k, 0x71c0) * 0.032;
+        b.strokeStyle = `rgba(10,8,6,${va})`;
+        b.beginPath();
+        b.moveTo(vx + jx1, y1 + jy1);
+        b.lineTo(vx + jx2, y2 + jy2);
+        b.stroke();
+      }
+      b.lineWidth = 2.4;
+
+      if (rng() > 0.78) {
+        b.fillStyle = `rgba(0,0,0,${0.022 + rng() * 0.034})`;
+        const cx = x + brickW * (0.2 + rng() * 0.55);
+        const cy = y + brickH * (0.25 + rng() * 0.45);
+        b.beginPath();
+        b.arc(cx, cy, 0.45 + rng() * 0.65, 0, Math.PI * 2);
+        b.fill();
+      }
+      if (rng() > 0.91) {
+        b.strokeStyle = `rgba(16,12,9,${0.028 + rng() * 0.032})`;
+        b.lineWidth = 0.45;
+        b.beginPath();
+        b.moveTo(x + brickPadX, y + brickH - 4);
+        b.lineTo(x + brickW - brickPadX, y + 4);
+        b.stroke();
+      }
+    }
+  }
+
+  const seed = 0xD6E82F17;
+  const seedChip = seed ^ 0xACE3711;
+  const seedFine = seed ^ 0x61189AB;
+  const sc = 3;
+  const sw = Math.ceil(vw / sc);
+  const sh = Math.ceil(vh / sc);
+  const img = b.createImageData(sw, sh);
+  const d = img.data;
+  let p = 0;
+  const scaleCoarse = 0.0098 * sc;
+  const scaleChip = 0.071 * sc;
+  const scaleFine = 0.14 * sc;
+
+  for (let j = 0; j < sh; j++) {
+    for (let i = 0; i < sw; i++) {
+      const wx = i * sc;
+      const wy = j * sc;
+      const coarse = fbm2(wx * scaleCoarse, wy * scaleCoarse, seed, 4);
+      const chips = fbm2(wx * scaleChip, wy * scaleChip, seedChip, 3);
+      const fine = smoothValueNoise(wx * scaleFine, wy * scaleFine, seedFine);
+      const edge = Math.abs(coarse - 0.48) + Math.abs(chips - 0.5) * 0.35;
+      const brickCx = Math.floor(wx / brickW);
+      const brickCy = Math.floor(wy / brickH);
+      const brickImpurity = smoothValueNoise(brickCx * 0.51, brickCy * 0.63, seed ^ 0x2e71);
+
+      const chipLift = Math.max(0, chips - 0.68) ** 2 * 2.1;
+      const pit = Math.max(0, 0.42 - fine) ** 2 * 1.8;
+
+      let a = 0.009 + edge * 0.014 + pit * 0.012 + chipLift * 0.011 + brickImpurity * 0.005;
+      if (chipLift > 0.04) {
+        const liftA = chipLift * 0.018;
+        d[p] = 210 + fine * 22;
+        d[p + 1] = 202 + fine * 18;
+        d[p + 2] = 190 + fine * 14;
+        d[p + 3] = Math.min(28, liftA * 255);
+      } else {
+        const dk = 14 + coarse * 16 + pit * 10 + brickImpurity * 3.2;
+        d[p] = dk;
+        d[p + 1] = dk - 2;
+        d[p + 2] = dk - 4;
+        d[p + 3] = Math.min(52, a * 255);
+      }
+      p += 4;
+    }
+  }
+
+  if (!_brickNoiseOff || _brickNoiseOff.width !== sw || _brickNoiseOff.height !== sh) {
+    _brickNoiseOff = document.createElement('canvas');
+    _brickNoiseOff.width = sw;
+    _brickNoiseOff.height = sh;
+  }
+  const off = _brickNoiseOff;
+  const ob = off.getContext('2d');
+  ob.putImageData(img, 0, 0);
+
+  b.save();
+  b.globalCompositeOperation = 'multiply';
+  b.globalAlpha = 0.38;
+  b.imageSmoothingEnabled = true;
+  b.imageSmoothingQuality = 'high';
+  b.drawImage(off, 0, 0, sw, sh, 0, 0, vw, vh);
+  b.globalCompositeOperation = 'soft-light';
+  b.globalAlpha = 0.11;
+  b.drawImage(off, 0, 0, sw, sh, 0, 0, vw, vh);
+  b.restore();
+}
+
+function makeAsciiWall() {
+  const chars = ['#', '/', '\\', '_', ':', '.', "'", '-', '|', '+'];
+  const rng = mkRng(0x51A11);
+  const charPx = 7.15;
+  const rowPx = 11;
+  const cols = Math.ceil(window.innerWidth / charPx);
+  const rows = Math.ceil(window.innerHeight / rowPx);
+  let out = '';
+  for (let gy = 0; gy < rows; gy++) {
+    const py = gy * rowPx;
+    const mortarH = (py % brickH) < 2.8 || (py % brickH) > brickH - 3.2;
+    const course = Math.floor(py / brickH);
+    const staggerPx = (course % 2 === 1) ? brickW / 2 : 0;
+    for (let gx = 0; gx < cols; gx++) {
+      const px = gx * charPx + staggerPx;
+      const lx = ((px % brickW) + brickW) % brickW;
+      const mortarV = lx < 3 || lx > brickW - 4;
+      let ch = ' ';
+      if (mortarH && mortarV && rng() > 0.22) {
+        ch = rng() > 0.55 ? ':' : '.';
+      } else if (mortarH && rng() > 0.72) {
+        ch = rng() > 0.5 ? ':' : '.';
+      } else if (mortarV && rng() > 0.86) {
+        ch = rng() > 0.65 ? '|' : "'";
+      } else if (rng() > 0.972) {
+        ch = chars[(rng() * chars.length) | 0];
+      } else if (rng() > 0.91) {
+        ch = rng() > 0.5 ? ':' : '.';
+      }
+      out += ch;
+    }
+    out += '\n';
+  }
+  document.getElementById('ascii-wall').textContent = out;
+}
+
+function buildLineBanks() {
+  wallPrepared = prepareWithSegments(corpus, WALL_BODY_FONT);
+  const maxW = brickW - brickPadX * 2;
+  const { lines } = layoutWithLines(wallPrepared, maxW, wallLineH);
+  const lineList = lines.length ? lines : corpus.split(/(?<=[.!?])\s+/).map(text => ({ text: text.trim() })).filter(l => l.text);
+  banks = [{ font: WALL_BODY_FONT, lines: lineList, prepared: wallPrepared }];
+}
+
+/**
+ * @param {number} phaseVal — horizontal “scroll” phase; only this drives line indices (no time).
+ */
+function drawWall(phaseVal) {
+  const seed = (Math.floor(phaseVal * 1000) | 0) ^ 0xBADC0DE;
+  const rng = mkRng(seed);
+ctx.fillStyle = lightMode ? '#f4eddc' : '#0a0907';
+  ctx.fillRect(0, 0, vw, vh);
+
+  const rows = Math.ceil(vh / brickH) + 2;
+  const cols = Math.ceil(vw / brickW) + 3;
+  const linePool = banks[0].lines;
+  const lineShift = Math.floor(phaseVal * PHASE_TO_LINE);
+
+  if (!lightMode) ctx.lineWidth = 2.2;
+  for (let row = 0; row < rows; row++) {
+    const y = row * brickH - brickH;
+    const rowOffset = row % 2 === 0 ? 0 : -brickW / 2;
+
+    if (!lightMode) {
+      ctx.strokeStyle = `rgba(6,4,3,${0.82 + (row % 3) * 0.06})`;
+  ctx.beginPath();
+      ctx.moveTo(0, y + brickH);
+      ctx.lineTo(vw, y + brickH);
+  ctx.stroke();
+}
+
+    for (let col = 0; col < cols; col++) {
+      const x = col * brickW + rowOffset - brickW;
+      const wear = mkRng((row << 16) ^ col ^ seed);
+      // Chronological order on the wall: left→right, then top→bottom.
+      const idx = wrap(lineShift + row * cols + col, linePool.length);
+      const line = linePool[idx].text;
+
+      ctx.fillStyle = lightMode
+        ? 'rgba(88,74,56,0.92)'
+        : `rgba(${WALL_COLOR.r},${WALL_COLOR.g},${WALL_COLOR.b},${0.22 + wear() * 0.18})`;
+      ctx.font = banks[0].font;
+      ctx.textBaseline = 'middle';
+      ctx.fillText(line, x + brickPadX, y + brickH * 0.5, brickW - brickPadX * 2);
+
+      if (!lightMode && wear() > 0.82) {
+        ctx.fillStyle = `rgba(0,0,0,${0.16 + wear() * 0.1})`;
+        ctx.fillRect(x + brickPadX + wear() * 30, y + brickPadY + wear() * 18, 6 + wear() * 18, 1 + wear() * 2);
+      }
+
+      if (!lightMode) {
+        ctx.fillStyle = `rgba(4,3,2,${0.38 + wear() * 0.22})`;
+        ctx.fillRect(x + brickW - 2, y, 2, brickH);
+      }
+    }
+  }
+
+  if (!lightMode) {
+    for (let i = 0; i < 28; i++) {
+      const px = rng() * vw;
+      const py = rng() * vh;
+      const rad = 22 + rng() * 140;
+      const gr = ctx.createRadialGradient(px, py, 0, px, py, rad);
+      gr.addColorStop(0, `rgba(${WALL_COLOR.r},${WALL_COLOR.g},${WALL_COLOR.b},${0.08 + rng() * 0.08})`);
+  gr.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = gr;
+      ctx.fillRect(px - rad, py - rad, rad * 2, rad * 2);
+    }
+  }
+}
+
+function wallIsSettled() {
+  const chasing = Math.abs(targetPhase - phase) > PHASE_EPS;
+  const recentWheel = performance.now() - lastWheelMs < 180;
+  return !chasing && !recentWheel;
+}
+
+function syncWallCache() {
+  wallCache.width = vw;
+  wallCache.height = vh;
+  wallCacheCtx.drawImage(wall, 0, 0);
+  wallCacheValid = true;
+  lastPaintedPhase = phase;
+}
+
+function paintWallIfNeeded() {
+  if (!wallIsSettled()) {
+    drawWall(phase);
+    wallCacheValid = false;
+    return;
+  }
+  if (!wallCacheValid || lastPaintedPhase == null || Math.abs(phase - lastPaintedPhase) > PHASE_EPS * 0.2) {
+    drawWall(phase);
+    syncWallCache();
+    return;
+  }
+  ctx.drawImage(wallCache, 0, 0);
+}
+
+// ═══════════════════════════════════════════════════════
+//  HUMUMENT SPINDLES (Tom Phillips — treated text / negative-space rivers)
+//  Anchors: { corpusStart, corpusEnd } = UTF-16 indices in `corpus`.
+//  Shape/noise keys off horizontal phase only → idle scroll = frozen spindle path + jagged hulls.
+//  Chains: anchors[0]→anchors[1]→… (any length ≥2). Multiple spindles may draw each frame.
+// ═══════════════════════════════════════════════════════
+
+function rectIntersectsViewport(r, vw0, vh0) {
+  return r.x + r.w > 0 && r.x < vw0 && r.y + r.h > 0 && r.y < vh0;
+}
+
+/** Screen rect for corpus fragment if it appears on a visible brick line this frame. */
+function findAnchorScreenRect(corpusStr, corpusStart, corpusEnd, phaseVal, lines, mctx) {
+  if (corpusStart < 0 || corpusEnd > corpusStr.length || corpusStart >= corpusEnd) return null;
+  const frag = corpusStr.slice(corpusStart, corpusEnd);
+  if (!frag.length) return null;
+
+  mctx.font = WALL_BODY_FONT;
+  const rows = Math.ceil(vh / brickH) + 2;
+  const cols = Math.ceil(vw / brickW) + 3;
+  const lineShift = Math.floor(phaseVal * PHASE_TO_LINE);
+
+  for (let row = 0; row < rows; row++) {
+    const y = row * brickH - brickH;
+    const rowOffset = row % 2 === 0 ? 0 : -brickW / 2;
+    for (let col = 0; col < cols; col++) {
+      const lineIdx = wrap(lineShift + row * cols + col, lines.length);
+      const lineText = lines[lineIdx].text;
+      const pos = lineText.indexOf(frag);
+      if (pos === -1) continue;
+      const xBrick = col * brickW + rowOffset - brickW;
+      const before = lineText.slice(0, pos);
+      const x0 = xBrick + brickPadX + mctx.measureText(before).width;
+      const fw = mctx.measureText(frag).width;
+      const y0 = y + brickH * 0.5 - wallLineH * 0.5;
+      const fh = wallLineH * 0.92;
+      const rect = {
+        x: x0, y: y0, w: fw, h: fh,
+        cx: x0 + fw / 2, cy: y0 + fh / 2,
+      };
+      if (rectIntersectsViewport(rect, vw, vh)) return rect;
+    }
+  }
+  return null;
+}
+
+/** Irregular island around text — seeded only by phase so it stays frozen when idle. */
+function buildJaggedHighlightPolygon(rx, ry, rw, rh, rng, jitterPx) {
+  const pad = 4;
+  const x = rx - pad;
+  const y = ry - pad;
+  const w = rw + pad * 2;
+  const h = rh + pad * 2;
+  const nx = Math.max(3, 4 + ((rng() * 4) | 0));
+  const ny = Math.max(3, 3 + ((rng() * 4) | 0));
+  const pts = [];
+
+  let i = 0;
+  for (; i <= nx; i++) {
+    const t = i / nx;
+    pts.push({
+      x: x + w * t + (rng() - 0.5) * jitterPx * 1.8,
+      y: y + (rng() - 0.5) * jitterPx * 1.4,
+    });
+  }
+  for (let j = 1; j <= ny; j++) {
+    const t = j / ny;
+    pts.push({
+      x: x + w + (rng() - 0.5) * jitterPx * 1.8,
+      y: y + h * t + (rng() - 0.5) * jitterPx * 1.4,
+    });
+  }
+  for (let k = nx - 1; k >= 0; k--) {
+    const t = k / nx;
+    pts.push({
+      x: x + w * t + (rng() - 0.5) * jitterPx * 1.8,
+      y: y + h + (rng() - 0.5) * jitterPx * 1.4,
+    });
+  }
+  for (let j = ny - 1; j > 0; j--) {
+    const t = j / ny;
+    pts.push({
+      x: x + (rng() - 0.5) * jitterPx * 1.8,
+      y: y + h * t + (rng() - 0.5) * jitterPx * 1.4,
+    });
+  }
+
+  return pts;
+}
+
+function drawPolygonFill(mctx, pts, fillStyle) {
+  if (!pts?.length) return;
+  mctx.fillStyle = fillStyle;
+  mctx.beginPath();
+  mctx.moveTo(pts[0].x, pts[0].y);
+  for (let p = 1; p < pts.length; p++) mctx.lineTo(pts[p].x, pts[p].y);
+  mctx.closePath();
+  mctx.fill();
+}
+
+function buildSpindlePolyline(from, to, rng, segments, amp, style) {
+  const pts = [{ x: from.cx, y: from.cy }];
+  const dx = to.cx - from.cx;
+  const dy = to.cy - from.cy;
+  const len = Math.hypot(dx, dy) || 1;
+  const px = -dy / len;
+  const py = dx / len;
+  const crack = style === 'crack';
+  for (let i = 1; i < segments; i++) {
+    const t = i / segments;
+    const envelope = Math.sin(Math.PI * t);
+    const wobble = crack
+      ? (Math.floor(rng() * 5) - 2) * amp * 0.22 * envelope
+      : (rng() - 0.5) * 2 * amp * envelope;
+    const secondary = crack ? (rng() - 0.5) * amp * 0.35 * (1 - envelope) : 0;
+    pts.push({
+      x: from.cx + dx * t + px * wobble + secondary,
+      y: from.cy + dy * t + py * wobble,
+    });
+  }
+  pts.push({ x: to.cx, y: to.cy });
+  return pts;
+}
+
+/**
+ * Ordered corpus fragments → noisy spindle path. phaseStart/phaseEnd gate u ∈ [0,1).
+ * Visible only when every anchor resolves on-screen (streaming wall).
+ */
+class HumumentSpindle {
+  constructor(opts) {
+    Object.assign(this, {
+      inspiration: 'Tom Phillips — A Humument',
+      phaseStart: 0,
+      phaseEnd: 1,
+      alpha: 0.3,
+      style: 'river',
+      riverWidth: 11,
+      noiseAmp: 13,
+      highlightJitter: 6,
+      stroke: 'rgba(172,172,172,0.78)',
+      strokeInner: 'rgba(120,120,120,0.36)',
+      highlight: 'rgba(150,150,150,0.42)',
+      textFill: WALL_TEXT_TOP_COLOR,
+      segments: 14,
+      ...opts,
+    });
+    if (!Array.isArray(this.anchors) || this.anchors.length < 2) {
+      throw new Error(`HumumentSpindle ${this.id}: need ≥2 anchors (chain — no branches)`);
+    }
+    this._cacheKey = '';
+    this._cachedHighlightPolys = [];
+    this._cachedSpindlePolylines = [];
+    this._cachedRects = [];
+  }
+
+  phaseGate(u) {
+    return u >= this.phaseStart && u < this.phaseEnd;
+  }
+
+  resolveAllRects(phaseVal, corpusStr, lines, mctx) {
+    const out = [];
+    for (const a of this.anchors) {
+      const r = findAnchorScreenRect(corpusStr, a.corpusStart, a.corpusEnd, phaseVal, lines, mctx);
+      if (!r) return null;
+      out.push(r);
+    }
+    return out;
+  }
+
+  draw(mctx, phaseVal, corpusStr, lines) {
+    const rects = this.resolveAllRects(phaseVal, corpusStr, lines, mctx);
+    if (!rects) return;
+    mctx.save();
+    mctx.globalAlpha = this.alpha;
+
+    const hash = this.id.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+    const seed = ((Math.floor(phaseVal * 8000) ^ hash) >>> 0);
+    const rectSig = rects.map(r => `${r.x.toFixed(2)},${r.y.toFixed(2)},${r.w.toFixed(2)},${r.h.toFixed(2)}`).join('|');
+    const cacheKey = rectSig;
+    const needsRebuild = cacheKey !== this._cacheKey;
+
+    if (needsRebuild) {
+      this._cachedRects = rects;
+      this._cachedHighlightPolys = [];
+      this._cachedSpindlePolylines = [];
+
+      for (let ri = 0; ri < rects.length; ri++) {
+        const r = rects[ri];
+        const rectRng = mkRng((seed ^ (ri * 0x9e3779b1)) >>> 0);
+        this._cachedHighlightPolys.push(
+          buildJaggedHighlightPolygon(r.x, r.y, r.w, r.h, rectRng, this.highlightJitter),
+        );
+      }
+
+      const pathRng = mkRng((seed ^ 0xdeadbeef) >>> 0);
+      for (let i = 0; i < rects.length - 1; i++) {
+        this._cachedSpindlePolylines.push(
+          buildSpindlePolyline(
+            rects[i], rects[i + 1], pathRng,
+            this.segments + ((i * 3) % 5),
+            this.noiseAmp * (this.style === 'crack' ? 1.35 : 1),
+            this.style,
+          ),
+        );
+      }
+      this._cacheKey = cacheKey;
+    }
+
+    for (const pts of this._cachedSpindlePolylines) {
+      mctx.lineJoin = 'round';
+      mctx.lineCap = 'round';
+      mctx.strokeStyle = this.stroke;
+      mctx.lineWidth = this.riverWidth;
+      mctx.beginPath();
+      mctx.moveTo(pts[0].x, pts[0].y);
+      for (let k = 1; k < pts.length; k++) mctx.lineTo(pts[k].x, pts[k].y);
+      mctx.stroke();
+      if (this.strokeInner) {
+        mctx.strokeStyle = this.strokeInner;
+        mctx.lineWidth = Math.max(2, this.riverWidth * 0.35);
+        mctx.stroke();
+      }
+    }
+    for (const poly of this._cachedHighlightPolys) {
+      drawPolygonFill(mctx, poly, this.highlight);
+    }
+    mctx.restore();
+
+    // Keep highlighted fragments clearly legible above spindle graphics.
+    mctx.font = WALL_BODY_FONT;
+    mctx.textBaseline = 'top';
+    for (let i = 0; i < this.anchors.length; i++) {
+      const a = this.anchors[i];
+      const r = this._cachedRects[i];
+      const frag = a.label || corpusStr.slice(a.corpusStart, a.corpusEnd);
+      mctx.fillStyle = this.textFill;
+      mctx.fillText(frag, r.x, r.y);
+    }
+  }
+}
+
+function buildSpindleLibrary() {
+  SPINDLE_LIBRARY = [];
+  const lines = banks[0]?.lines;
+  if (!Array.isArray(SPINDLE_CURATED_ROWS) || !SPINDLE_CURATED_ROWS.length || !CORPUS_WORDS.length || !lines?.length) {
+    globalThis.__humumentDesignSystem = { HumumentSpindle, library: SPINDLE_LIBRARY };
+    return;
+  }
+
+  const total = SPINDLE_CURATED_ROWS.length;
+  for (let i = 0; i < total; i++) {
+    const row = SPINDLE_CURATED_ROWS[i];
+    if (!Array.isArray(row.matches) || !row.matches.length) continue;
+    const nominalStart = i / total;
+    const nominalEnd = Math.min(1, (i + 1) / total);
+    const localSamples = buildPhaseSamples(nominalStart, nominalEnd, STRICT_PHASE_SAMPLES_PER_LINE);
+    let resolved = null;
+
+    // Pass 1: exact/syn only, inside the line's own phase window.
+    for (const p of localSamples) {
+      const r = resolveRowAtPhaseStrict(row, p, lines, spCtx, 0);
+      if (r && r.missCount === 0) { resolved = { ...r, phaseRef: p }; break; }
+    }
+    // Pass 2: allow a tiny amount of fragments in-window for readability.
+    if (!resolved) {
+      for (const p of localSamples) {
+        const r = resolveRowAtPhaseStrict(row, p, lines, spCtx, 99);
+        if (r && r.missCount === 0) { resolved = { ...r, phaseRef: p }; break; }
+      }
+    }
+    // Pass 3: global pretext-visibility search so every line can appear, still no missing words.
+    if (!resolved) {
+      const globalSamples = buildPhaseSamples(0, 1, STRICT_GLOBAL_PHASE_SAMPLES);
+      for (const p of globalSamples) {
+        const r = resolveRowAtPhaseStrict(row, p, lines, spCtx, 99);
+        if (!r) continue;
+        if (r.missCount === 0) { resolved = { ...r, phaseRef: p }; break; }
+      }
+    }
+    // Final strict fallback: still require complete sentence coverage, but allow more fragments.
+    if (!resolved) {
+      const globalSamples = buildPhaseSamples(0, 1, STRICT_GLOBAL_PHASE_SAMPLES);
+      for (const p of globalSamples) {
+        const r = resolveRowAtPhaseStrict(row, p, lines, spCtx, 240);
+        if (!r) continue;
+        if (r.missCount === 0) { resolved = { ...r, phaseRef: p }; break; }
+      }
+    }
+
+    if (!resolved || resolved.anchors.length < 2) {
+      console.warn(`Spindle line ${row.id} could not be fully resolved (all words).`);
+      continue;
+    }
+    const uRef = wrap(resolved.phaseRef, PHASE_CYCLE) / PHASE_CYCLE;
+    const phaseHalf = 0.03;
+    const phaseStart = Math.max(0, uRef - phaseHalf);
+    const phaseEnd = Math.min(1, uRef + phaseHalf);
+    SPINDLE_LIBRARY.push(new HumumentSpindle({
+      id: `curated-${row.id}`,
+      inspiration: `Curated line ${row.id}`,
+      anchors: resolved.anchors,
+      phaseStart,
+      phaseEnd,
+      style: row.id % 3 === 0 ? 'crack' : 'river',
+      riverWidth: resolved.fragCount === 0 ? 10 : 8,
+      noiseAmp: resolved.fragCount === 0 ? 10 : 13,
+      segments: 13,
+      highlightJitter: 6,
+      stroke: 'rgba(172,172,172,0.78)',
+      highlight: 'rgba(150,150,150,0.42)',
+      strokeInner: 'rgba(118,118,118,0.34)',
+    }));
+  }
+
+  console.info(`Spindles built: ${SPINDLE_LIBRARY.length}/${total}`);
+  globalThis.__humumentDesignSystem = { HumumentSpindle, library: SPINDLE_LIBRARY };
+}
+
+function paintSpindles(phaseVal, normalizedPhase) {
+  if (lightMode) {
+    spCtx.clearRect(0, 0, vw, vh);
+    return;
+  }
+  spCtx.clearRect(0, 0, vw, vh);
+  const lines = banks[0]?.lines;
+  if (!lines?.length) return;
+
+  for (const spindle of SPINDLE_LIBRARY) {
+    if (!spindle.phaseGate(normalizedPhase)) continue;
+    spindle.draw(spCtx, phaseVal, corpus, lines);
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  ANIMATED FILM GRAIN
+// ═══════════════════════════════════════════════════════
+const grainCv  = document.getElementById('grain');
+grainCv.width  = window.innerWidth;
+grainCv.height = window.innerHeight;
+const gCtx     = grainCv.getContext('2d');
+
+let grainMs = 75;
+let grainTickMs = 0;
+function drawGrain() {
+  const id = gCtx.createImageData(grainCv.width, grainCv.height);
+  const d  = id.data;
+  for (let i = 0; i < d.length; i += 4) {
+    const v = Math.random() * 255 | 0;
+    d[i] = d[i+1] = d[i+2] = v; d[i+3] = 255;
+  }
+  gCtx.putImageData(id, 0, 0);
+}
+drawGrain();
+function maybeDrawGrain(now, moving) {
+  if (!moving) return;
+  if (now - grainTickMs >= grainMs) {
+    drawGrain();
+    grainTickMs = now;
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  COLOUR PALETTE
+// ═══════════════════════════════════════════════════════
+const G = 'oklch(80% .30 140)';   // toxic green
+const M = 'oklch(67% .32 330)';   // hot magenta
+const C = 'oklch(78% .28 215)';   // electric cyan
+
+// ═══════════════════════════════════════════════════════
+//  ANNOTATION CARD (stencil / handbill — foreground only)
+// ═══════════════════════════════════════════════════════
+function ann(col, label, t1, t2, desc, side = 'right') {
+  const lft = side === 'left';
+  return `
+<div style="position:relative;">
+  <div style="
+    color:${col};max-width:258px;padding:11px 15px 14px;
+    border:1.5px solid ${col};
+    background:color-mix(in oklch,${col} 7%,transparent);
+    box-shadow:0 0 0 .5px color-mix(in oklch,${col} 22%,transparent),
+      inset 0 0 18px color-mix(in oklch,${col} 4%,transparent);
+    font-family:'StencilDamage',cursive;position:relative;overflow:hidden;
+    mix-blend-mode:screen;">
+    <div style="position:absolute;inset:0;
+      background-image:radial-gradient(circle,${col} 1px,transparent 1px);
+      background-size:8px 8px;opacity:.10;pointer-events:none;"></div>
+    <div style="font-size:11px;letter-spacing:.32em;opacity:.6;margin-bottom:5px;">${label}</div>
+    <div style="font-size:32px;line-height:.94;margin-bottom:8px;">${t1}<br>${t2}</div>
+    <div style="font-size:17px;line-height:1.32;opacity:.68;max-width:225px;">${desc}</div>
+  </div>
+  <svg style="position:absolute;top:50%;
+    ${lft ? 'right:calc(100% + 6px)' : 'left:calc(100% + 6px)'};
+    margin-top:-22px;overflow:visible;" width="90" height="44">
+    <line x1="${lft ? 88 : 2}" y1="22" x2="${lft ? 2 : 88}" y2="${lft ? 32 : 12}"
+      stroke="${col}" stroke-width="1.5" stroke-dasharray="5,4" opacity=".62"/>
+    <circle cx="${lft ? 2 : 88}" cy="${lft ? 32 : 12}" r="3" fill="${col}" opacity=".62"/>
+  </svg>
+</div>`;
+}
+
+// ═══════════════════════════════════════════════════════
+//  GRAFFITI COMPONENT — style ref + phase window [0,1) on horizontal phase
+// ═══════════════════════════════════════════════════════
+class GraffitiPiece {
+  /**
+   * @param {object} o
+   * @param {string} o.id
+   * @param {string} o.styleRef — design lineage / reference (throw, tag, stencil…)
+   * @param {number} o.phaseStart — inclusive; normalized scroll 0..1
+   * @param {number} o.phaseEnd — exclusive
+   * @param {string} o.x o.y — CSS position
+   * @param {number} [o.rot]
+   * @param {string} o.html — inner markup (use data-glitch-a / data-glitch-b for animated glitch)
+   * @param {{durA?:string,durB?:string,delayA?:string,delayB?:string}} [o.glitch]
+   */
+  constructor(o) {
+    Object.assign(this, {
+      rot: 0,
+      glitch: {},
+      arc: 'untitled',
+      keywords: [],
+      hook: null,
+      ...o,
+    });
+  }
+
+  glitchStyle() {
+    const g = this.glitch;
+    return [
+      `--glitch-dur-a:${g.durA ?? '9.5s'}`,
+      `--glitch-dur-b:${g.durB ?? '8.7s'}`,
+      `--glitch-delay-a:${g.delayA ?? '0s'}`,
+      `--glitch-delay-b:${g.delayB ?? '0.18s'}`,
+    ].join(';');
+  }
+
+  mount(overlayEl) {
+    const div = document.createElement('div');
+    div.className = 'graffiti-root';
+    div.dataset.graffitiId = this.id;
+    div.dataset.styleRef = this.styleRef;
+    div.dataset.arc = this.arc;
+    div.dataset.phaseStart = String(this.phaseStart);
+    div.dataset.phaseEnd = String(this.phaseEnd);
+    const hookLabel = this.hook
+      ? ` · words ∈ [${this.hook.startWord}, ${this.hook.endWord}]`
+      : '';
+    div.title = `${this.id} · ${this.arc} · ${this.styleRef} · phase ∈ [${this.phaseStart}, ${this.phaseEnd})${hookLabel}`;
+    div.style.cssText = `
+      position:absolute;left:${this.x};top:${this.y};
+      transform:rotate(${this.rot}deg);
+      opacity:0;transition:opacity .45s ease;
+      pointer-events:none;user-select:none;cursor:default;
+      ${this.glitchStyle()}`;
+    div.innerHTML = this.html;
+    overlayEl.appendChild(div);
+    this.el = div;
+    return div;
+  }
+}
+
+class GraffitiVisibilityHook {
+  /**
+   * Hook abstraction driven by word-index windows.
+   * A graffiti appears when its hooked word window is on screen.
+   */
+  constructor(opts) {
+    Object.assign(this, {
+      startWord: 0,
+      endWord: 0,
+      padWords: 80,
+      ...opts,
+    });
+  }
+
+  visible01(visibleWordWindow) {
+    if (!visibleWordWindow) return 0;
+    const a0 = Math.max(0, this.startWord - this.padWords);
+    const a1 = Math.max(a0, this.endWord + this.padWords);
+    const b0 = visibleWordWindow.startWord;
+    const b1 = visibleWordWindow.endWord;
+    const overlap = Math.max(0, Math.min(a1, b1) - Math.max(a0, b0));
+    if (overlap <= 0) return 0;
+    const denom = Math.max(1, Math.min(a1 - a0, b1 - b0));
+    return Math.max(0, Math.min(1, overlap / denom));
+  }
+}
+
+/** Normalized phase u ∈ [0,1); fade at window edges */
+function graffitiVisibility01(u, start, end, fade = 0.04) {
+  if (u < start || u >= end) return 0;
+  let a = 1;
+  if (u - start < fade) a = (u - start) / fade;
+  if (end - u < fade) a = Math.min(a, (end - u) / fade);
+  return Math.max(0, Math.min(1, a));
+}
+
+function getVisibleWallLexicon(normalizedPhase) {
+  const lines = banks[0]?.lines;
+  if (!lines?.length) return new Set();
+  const rows = Math.ceil(vh / brickH) + 2;
+  const cols = Math.ceil(vw / brickW) + 3;
+  const phaseVal = normalizedPhase * PHASE_CYCLE;
+  const lineShift = Math.floor(phaseVal * PHASE_TO_LINE);
+  const lex = new Set();
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const idx = wrap(lineShift + row * cols + col, lines.length);
+      const txt = lines[idx]?.text || '';
+      const words = txt.toLowerCase().match(/[a-z']+/g) || [];
+      for (const w of words) lex.add(w);
+    }
+  }
+  return lex;
+}
+
+function graffitiRelevance01(piece, visibleLexicon) {
+  const kw = Array.isArray(piece.keywords) ? piece.keywords : [];
+  if (!kw.length) return 1;
+  let hits = 0;
+  for (const k of kw) if (visibleLexicon.has(k)) hits++;
+  return Math.max(0, Math.min(1, hits / Math.max(2, Math.min(5, kw.length))));
+}
+
+function getVisibleWordWindow(normalizedPhase) {
+  const lines = banks[0]?.lines;
+  if (!lines?.length || !CORPUS_WORDS.length) return null;
+  const rows = Math.ceil(vh / brickH) + 2;
+  const cols = Math.ceil(vw / brickW) + 3;
+  const phaseVal = normalizedPhase * PHASE_CYCLE;
+  const lineShift = Math.floor(phaseVal * PHASE_TO_LINE);
+
+  let minIdx = Infinity;
+  let maxIdx = -Infinity;
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const idx = wrap(lineShift + row * cols + col, lines.length);
+      if (idx < minIdx) minIdx = idx;
+      if (idx > maxIdx) maxIdx = idx;
+    }
+  }
+  if (!Number.isFinite(minIdx) || !Number.isFinite(maxIdx)) return null;
+  const wCount = CORPUS_WORDS.length;
+  const startWord = Math.floor((minIdx / Math.max(1, lines.length - 1)) * (wCount - 1));
+  const endWord = Math.ceil((maxIdx / Math.max(1, lines.length - 1)) * (wCount - 1));
+  return { startWord: Math.max(0, startWord), endWord: Math.max(0, endWord) };
+}
+
+function tokenListLower(s) {
+  return (s || '').toLowerCase().match(/[a-z']+/g) || [];
+}
+
+function alignGraffitiKeywordsToSpindles() {
+  if (!Array.isArray(SPINDLE_CURATED_ROWS) || !SPINDLE_CURATED_ROWS.length) return;
+  const total = SPINDLE_CURATED_ROWS.length;
+  const stop = new Set(['the', 'a', 'an', 'of', 'to', 'is', 'it', 'and', 'or', 'in', 'on', 'as', 'we', 'i', 'my', 'our', 'with', 'for', 'not', 'then']);
+
+  for (const piece of GRAFFITI_LIBRARY) {
+    const scored = new Map();
+    for (let i = 0; i < total; i++) {
+      const rowStart = i / total;
+      const rowEnd = (i + 1) / total;
+      const overlap = Math.max(0, Math.min(piece.phaseEnd, rowEnd) - Math.max(piece.phaseStart, rowStart));
+      if (overlap <= 0) continue;
+      const row = SPINDLE_CURATED_ROWS[i];
+
+      for (const t of tokenListLower(row.line)) {
+        if (stop.has(t) || t.length < 4) continue;
+        scored.set(t, (scored.get(t) || 0) + overlap * 2.2);
+      }
+      if (Array.isArray(row.matches)) {
+        for (const m of row.matches) {
+          const picked = normalizePickedToken(m);
+          if (!picked || picked.length < 4 || stop.has(picked)) continue;
+          if ((m.mode || '') === 'exact') scored.set(picked, (scored.get(picked) || 0) + overlap * 2.8);
+          else if ((m.mode || '') === 'syn') scored.set(picked, (scored.get(picked) || 0) + overlap * 2.4);
+          else scored.set(picked, (scored.get(picked) || 0) + overlap * 1.2);
+        }
+      }
+    }
+
+    const ranked = [...scored.entries()].sort((a, b) => b[1] - a[1]).map(([k]) => k);
+    const blended = [...new Set([...(piece.keywords || []), ...ranked.slice(0, 8)])];
+    piece.keywords = blended.slice(0, 10);
+  }
+}
+
+function attachGraffitiHooksFromSpindles() {
+  if (!Array.isArray(SPINDLE_CURATED_ROWS) || !SPINDLE_CURATED_ROWS.length) return;
+  const total = SPINDLE_CURATED_ROWS.length;
+
+  for (const piece of GRAFFITI_LIBRARY) {
+    let minWord = Infinity;
+    let maxWord = -Infinity;
+    for (let i = 0; i < total; i++) {
+      const rowStart = i / total;
+      const rowEnd = (i + 1) / total;
+      const overlap = Math.max(0, Math.min(piece.phaseEnd, rowEnd) - Math.max(piece.phaseStart, rowStart));
+      if (overlap <= 0) continue;
+      const row = SPINDLE_CURATED_ROWS[i];
+      const cw = row?.chunk_words;
+      if (!Array.isArray(cw) || cw.length < 2) continue;
+      minWord = Math.min(minWord, cw[0]);
+      maxWord = Math.max(maxWord, cw[1]);
+    }
+
+    if (!Number.isFinite(minWord) || !Number.isFinite(maxWord)) {
+      piece.hook = null;
+      continue;
+    }
+    piece.hook = new GraffitiVisibilityHook({ startWord: minWord, endWord: maxWord, padWords: 120 });
+  }
+}
+
+function updateGraffitiVisibility(normalizedPhase) {
+  const visibleLexicon = getVisibleWallLexicon(normalizedPhase);
+  const visibleWordWindow = getVisibleWordWindow(normalizedPhase);
+  overlay.querySelectorAll('.graffiti-root').forEach(el => {
+    const start = +el.dataset.phaseStart;
+    const end = +el.dataset.phaseEnd;
+    const piece = GRAFFITI_LIBRARY.find(g => g.id === el.dataset.graffitiId);
+    const baseVis = graffitiVisibility01(normalizedPhase, start, end);
+    const rel = piece ? graffitiRelevance01(piece, visibleLexicon) : 1;
+    const hookVis = (piece && piece.hook)
+      ? piece.hook.visible01(visibleWordWindow)
+      : 1;
+    const vis = baseVis * (0.38 + rel * 0.62) * hookVis;
+    el.style.opacity = String(vis);
+    el.style.pointerEvents = vis > 0.12 ? 'all' : 'none';
+    el.style.cursor = vis > 0.12 ? 'pointer' : 'default';
+  });
+}
+
+const GRAFFITI_THESIS_ARCS = [
+  {
+    id: 'arc-1-sign-production',
+    thesis: 'Lefebvre plus symbolic interactionism: urban meaning is negotiated through repeated marks and encounters, not passively received from plan.',
+    refs: ['Lefebvre', 'Mead', 'Blumer'],
+  },
+  {
+    id: 'arc-2-legibility-conflict',
+    thesis: 'Structural and semiotic order (Saussurean code, administrative legibility) clashes with tactical writing from below.',
+    refs: ['Saussure', 'Stoicheff', 'de Certeau'],
+  },
+  {
+    id: 'arc-3-graphesis-material',
+    thesis: 'Drucker graphesis: typography/form are argument; inscription is material epistemology, not ornament.',
+    refs: ['Drucker', 'Barthes', 'Graphesis'],
+  },
+  {
+    id: 'arc-4-right-practice',
+    thesis: 'The right to the city appears as iterative practice: cry -> demand -> rewrite -> collective relation.',
+    refs: ['Lefebvre', 'Harvey'],
+  },
+];
+
+function graffitiTag(font, text, color, size = 'clamp(34px,4.6vw,74px)', stroke = 0) {
+  return `<div data-glitch-a style="font-family:'${font}',cursive;font-size:${size};color:${color};mix-blend-mode:screen;line-height:.94;letter-spacing:.02em;${stroke ? `-webkit-text-stroke:${stroke}px ${color};` : ''}text-shadow:0 0 14px ${color},0 0 34px color-mix(in oklch,${color} 36%,transparent);">${text}</div>`;
+}
+
+function graffitiNote(text, color = 'rgba(214,190,156,.78)') {
+  return `<div style="font-family:'StencilDamage',cursive;font-size:15px;letter-spacing:.08em;color:${color};text-shadow:0 0 8px ${color};mix-blend-mode:screen;line-height:1.2;">${text}</div>`;
+}
+
+const GRAFFITI_LIBRARY = [
+  new GraffitiPiece({ id:'g1', arc:'arc-1-sign-production', styleRef:'FiveCent throw', phaseStart:0.00, phaseEnd:0.10, keywords:['city','urban','question','reality','outside'], x:'3%', y:'8%', rot:-4, html:`<div>${graffitiTag('FiveCent','STREET<br>SPEAKS<br>BACK',G,'clamp(58px,9.8vw,160px)',2)}${graffitiNote('interaction writes place')}</div>` }),
+  new GraffitiPiece({ id:'g2', arc:'arc-1-sign-production', styleRef:'Scrawler handstyle', phaseStart:0.03, phaseEnd:0.14, keywords:['names','erases','difference','youth'], x:'63%', y:'9%', rot:-7, html:graffitiTag('Scrawler3rd','ROLE // SCRATCH',C,'clamp(42px,5.2vw,86px)') }),
+  new GraffitiPiece({ id:'g3', arc:'arc-1-sign-production', styleRef:'Underground brush', phaseStart:0.07, phaseEnd:0.19, keywords:['edge','outside','industrial','streets'], x:'24%', y:'23%', rot:3, html:`<div>${graffitiTag('Underground','EDGE LEARNS FAST',M,'clamp(38px,4.6vw,72px)')}${graffitiNote('mead/blumer: self in encounter')}</div>` }),
+  new GraffitiPiece({ id:'g4', arc:'arc-1-sign-production', styleRef:'Rase marker', phaseStart:0.10, phaseEnd:0.22, keywords:['use','value','exchange','sold'], x:'76%', y:'20%', rot:-5, html:graffitiTag('RaseBasic','USE BEFORE PRICE',G,'clamp(44px,5.1vw,80px)') }),
+  new GraffitiPiece({ id:'g5', arc:'arc-2-legibility-conflict', styleRef:'StencilDamage block', phaseStart:0.16, phaseEnd:0.28, keywords:['centre','order','minor','rhythm','signs'], x:'10%', y:'33%', rot:2, html:`<div>${graffitiTag('StencilDamage','ORDER<br>WANTS<br>QUIET',M,'clamp(40px,4.8vw,78px)')}${graffitiNote('saussure: code != use')}</div>` }),
+  new GraffitiPiece({ id:'g6', arc:'arc-2-legibility-conflict', styleRef:'WildBasic burner', phaseStart:0.20, phaseEnd:0.33, keywords:['suburb','core','encounter','centrality'], x:'53%', y:'30%', rot:4, html:graffitiTag('WildBasic','CORE // NO CORE',C,'clamp(54px,8.2vw,138px)',1) }),
+  new GraffitiPiece({ id:'g7', arc:'arc-2-legibility-conflict', styleRef:'BBoy block tag', phaseStart:0.24, phaseEnd:0.36, keywords:['text','wall','prescribed','fragments'], x:'72%', y:'43%', rot:-3, html:`<div>${graffitiTag('BBoy','READ-BACK',G,'clamp(44px,5.4vw,84px)')}${graffitiNote('stoicheff: margin as pressure')}</div>` }),
+  new GraffitiPiece({ id:'g8', arc:'arc-2-legibility-conflict', styleRef:'Scrawler slash', phaseStart:0.27, phaseEnd:0.40, keywords:['near','far','order','split','body'], x:'4%', y:'50%', rot:-8, html:graffitiTag('Scrawler3rd','NEAR/FAR CUT',M,'clamp(36px,4.4vw,70px)') }),
+  new GraffitiPiece({ id:'g9', arc:'arc-2-legibility-conflict', styleRef:'Underground slogan', phaseStart:0.30, phaseEnd:0.44, keywords:['class','strategy','route','pushed'], x:'32%', y:'46%', rot:5, html:`<div>${graffitiTag('Underground','ROUTE REDRAWN',C,'clamp(36px,4.4vw,68px)')}${graffitiNote('de certeau: tactic in path')}</div>` }),
+  new GraffitiPiece({ id:'g10', arc:'arc-3-graphesis-material', styleRef:'StencilDamage thesis mark', phaseStart:0.36, phaseEnd:0.50, keywords:['cry','demand','practice','inhabit'], x:'58%', y:'57%', rot:-2, html:`<div>${graffitiTag('StencilDamage','RIGHT AS VERB',G,'clamp(42px,5vw,80px)')}${graffitiNote('not habitat // to inhabit')}</div>` }),
+  new GraffitiPiece({ id:'g11', arc:'arc-3-graphesis-material', styleRef:'WildBasic fill', phaseStart:0.40, phaseEnd:0.56, keywords:['plastic','space','living','centrality'], x:'13%', y:'61%', rot:3, html:graffitiTag('WildBasic','SPACE BENDS',M,'clamp(56px,8.8vw,148px)',1) }),
+  new GraffitiPiece({ id:'g12', arc:'arc-3-graphesis-material', styleRef:'Rase meta-tag', phaseStart:0.45, phaseEnd:0.60, keywords:['consumed','reclaimed','planner','coherence'], x:'75%', y:'63%', rot:-6, html:`<div>${graffitiTag('RaseBasic','PLAN AGAINST LIFE',C,'clamp(38px,4.6vw,72px)')}${graffitiNote('graphesis: form carries claim')}</div>` }),
+  new GraffitiPiece({ id:'g13', arc:'arc-3-graphesis-material', styleRef:'Scrawler note', phaseStart:0.49, phaseEnd:0.64, keywords:['contradiction','isotopies','breaks','meaning','border'], x:'40%', y:'15%', rot:7, html:graffitiTag('Scrawler3rd','SIGN LEAK',G,'clamp(34px,4.1vw,64px)') }),
+  new GraffitiPiece({ id:'g14', arc:'arc-3-graphesis-material', styleRef:'Underground phrase', phaseStart:0.54, phaseEnd:0.69, keywords:['language','stutters','sings','system','open'], x:'58%', y:'7%', rot:-2, html:`<div>${graffitiTag('Underground','STAMMER / CHANT',M,'clamp(34px,4.1vw,66px)')}${graffitiNote('barthes: writerly city')}</div>` }),
+  new GraffitiPiece({ id:'g15', arc:'arc-4-right-practice', styleRef:'FiveCent throw', phaseStart:0.60, phaseEnd:0.76, keywords:['core','desire','occupy','legible','danger'], x:'2%', y:'73%', rot:2, html:graffitiTag('FiveCent','TO BE SEEN IS RISK',C,'clamp(54px,8.2vw,136px)',2) }),
+  new GraffitiPiece({ id:'g16', arc:'arc-4-right-practice', styleRef:'BBoy block', phaseStart:0.66, phaseEnd:0.82, keywords:['blur','reappear','art','claim','relation'], x:'30%', y:'74%', rot:-4, html:`<div>${graffitiTag('BBoy','CLAIM RELATES',G,'clamp(40px,4.8vw,76px)')}${graffitiNote('drucker: visual argument')}</div>` }),
+  new GraffitiPiece({ id:'g17', arc:'arc-4-right-practice', styleRef:'WildBasic burner', phaseStart:0.72, phaseEnd:0.88, keywords:['margin','centre','minute','ours','power'], x:'52%', y:'72%', rot:5, html:graffitiTag('WildBasic','MARGIN TURNS',M,'clamp(58px,8.4vw,142px)',1) }),
+  new GraffitiPiece({ id:'g18', arc:'arc-4-right-practice', styleRef:'StencilDamage strike', phaseStart:0.78, phaseEnd:0.92, keywords:['writes','again','another','writing','becoming'], x:'74%', y:'77%', rot:-3, html:graffitiTag('StencilDamage','OVERWRITE?<br>WE REWRITE.',G,'clamp(34px,4vw,64px)') }),
+  new GraffitiPiece({ id:'g19', arc:'arc-4-right-practice', styleRef:'Rase handstyle', phaseStart:0.84, phaseEnd:1.00, keywords:['right','practice','gift','page','connect'], x:'15%', y:'5%', rot:4, html:`<div>${graffitiTag('RaseBasic','RIGHT IS PRACTICE',C,'clamp(34px,4vw,62px)')}${graffitiNote('saussure/stoicheff/drucker in the wall')}</div>` }),
+  new GraffitiPiece({ id:'g20', arc:'arc-4-right-practice', styleRef:'Underground postscript', phaseStart:0.90, phaseEnd:1.00, keywords:['page','connect','becoming','urban','practice'], x:'67%', y:'4%', rot:1, html:`<div>${graffitiTag('Underground','PAGE TO PAVEMENT',M,'clamp(32px,3.8vw,58px)')}${graffitiNote('city as unfinished relation')}</div>` }),
+];
+
+function buildMicroGraffitiLayer() {
+  const refs = [
+    'oeuvre not product', 'the city as text', 'not habitat but inhabit',
+    'langue in the plan', 'parole on the wall', 'graphesis is method',
+    'symbolic encounter', 'difference at speed', 'claim as relation',
+    'margin turns centre', 'right as practice', 'every mark remembers',
+    'stoicheff margin pressure', 'saussure split shaken', 'drucker visual argument',
+    'mead self in address', 'blumer meaning in act', 'harvey common right',
+    'de certeau tactic line', 'barthes writerly street',
+  ];
+  const fonts = ['RaseBasic', 'Scrawler3rd', 'Underground', 'StencilDamage', 'BBoy'];
+  const colors = [G, M, C, 'rgba(225,196,162,.76)'];
+  const out = [];
+  for (let i = 0; i < 34; i++) {
+    const phaseStart = Math.max(0, Math.min(0.96, (i / 36) + ((i % 5) * 0.01)));
+    const phaseEnd = Math.min(1, phaseStart + 0.16);
+    const x = 2 + ((i * 11) % 88);
+    const y = 6 + ((i * 17) % 84);
+    const rot = ((i * 13) % 18) - 9;
+    const txt = refs[i % refs.length].toUpperCase();
+    const font = fonts[i % fonts.length];
+    const color = colors[i % colors.length];
+    out.push(new GraffitiPiece({
+      id: `micro-${i + 1}`,
+      arc: i < 9 ? 'arc-1-sign-production' : i < 18 ? 'arc-2-legibility-conflict' : i < 27 ? 'arc-3-graphesis-material' : 'arc-4-right-practice',
+      styleRef: `Micro tag (${font})`,
+      phaseStart,
+      phaseEnd,
+      keywords: tokenListLower(refs[i % refs.length]).filter(w => w.length > 3).slice(0, 5),
+      x: `${x}%`,
+      y: `${y}%`,
+      rot,
+      glitch: { durA: `${7 + (i % 5)}s`, durB: `${8 + (i % 4)}s`, delayA: `${(i % 7) * 0.3}s`, delayB: `${(i % 9) * 0.22}s` },
+      html: `<div data-glitch-b style="font-family:'${font}',cursive;font-size:clamp(17px,2vw,30px);color:${color};mix-blend-mode:screen;line-height:1.02;letter-spacing:.03em;opacity:.86;text-shadow:0 0 8px ${color},0 0 18px color-mix(in oklch,${color} 35%,transparent);">${txt}</div>`,
+    }));
+  }
+  return out;
+}
+
+GRAFFITI_LIBRARY.push(...buildMicroGraffitiLayer());
+
+GRAFFITI_LIBRARY.forEach(p => p.mount(overlay));
+globalThis.__graffitiDesignSystem = {
+  GraffitiPiece,
+  arcs: GRAFFITI_THESIS_ARCS,
+  library: GRAFFITI_LIBRARY,
+};
+
+// ═══════════════════════════════════════════════════════
+//  PHASE INPUT — WHEEL + DRAG + TOUCH
+// ═══════════════════════════════════════════════════════
+function setFlashlight(x, y) {
+  document.documentElement.style.setProperty('--fx', `${x}px`);
+  document.documentElement.style.setProperty('--fy', `${y}px`);
+}
+
+window.addEventListener('pointermove', e => {
+  pointerClient.x = e.clientX;
+  pointerClient.y = e.clientY;
+  if (lightMode) return;
+  if (inputLocked) return;
+  if (e.pointerType === 'mouse' || e.pointerType === 'pen' || e.pointerType === 'touch') {
+    setFlashlight(e.clientX, e.clientY);
+  }
+}, { passive: true });
+
+window.addEventListener('touchmove', e => {
+  const t = e.touches[0];
+  if (t) {
+    pointerClient.x = t.clientX;
+    pointerClient.y = t.clientY;
+  }
+  if (lightMode) return;
+  if (inputLocked) return;
+  if (t) setFlashlight(t.clientX, t.clientY);
+}, { passive: true });
+
+window.addEventListener('touchstart', e => {
+  const t = e.touches[0];
+  if (t) {
+    pointerClient.x = t.clientX;
+    pointerClient.y = t.clientY;
+  }
+  if (lightMode) return;
+  if (inputLocked) return;
+  if (t) setFlashlight(t.clientX, t.clientY);
+}, { passive: true });
+
+function bumpScrollActivity() {
+  lastWheelMs = performance.now();
+}
+
+window.addEventListener('wheel', e => {
+  e.preventDefault();
+  if (lightMode) {
+    bumpScrollActivity();
+  const d = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    targetPhase += d * 0.28;
+    return;
+  }
+  if (inputLocked) return;
+  bumpScrollActivity();
+  const d = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+  targetPhase += d * 0.28;
+}, { passive: false });
+
+window.addEventListener('pointerdown', e => {
+  if (lightMode) return;
+  if (e.button !== 0) return;
+  if (e.target instanceof Element && e.target.closest('#mode-toggle')) return;
+  if (e.target instanceof Element && e.target.closest('#tweaks-panel')) return;
+  pointerClient.x = e.clientX;
+  pointerClient.y = e.clientY;
+  const world = viewportToWorld(e.clientX, e.clientY);
+  inputLocked = true;
+  holdZoomActive = true;
+  releaseAnimating = false;
+  setCameraTargetForHoldFromWorld(world.x, world.y);
+  e.preventDefault();
+});
+
+window.addEventListener('pointerup', e => {
+  if (lightMode) return;
+  if (!holdZoomActive && !releaseAnimating) return;
+  holdZoomActive = false;
+  releaseAnimating = true;
+  resetCameraTarget();
+  e.preventDefault();
+});
+
+window.addEventListener('pointercancel', () => {
+  if (lightMode) return;
+  holdZoomActive = false;
+  releaseAnimating = true;
+  resetCameraTarget();
+});
+
+window.addEventListener('keydown', e => {
+  if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+  if (e.key === '+' || e.key === '=' || e.code === 'NumpadAdd') {
+  e.preventDefault();
+    setTorchBrightness(torchBrightness + 0.12);
+  } else if (e.key === '-' || e.key === '_' || e.code === 'NumpadSubtract') {
+    e.preventDefault();
+    setTorchBrightness(torchBrightness - 0.12);
+  }
+});
+
+// Dismiss scroll hint on first scroll
+const dismissHint = () => { hint.style.opacity = '0'; };
+window.addEventListener('wheel', dismissHint, { once: true });
+
+// ═══════════════════════════════════════════════════════
+//  DISMISS LOADING SCREEN
+// ═══════════════════════════════════════════════════════
+setTimeout(() => document.getElementById('loading').classList.add('done'), 2100);
+
+window.addEventListener('resize', () => {
+  resizeWall();
+  makeAsciiWall();
+  buildLineBanks();
+  buildSpindleLibrary();
+  alignGraffitiKeywordsToSpindles();
+  wallCacheValid = false;
+  lastPaintedPhase = null;
+  grainCv.width = window.innerWidth;
+  grainCv.height = window.innerHeight;
+  if (holdZoomActive) setCameraTargetForHoldFromWorld(holdAnchorWorld.x, holdAnchorWorld.y);
+  else resetCameraTarget();
+  updateGraffitiVisibility(wrap(phase, PHASE_CYCLE) / PHASE_CYCLE);
+});
+
+document.getElementById('mode-toggle').addEventListener('click', () => {
+  setLightMode(!lightMode);
+});
+
+// ═══════════════════════════════════════════════════════
+//  TWEAKS PANEL
+// ═══════════════════════════════════════════════════════
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "grainSpeed": 400,
+  "dotSize": 5.5,
+  "glitch": true,
+  "grainOpacity": 0.2
+}/*EDITMODE-END*/;
+
+const panel = document.createElement('div');
+panel.id = 'tweaks-panel';
+panel.style.cssText = `
+  position:fixed;bottom:20px;right:20px;z-index:300;
+  background:rgba(8,6,5,.97);border:1px solid oklch(78% .28 215);
+  padding:18px 18px 14px;min-width:228px;
+  font-family:'VT323',monospace;font-size:15px;color:oklch(78% .28 215);
+  display:none;pointer-events:all;
+  box-shadow:0 0 28px oklch(78% .28 215 / .16);`;
+panel.innerHTML = `
+  <div style="letter-spacing:.3em;margin-bottom:14px;font-size:12px;opacity:.55;">TWEAKS //</div>
+  <label style="display:block;margin-bottom:13px;">
+    <span style="display:block;font-size:11px;letter-spacing:.25em;opacity:.5;margin-bottom:4px;">DOT SIZE</span>
+    <input id="tw-dot" type="range" min="3" max="12" step=".5" value="5"
+      style="width:100%;accent-color:oklch(78% .28 215);">
+  </label>
+  <label style="display:block;margin-bottom:13px;">
+    <span style="display:block;font-size:11px;letter-spacing:.25em;opacity:.5;margin-bottom:4px;">GRAIN SPEED</span>
+    <input id="tw-grain" type="range" min="30" max="400" step="10" value="75"
+      style="width:100%;accent-color:oklch(78% .28 215);">
+  </label>
+  <label style="display:block;margin-bottom:13px;">
+    <span style="display:block;font-size:11px;letter-spacing:.25em;opacity:.5;margin-bottom:4px;">GRAIN OPACITY</span>
+    <input id="tw-grain-op" type="range" min="0" max=".2" step=".005" value=".06"
+      style="width:100%;accent-color:oklch(78% .28 215);">
+  </label>
+  <label style="display:flex;align-items:center;gap:10px;">
+    <input id="tw-glitch" type="checkbox" checked style="accent-color:oklch(78% .28 215);">
+    <span style="font-size:14px;letter-spacing:.18em;">GLITCH ANIMATIONS</span>
+  </label>`;
+document.body.appendChild(panel);
+
+document.getElementById('tw-dot').addEventListener('input', e => {
+  const v = e.target.value;
+  document.querySelector('.benday').style.backgroundSize = `${v}px ${v}px`;
+  window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ dotSize:+v } }, '*');
+});
+document.getElementById('tw-grain').addEventListener('input', e => {
+  const v = +e.target.value;
+  grainMs = v;
+  window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ grainSpeed:v } }, '*');
+});
+document.getElementById('tw-grain-op').addEventListener('input', e => {
+  const v = +e.target.value;
+  grainCv.style.opacity = v;
+  window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ grainOpacity:v } }, '*');
+});
+document.getElementById('tw-glitch').addEventListener('change', e => {
+  const state = e.target.checked ? 'running' : 'paused';
+  document.querySelectorAll('[data-glitch-a],[data-glitch-b]').forEach(el => {
+    el.style.animationPlayState = state;
+  });
+  window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ glitch:e.target.checked } }, '*');
+});
+
+window.addEventListener('message', e => {
+  if (e.data?.type === '__activate_edit_mode')   panel.style.display = 'block';
+  if (e.data?.type === '__deactivate_edit_mode') panel.style.display = 'none';
+});
+window.parent.postMessage({ type:'__edit_mode_available' }, '*');
+
+async function init() {
+  setTorchBrightness(1);
+  setFlashlight(window.innerWidth * 0.5, window.innerHeight * 0.5);
+  resizeWall();
+  makeAsciiWall();
+
+  await Promise.all([
+    document.fonts.load('17px "Crimson Pro"'),
+    document.fonts.load('16px "FiveCent"'),
+    document.fonts.load('16px "Underground"'),
+    document.fonts.load('16px "BBoy"'),
+    document.fonts.load('16px "RaseBasic"'),
+    document.fonts.load('16px "Scrawler3rd"'),
+    document.fonts.load('16px "StencilDamage"'),
+    document.fonts.load('16px "WildBasic"'),
+  ]);
+  await document.fonts.ready;
+
+  corpus = await loadCorpus();
+  SPINDLE_CURATED_ROWS = await loadCuratedSpindleRows();
+  CORPUS_WORDS = buildCorpusWordIndex(corpus);
+  buildLineBanks();
+  buildSpindleLibrary();
+  alignGraffitiKeywordsToSpindles();
+  wallCacheValid = false;
+  lastPaintedPhase = null;
+  hint.textContent = '← SCROLL TO PHASE-SHIFT THE WALL TEXT →';
+  updateGraffitiVisibility(wrap(phase, PHASE_CYCLE) / PHASE_CYCLE);
+  requestAnimationFrame(loop);
+}
+
+function loop(now) {
+  const t = now ?? performance.now();
+  const prevPhase = phase;
+  if (!inputLocked) phase = targetPhase;
+  const moved = Math.abs(phase - prevPhase) > 1e-6;
+
+  if (!lightMode && holdZoomActive && !releaseAnimating) {
+    updateHoldPanTarget();
+  }
+
+  if (lightMode) {
+    camScale = 1;
+    camTx = 0;
+    camTy = 0;
+    targetCamScale = 1;
+    targetCamTx = 0;
+    targetCamTy = 0;
+    applyCameraTransform();
+  } else {
+    const camEase = holdZoomActive ? 0.2 : 0.14;
+    camScale += (targetCamScale - camScale) * camEase;
+    camTx += (targetCamTx - camTx) * camEase;
+    camTy += (targetCamTy - camTy) * camEase;
+    applyCameraTransform();
+  }
+
+  if (!lightMode && releaseAnimating) {
+    const done =
+      Math.abs(camScale - 1) < 0.002 &&
+      Math.abs(camTx) < 0.5 &&
+      Math.abs(camTy) < 0.5;
+    if (done) {
+      camScale = 1;
+      camTx = 0;
+      camTy = 0;
+      applyCameraTransform();
+      releaseAnimating = false;
+      inputLocked = false;
+    }
+  }
+
+  paintWallIfNeeded();
+  const u = wrap(phase, PHASE_CYCLE) / PHASE_CYCLE;
+  paintSpindles(phase, u);
+  maybeDrawGrain(t, moved);
+  progressBar.style.width = `${(u * 100).toFixed(2)}vw`;
+  updateGraffitiVisibility(u);
+  requestAnimationFrame(loop);
+}
+
+init();
+
+</script>
+</body>
+</html>

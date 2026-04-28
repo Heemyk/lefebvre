@@ -1,0 +1,3374 @@
+[
+  {
+    "id": 1,
+    "line": "I enter the city as question.",
+    "status": "good",
+    "coverage": 0.83,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 5,
+    "fragment_count": 0,
+    "chunk_id": 1,
+    "chunk_words": [
+      90,
+      449
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "enter",
+        "mode": "exact",
+        "picked": "enter",
+        "corpusStart": 1193,
+        "corpusEnd": 1198
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 835,
+        "corpusEnd": 838
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city",
+        "corpusStart": 1392,
+        "corpusEnd": 1396
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as",
+        "corpusStart": 999,
+        "corpusEnd": 1001
+      },
+      {
+        "token": "question",
+        "mode": "syn",
+        "picked": "questions",
+        "corpusStart": 1049,
+        "corpusEnd": 1058
+      }
+    ],
+    "preview": "System is fashionable as much in thought as in terminologies and language Now all systems tend to close off reflection to block off horizon This work wants to break up systems not to substitute another system but to open up ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 637,
+    "clusterCharEnd": 1437,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 2,
+    "line": "Urban reality names me, then erases me.",
+    "status": "weak",
+    "coverage": 0.29,
+    "soft_coverage": 1.0,
+    "token_count": 7,
+    "resolved_count": 2,
+    "fragment_count": 5,
+    "chunk_id": 3,
+    "chunk_words": [
+      270,
+      629
+    ],
+    "matches": [
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban",
+        "corpusStart": 2584,
+        "corpusEnd": 2589
+      },
+      {
+        "token": "reality",
+        "mode": "exact",
+        "picked": "reality",
+        "corpusStart": 2590,
+        "corpusEnd": 2597
+      },
+      {
+        "token": "names",
+        "mode": "frag",
+        "picked": "nam",
+        "corpusStart": 3326,
+        "corpusEnd": 3331
+      },
+      {
+        "token": "me",
+        "mode": "frag",
+        "picked": "me",
+        "corpusStart": 2565,
+        "corpusEnd": 2576
+      },
+      {
+        "token": "then",
+        "mode": "frag",
+        "picked": "then",
+        "corpusStart": 2548,
+        "corpusEnd": 2551
+      },
+      {
+        "token": "erases",
+        "mode": "frag",
+        "picked": "ses",
+        "corpusStart": 2946,
+        "corpusEnd": 2952
+      },
+      {
+        "token": "me",
+        "mode": "frag",
+        "picked": "me",
+        "corpusStart": 3171,
+        "corpusEnd": 3178
+      }
+    ],
+    "preview": "does not only propose to critically analyse thoughts and activities related to urbanism It s aim is to allow its problems to enter into consciousness and political policies From the theoretical and practical situation of problems from the problematic concerning ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 2548,
+    "clusterCharEnd": 3348,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 3,
+    "line": "At the edge, I learn outside first.",
+    "status": "weak",
+    "coverage": 0.29,
+    "soft_coverage": 1.0,
+    "token_count": 7,
+    "resolved_count": 2,
+    "fragment_count": 5,
+    "chunk_id": 6,
+    "chunk_words": [
+      540,
+      899
+    ],
+    "matches": [
+      {
+        "token": "at",
+        "mode": "frag",
+        "picked": "at",
+        "corpusStart": 8,
+        "corpusEnd": 13
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "edge",
+        "mode": "frag",
+        "picked": "outside",
+        "corpusStart": 48,
+        "corpusEnd": 53
+      },
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "learn",
+        "mode": "frag",
+        "picked": "le",
+        "corpusStart": 29,
+        "corpusEnd": 37
+      },
+      {
+        "token": "outside",
+        "mode": "frag",
+        "picked": "out",
+        "corpusStart": 403,
+        "corpusEnd": 408
+      },
+      {
+        "token": "first",
+        "mode": "frag",
+        "picked": "st",
+        "corpusStart": 21,
+        "corpusEnd": 25
+      }
+    ],
+    "preview": "eminent urban creations the most beautiful oeuvres of urban life we say beautiful because they are oeuvres rather than products date from epochs previous to that of industrialization There was the oriental city linked to the Asiatic mode of production ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 8,
+    "clusterCharEnd": 808,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 4,
+    "line": "Industrial days press against my breath.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 2,
+    "chunk_id": 7,
+    "chunk_words": [
+      630,
+      989
+    ],
+    "matches": [
+      {
+        "token": "industrial",
+        "mode": "exact",
+        "picked": "industrial",
+        "corpusStart": 4217,
+        "corpusEnd": 4227
+      },
+      {
+        "token": "days",
+        "mode": "frag",
+        "picked": "da",
+        "corpusStart": 3542,
+        "corpusEnd": 3546
+      },
+      {
+        "token": "press",
+        "mode": "frag",
+        "picked": "pr",
+        "corpusStart": 3532,
+        "corpusEnd": 3540
+      },
+      {
+        "token": "against",
+        "mode": "exact",
+        "picked": "against",
+        "corpusStart": 3841,
+        "corpusEnd": 3848
+      },
+      {
+        "token": "my",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "breath",
+        "mode": "syn",
+        "picked": "life",
+        "corpusStart": 3469,
+        "corpusEnd": 3473
+      }
+    ],
+    "preview": "to commerce crafts and banking It absorbed merchants who had previously been quasi nomadic and relegated outside the city When industrialization begins and capitalism in competition with a specifically industrial bourgeoisie is born the city is already a powerful reality ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 3469,
+    "clusterCharEnd": 4269,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 5,
+    "line": "I walk the induced streets.",
+    "status": "weak",
+    "coverage": 0.4,
+    "soft_coverage": 0.8,
+    "token_count": 5,
+    "resolved_count": 2,
+    "fragment_count": 2,
+    "chunk_id": 8,
+    "chunk_words": [
+      720,
+      1079
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "walk",
+        "mode": "frag",
+        "picked": "lk",
+        "corpusStart": 41,
+        "corpusEnd": 47
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "induced",
+        "mode": "frag",
+        "picked": "ced",
+        "corpusStart": 29,
+        "corpusEnd": 37
+      },
+      {
+        "token": "streets",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      }
+    ],
+    "preview": "for what remained of exchange economies maintained by wandering merchants From the growing surplus product of agriculture to the detriment of feudal lords cities accumulate riches objects treasures virtual capitals There already existed in these urban centres a great monetary ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 29,
+    "clusterCharEnd": 829,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 6,
+    "line": "Use value flickers under exchange.",
+    "status": "partial",
+    "coverage": 0.6,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 3,
+    "fragment_count": 2,
+    "chunk_id": 9,
+    "chunk_words": [
+      810,
+      1169
+    ],
+    "matches": [
+      {
+        "token": "use",
+        "mode": "exact",
+        "picked": "use",
+        "corpusStart": 5466,
+        "corpusEnd": 5469
+      },
+      {
+        "token": "value",
+        "mode": "exact",
+        "picked": "value",
+        "corpusStart": 5470,
+        "corpusEnd": 5475
+      },
+      {
+        "token": "flickers",
+        "mode": "frag",
+        "picked": "ers",
+        "corpusStart": 5364,
+        "corpusEnd": 5376
+      },
+      {
+        "token": "under",
+        "mode": "frag",
+        "picked": "under",
+        "corpusStart": 5034,
+        "corpusEnd": 5045
+      },
+      {
+        "token": "exchange",
+        "mode": "exact",
+        "picked": "exchange",
+        "corpusStart": 5422,
+        "corpusEnd": 5430
+      }
+    ],
+    "preview": "techniques and oeuvres works of art monuments This city is itself oeuvre a feature which contrasts with the irreversible tendency towards money and commerce towards exchange and products Indeed the oeuvre is use value and the the product is exchange ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 5034,
+    "clusterCharEnd": 5834,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 7,
+    "line": "I keep what can be used, not sold.",
+    "status": "partial",
+    "coverage": 0.62,
+    "soft_coverage": 0.88,
+    "token_count": 8,
+    "resolved_count": 5,
+    "fragment_count": 2,
+    "chunk_id": 10,
+    "chunk_words": [
+      900,
+      1259
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "keep",
+        "mode": "frag",
+        "picked": "ep",
+        "corpusStart": 2156,
+        "corpusEnd": 2165
+      },
+      {
+        "token": "what",
+        "mode": "exact",
+        "picked": "what",
+        "corpusStart": 2002,
+        "corpusEnd": 2006
+      },
+      {
+        "token": "can",
+        "mode": "exact",
+        "picked": "can",
+        "corpusStart": 2385,
+        "corpusEnd": 2388
+      },
+      {
+        "token": "be",
+        "mode": "exact",
+        "picked": "be",
+        "corpusStart": 2171,
+        "corpusEnd": 2173
+      },
+      {
+        "token": "used",
+        "mode": "exact",
+        "picked": "used",
+        "corpusStart": 2007,
+        "corpusEnd": 2011
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not",
+        "corpusStart": 1667,
+        "corpusEnd": 1670
+      },
+      {
+        "token": "sold",
+        "mode": "frag",
+        "picked": "exchange",
+        "corpusStart": 2281,
+        "corpusEnd": 2288
+      }
+    ],
+    "preview": "of their development centralize wealth powerful groups invest unproductively a large part of their wealth in the cities they dominate At the same time banking and commercial capital have already made wealth mobile and has established exchange networks enabling the ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 1667,
+    "clusterCharEnd": 2467,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 8,
+    "line": "The centre calls itself order.",
+    "status": "weak",
+    "coverage": 0.2,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 1,
+    "fragment_count": 4,
+    "chunk_id": 11,
+    "chunk_words": [
+      990,
+      1349
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 1512,
+        "corpusEnd": 1515
+      },
+      {
+        "token": "centre",
+        "mode": "frag",
+        "picked": "centre",
+        "corpusStart": 2302,
+        "corpusEnd": 2309
+      },
+      {
+        "token": "calls",
+        "mode": "frag",
+        "picked": "ca",
+        "corpusStart": 1687,
+        "corpusEnd": 1697
+      },
+      {
+        "token": "itself",
+        "mode": "frag",
+        "picked": "itself",
+        "corpusStart": 1772,
+        "corpusEnd": 1775
+      },
+      {
+        "token": "order",
+        "mode": "frag",
+        "picked": "order",
+        "corpusStart": 1624,
+        "corpusEnd": 1628
+      }
+    ],
+    "preview": "capitalises enriched by commerce banking usury The outcome is that society as a whole made up of the city the country and the institutions which regulate their relations tend to constitute themselves as a network of cities with a certain ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 1512,
+    "clusterCharEnd": 2312,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 9,
+    "line": "I answer with a minor rhythm.",
+    "status": "partial",
+    "coverage": 0.67,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 4,
+    "fragment_count": 1,
+    "chunk_id": 14,
+    "chunk_words": [
+      1260,
+      1619
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "answer",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with",
+        "corpusStart": 54,
+        "corpusEnd": 58
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 394,
+        "corpusEnd": 395
+      },
+      {
+        "token": "minor",
+        "mode": "syn",
+        "picked": "or",
+        "corpusStart": 38,
+        "corpusEnd": 40
+      },
+      {
+        "token": "rhythm",
+        "mode": "frag",
+        "picked": "time",
+        "corpusStart": 409,
+        "corpusEnd": 421
+      }
+    ],
+    "preview": "of belonging Political confrontations between the minuto popolo the popolo grosso the aristocracy and the oligarchy have the city as their battle ground their stake These groups are rivals in their love of the city As for the rich and ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 38,
+    "clusterCharEnd": 838,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 10,
+    "line": "Youth absorbs the city too fast.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 4,
+    "chunk_id": 16,
+    "chunk_words": [
+      1440,
+      1799
+    ],
+    "matches": [
+      {
+        "token": "youth",
+        "mode": "frag",
+        "picked": "th",
+        "corpusStart": 3608,
+        "corpusEnd": 3611
+      },
+      {
+        "token": "absorbs",
+        "mode": "frag",
+        "picked": "abs",
+        "corpusStart": 4046,
+        "corpusEnd": 4054
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 3637,
+        "corpusEnd": 3640
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city",
+        "corpusStart": 3621,
+        "corpusEnd": 3625
+      },
+      {
+        "token": "too",
+        "mode": "frag",
+        "picked": "too",
+        "corpusStart": 4400,
+        "corpusEnd": 4404
+      },
+      {
+        "token": "fast",
+        "mode": "frag",
+        "picked": "st",
+        "corpusStart": 3830,
+        "corpusEnd": 3840
+      }
+    ],
+    "preview": "value the origins of a virtual predominance and revalorization of use In the urban system we are attempting to analyse action is exercized over specific conflicts between use value and exchange value between mobilization of wealth in silver and in ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 3608,
+    "clusterCharEnd": 4408,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 11,
+    "line": "I wear its signs, not its obedience.",
+    "status": "weak",
+    "coverage": 0.43,
+    "soft_coverage": 0.86,
+    "token_count": 7,
+    "resolved_count": 3,
+    "fragment_count": 3,
+    "chunk_id": 17,
+    "chunk_words": [
+      1530,
+      1889
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "wear",
+        "mode": "frag",
+        "picked": "ar",
+        "corpusStart": 13108,
+        "corpusEnd": 13118
+      },
+      {
+        "token": "its",
+        "mode": "exact",
+        "picked": "its",
+        "corpusStart": 13354,
+        "corpusEnd": 13357
+      },
+      {
+        "token": "signs",
+        "mode": "frag",
+        "picked": "si",
+        "corpusStart": 12891,
+        "corpusEnd": 12896
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not",
+        "corpusStart": 12929,
+        "corpusEnd": 12932
+      },
+      {
+        "token": "its",
+        "mode": "exact",
+        "picked": "its",
+        "corpusStart": 13674,
+        "corpusEnd": 13677
+      },
+      {
+        "token": "obedience",
+        "mode": "frag",
+        "picked": "nce",
+        "corpusStart": 13268,
+        "corpusEnd": 13282
+      }
+    ],
+    "preview": "the initiatives of banking and commercial capitalism The coporarion does not only regulate a craft Each enters into an organic whole the corporate system regulates the distribution of actions and activities over urban space streets and neighbourhoods and urban time ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 12891,
+    "clusterCharEnd": 13691,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 12,
+    "line": "In the suburb I lose urban consciousness.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 0.86,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 2,
+    "chunk_id": 22,
+    "chunk_words": [
+      1980,
+      2339
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in",
+        "corpusStart": 1539,
+        "corpusEnd": 1541
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 1010,
+        "corpusEnd": 1013
+      },
+      {
+        "token": "suburb",
+        "mode": "frag",
+        "picked": "suburb",
+        "corpusStart": 1038,
+        "corpusEnd": 1048
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "lose",
+        "mode": "frag",
+        "picked": "lo",
+        "corpusStart": 1332,
+        "corpusEnd": 1340
+      },
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban",
+        "corpusStart": 1404,
+        "corpusEnd": 1409
+      },
+      {
+        "token": "consciousness",
+        "mode": "exact",
+        "picked": "consciousness",
+        "corpusStart": 1799,
+        "corpusEnd": 1812
+      }
+    ],
+    "preview": "materials labour Since settlement outside of cities is not satisfactory for entrepreneurs as soon as it is possible industry comes closer to urban centres Inversely the city prior to industrialization accelerates the process in particular it enables the rapid growth ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 1010,
+    "clusterCharEnd": 1810,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 13,
+    "line": "In the core I return to encounter.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 0.86,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 2,
+    "chunk_id": 25,
+    "chunk_words": [
+      2250,
+      2609
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in",
+        "corpusStart": 386,
+        "corpusEnd": 388
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "core",
+        "mode": "frag",
+        "picked": "cor",
+        "corpusStart": 344,
+        "corpusEnd": 355
+      },
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "return",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to",
+        "corpusStart": 200,
+        "corpusEnd": 202
+      },
+      {
+        "token": "encounter",
+        "mode": "frag",
+        "picked": "enc",
+        "corpusStart": 29,
+        "corpusEnd": 37
+      }
+    ],
+    "preview": "city assaults it takes it ravages it It tends to break up the old cores by taking them over This does not prevent the extension of urban phenomena cities and agglomerations industrial towns and suburbs with the addition of shanty ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 29,
+    "clusterCharEnd": 829,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 14,
+    "line": "Difference meets difference at speed.",
+    "status": "weak",
+    "coverage": 0.0,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 0,
+    "fragment_count": 5,
+    "chunk_id": 27,
+    "chunk_words": [
+      2430,
+      2789
+    ],
+    "matches": [
+      {
+        "token": "difference",
+        "mode": "frag",
+        "picked": "nce",
+        "corpusStart": 29,
+        "corpusEnd": 37
+      },
+      {
+        "token": "meets",
+        "mode": "frag",
+        "picked": "ts",
+        "corpusStart": 699,
+        "corpusEnd": 704
+      },
+      {
+        "token": "difference",
+        "mode": "frag",
+        "picked": "nce",
+        "corpusStart": 96,
+        "corpusEnd": 105
+      },
+      {
+        "token": "at",
+        "mode": "frag",
+        "picked": "at",
+        "corpusStart": 8,
+        "corpusEnd": 13
+      },
+      {
+        "token": "speed",
+        "mode": "frag",
+        "picked": "rapid",
+        "corpusStart": 59,
+        "corpusEnd": 67
+      }
+    ],
+    "preview": "agglomeration which parallels it on the mainland Mestre This city among the most beautiful cities bequeathed to us from pre industrial times is threatened not so much by physical deterioration due to the sea or to its subsidence as by ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 8,
+    "clusterCharEnd": 808,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 15,
+    "line": "I hear centrality before I see it.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 0.71,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 1,
+    "chunk_id": 28,
+    "chunk_words": [
+      2520,
+      2879
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "hear",
+        "mode": "syn",
+        "picked": "he",
+        "corpusStart": 48451,
+        "corpusEnd": 48453
+      },
+      {
+        "token": "centrality",
+        "mode": "frag",
+        "picked": "ity",
+        "corpusStart": 48181,
+        "corpusEnd": 48190
+      },
+      {
+        "token": "before",
+        "mode": "exact",
+        "picked": "before",
+        "corpusStart": 47814,
+        "corpusEnd": 47820
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "see",
+        "mode": "exact",
+        "picked": "see",
+        "corpusStart": 48275,
+        "corpusEnd": 48278
+      },
+      {
+        "token": "it",
+        "mode": "exact",
+        "picked": "it",
+        "corpusStart": 48043,
+        "corpusEnd": 48045
+      }
+    ],
+    "preview": "Greece are only places of tourist consumption and aesthetic pilgrimage Yet the organizational core of the city remains very strong Its surroundings of new neighbourhoods and semi shanty towns inhabited by uprooted and disorganized people confer it an exorbitant power ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 47723,
+    "clusterCharEnd": 48523,
+    "clusterCharSpan": 800,
+    "miss_count": 2,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 16,
+    "line": "The wall is text; the text is wall.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 1.0,
+    "token_count": 8,
+    "resolved_count": 4,
+    "fragment_count": 4,
+    "chunk_id": 29,
+    "chunk_words": [
+      2610,
+      2969
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "wall",
+        "mode": "frag",
+        "picked": "ll",
+        "corpusStart": 154,
+        "corpusEnd": 157
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 74,
+        "corpusEnd": 76
+      },
+      {
+        "token": "text",
+        "mode": "frag",
+        "picked": "text",
+        "corpusStart": 409,
+        "corpusEnd": 421
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 428,
+        "corpusEnd": 431
+      },
+      {
+        "token": "text",
+        "mode": "frag",
+        "picked": "text",
+        "corpusStart": 449,
+        "corpusEnd": 461
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 488,
+        "corpusEnd": 490
+      },
+      {
+        "token": "wall",
+        "mode": "frag",
+        "picked": "wa",
+        "corpusStart": 699,
+        "corpusEnd": 704
+      }
+    ],
+    "preview": "so on and so forth It is this fragile network always in danger of breaking which defines a type of urbanization without or with a weak industrialization but with a rapid extension of the agglomeration of property and speculation a ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 74,
+    "clusterCharEnd": 874,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 17,
+    "line": "I read what was prescribed to me.",
+    "status": "weak",
+    "coverage": 0.43,
+    "soft_coverage": 0.86,
+    "token_count": 7,
+    "resolved_count": 3,
+    "fragment_count": 3,
+    "chunk_id": 31,
+    "chunk_words": [
+      2790,
+      3149
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "read",
+        "mode": "frag",
+        "picked": "re",
+        "corpusStart": 3688,
+        "corpusEnd": 3693
+      },
+      {
+        "token": "what",
+        "mode": "exact",
+        "picked": "what",
+        "corpusStart": 4485,
+        "corpusEnd": 4489
+      },
+      {
+        "token": "was",
+        "mode": "exact",
+        "picked": "was",
+        "corpusStart": 3900,
+        "corpusEnd": 3903
+      },
+      {
+        "token": "prescribed",
+        "mode": "frag",
+        "picked": "bed",
+        "corpusStart": 3797,
+        "corpusEnd": 3805
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to",
+        "corpusStart": 4010,
+        "corpusEnd": 4012
+      },
+      {
+        "token": "me",
+        "mode": "frag",
+        "picked": "me",
+        "corpusStart": 3759,
+        "corpusEnd": 3767
+      }
+    ],
+    "preview": "phenomenon extends itself over a very large part of the territory of great industrial countries It happily crosses national boundaries the Megalopolis of Northern Europe extends from the Ruhr to the sea and even to English cities and from the ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 3688,
+    "clusterCharEnd": 4488,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 18,
+    "line": "Then I write back in fragments.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 3,
+    "chunk_id": 35,
+    "chunk_words": [
+      3150,
+      3509
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "frag",
+        "picked": "then",
+        "corpusStart": 14,
+        "corpusEnd": 20
+      },
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "write",
+        "mode": "frag",
+        "picked": "te",
+        "corpusStart": 409,
+        "corpusEnd": 421
+      },
+      {
+        "token": "back",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in",
+        "corpusStart": 386,
+        "corpusEnd": 388
+      },
+      {
+        "token": "fragments",
+        "mode": "frag",
+        "picked": "nts",
+        "corpusStart": 699,
+        "corpusEnd": 704
+      }
+    ],
+    "preview": "around one or several cities old and recent Such a description may lose what is essential Indeed the significance of the urban fabric is not limited to its morphology It is the support of a more or less intense more ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 14,
+    "clusterCharEnd": 814,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 19,
+    "line": "Near order / far order split my body.",
+    "status": "good",
+    "coverage": 0.86,
+    "soft_coverage": 0.86,
+    "token_count": 7,
+    "resolved_count": 6,
+    "fragment_count": 0,
+    "chunk_id": 36,
+    "chunk_words": [
+      3240,
+      3599
+    ],
+    "matches": [
+      {
+        "token": "near",
+        "mode": "exact",
+        "picked": "near",
+        "corpusStart": 89407,
+        "corpusEnd": 89411
+      },
+      {
+        "token": "order",
+        "mode": "exact",
+        "picked": "order",
+        "corpusStart": 89009,
+        "corpusEnd": 89014
+      },
+      {
+        "token": "far",
+        "mode": "exact",
+        "picked": "far",
+        "corpusStart": 89255,
+        "corpusEnd": 89258
+      },
+      {
+        "token": "order",
+        "mode": "exact",
+        "picked": "order",
+        "corpusStart": 89259,
+        "corpusEnd": 89264
+      },
+      {
+        "token": "split",
+        "mode": "syn",
+        "picked": "it",
+        "corpusStart": 89140,
+        "corpusEnd": 89142
+      },
+      {
+        "token": "my",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "body",
+        "mode": "syn",
+        "picked": "life",
+        "corpusStart": 89808,
+        "corpusEnd": 89812
+      }
+    ],
+    "preview": "values The best known elements of the urban system of objects include water electricity gas butane in the countryside not to mention the car the television plastic utensils modern furniture which entail new demands with regard to services Among the ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 89009,
+    "clusterCharEnd": 89809,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 20,
+    "line": "I become mediation among mediations.",
+    "status": "partial",
+    "coverage": 0.6,
+    "soft_coverage": 0.8,
+    "token_count": 5,
+    "resolved_count": 3,
+    "fragment_count": 1,
+    "chunk_id": 37,
+    "chunk_words": [
+      3330,
+      3689
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "become",
+        "mode": "frag",
+        "picked": "bec",
+        "corpusStart": 89320,
+        "corpusEnd": 89327
+      },
+      {
+        "token": "mediation",
+        "mode": "exact",
+        "picked": "mediation",
+        "corpusStart": 89511,
+        "corpusEnd": 89520
+      },
+      {
+        "token": "among",
+        "mode": "exact",
+        "picked": "among",
+        "corpusStart": 88774,
+        "corpusEnd": 88779
+      },
+      {
+        "token": "mediations",
+        "mode": "exact",
+        "picked": "mediations",
+        "corpusStart": 89527,
+        "corpusEnd": 89537
+      }
+    ],
+    "preview": "to this rapid assimilation of things and representations coming from the city These are sociological trivialities which are useful to remember to show their implications Within the mesh of the urban fabric survive islets and islands of pure rurality often ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 88774,
+    "clusterCharEnd": 89574,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 21,
+    "line": "Class strategy redraws my route.",
+    "status": "weak",
+    "coverage": 0.0,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 0,
+    "fragment_count": 5,
+    "chunk_id": 42,
+    "chunk_words": [
+      3780,
+      4139
+    ],
+    "matches": [
+      {
+        "token": "class",
+        "mode": "frag",
+        "picked": "ss",
+        "corpusStart": 16628,
+        "corpusEnd": 16637
+      },
+      {
+        "token": "strategy",
+        "mode": "frag",
+        "picked": "str",
+        "corpusStart": 16074,
+        "corpusEnd": 16091
+      },
+      {
+        "token": "redraws",
+        "mode": "frag",
+        "picked": "red",
+        "corpusStart": 16222,
+        "corpusEnd": 16229
+      },
+      {
+        "token": "my",
+        "mode": "frag",
+        "picked": "my",
+        "corpusStart": 16776,
+        "corpusEnd": 16783
+      },
+      {
+        "token": "route",
+        "mode": "frag",
+        "picked": "te",
+        "corpusStart": 16055,
+        "corpusEnd": 16060
+      }
+    ],
+    "preview": "the urban urban society There is the urban fabric which carries this urbanness and centrality old renovated new Hence a disquieting problematic particularly if one wishes to go from analysis to synthesis from observations to a project the normative Must ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 16055,
+    "clusterCharEnd": 16855,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 22,
+    "line": "I return where I was pushed out.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 0.71,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 1,
+    "chunk_id": 47,
+    "chunk_words": [
+      4230,
+      4589
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "return",
+        "mode": "exact",
+        "picked": "return",
+        "corpusStart": 31286,
+        "corpusEnd": 31292
+      },
+      {
+        "token": "where",
+        "mode": "frag",
+        "picked": "whe",
+        "corpusStart": 30996,
+        "corpusEnd": 31001
+      },
+      {
+        "token": "i",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "was",
+        "mode": "exact",
+        "picked": "was",
+        "corpusStart": 30855,
+        "corpusEnd": 30858
+      },
+      {
+        "token": "pushed",
+        "mode": "exact",
+        "picked": "pushed",
+        "corpusStart": 31329,
+        "corpusEnd": 31335
+      },
+      {
+        "token": "out",
+        "mode": "exact",
+        "picked": "out",
+        "corpusStart": 30945,
+        "corpusEnd": 30948
+      }
+    ],
+    "preview": "is still a visible witness to this before the Revolution it is an aristocratic quarter despite the tendency of the capital and the wealthy to drift towards the west an area of gardens and private mansions It took but a ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 30763,
+    "clusterCharEnd": 31563,
+    "clusterCharSpan": 800,
+    "miss_count": 2,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 23,
+    "line": "The right appears as cry first.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 2,
+    "chunk_id": 50,
+    "chunk_words": [
+      4500,
+      4859
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 13044,
+        "corpusEnd": 13047
+      },
+      {
+        "token": "right",
+        "mode": "frag",
+        "picked": "right",
+        "corpusStart": 12872,
+        "corpusEnd": 12881
+      },
+      {
+        "token": "appears",
+        "mode": "exact",
+        "picked": "appears",
+        "corpusStart": 13645,
+        "corpusEnd": 13652
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as",
+        "corpusStart": 12967,
+        "corpusEnd": 12969
+      },
+      {
+        "token": "cry",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "first",
+        "mode": "frag",
+        "picked": "st",
+        "corpusStart": 12993,
+        "corpusEnd": 13001
+      }
+    ],
+    "preview": "immediate periphery Former craftsmen and new proletarians penetrate right up to the heart of the city They live in slums but also in tenements where the better off live on the ground floors and the workers on the upper ones ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 12872,
+    "clusterCharEnd": 13672,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 24,
+    "line": "Then demand, then practice.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 1.0,
+    "token_count": 4,
+    "resolved_count": 2,
+    "fragment_count": 2,
+    "chunk_id": 54,
+    "chunk_words": [
+      4860,
+      5219
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "frag",
+        "picked": "then",
+        "corpusStart": 579,
+        "corpusEnd": 586
+      },
+      {
+        "token": "demand",
+        "mode": "syn",
+        "picked": "and",
+        "corpusStart": 607,
+        "corpusEnd": 610
+      },
+      {
+        "token": "then",
+        "mode": "frag",
+        "picked": "then",
+        "corpusStart": 689,
+        "corpusEnd": 693
+      },
+      {
+        "token": "practice",
+        "mode": "exact",
+        "picked": "practice",
+        "corpusStart": 1345,
+        "corpusEnd": 1353
+      }
+    ],
+    "preview": "other finalities take place which justify in another way these gashes into urban life It should be noted that Haussmann did not achieve his goal One strong aspect of the Paris Commune is the strength of the return towards the ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 579,
+    "clusterCharEnd": 1379,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 25,
+    "line": "Not habitat: to inhabit.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 1.0,
+    "token_count": 4,
+    "resolved_count": 2,
+    "fragment_count": 2,
+    "chunk_id": 55,
+    "chunk_words": [
+      4950,
+      5309
+    ],
+    "matches": [
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not",
+        "corpusStart": 7020,
+        "corpusEnd": 7023
+      },
+      {
+        "token": "habitat",
+        "mode": "frag",
+        "picked": "habitat",
+        "corpusStart": 7086,
+        "corpusEnd": 7091
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to",
+        "corpusStart": 7029,
+        "corpusEnd": 7031
+      },
+      {
+        "token": "inhabit",
+        "mode": "frag",
+        "picked": "inhabit",
+        "corpusStart": 7805,
+        "corpusEnd": 7813
+      }
+    ],
+    "preview": "the second half of the century influential people that is rich or powerful or both sometimes ideologues Le Play with ideas strongly marked by religions Catholic and Protestant sometimes informed politicians belonging to the centre right and who moreover do ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 7020,
+    "clusterCharEnd": 7820,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 26,
+    "line": "I refuse the logic of habitat.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 2,
+    "chunk_id": 56,
+    "chunk_words": [
+      5040,
+      5399
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "refuse",
+        "mode": "frag",
+        "picked": "use",
+        "corpusStart": 336,
+        "corpusEnd": 343
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "logic",
+        "mode": "frag",
+        "picked": "logic",
+        "corpusStart": 491,
+        "corpusEnd": 498
+      },
+      {
+        "token": "of",
+        "mode": "exact",
+        "picked": "of",
+        "corpusStart": 147,
+        "corpusEnd": 149
+      },
+      {
+        "token": "habitat",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      }
+    ],
+    "preview": "community village or city Urban life had among other qualities this attribute It gave the right to inhabit it allowed townsmen citizens to inhabit It is thus that mortals inhabit while they save the earth while they wait for the ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 0,
+    "clusterCharEnd": 800,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 27,
+    "line": "I claim the plastic space of living.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 0.86,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 2,
+    "chunk_id": 57,
+    "chunk_words": [
+      5130,
+      5489
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "claim",
+        "mode": "exact",
+        "picked": "claim",
+        "corpusStart": 117,
+        "corpusEnd": 122
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "plastic",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "space",
+        "mode": "frag",
+        "picked": "ce",
+        "corpusStart": 0,
+        "corpusEnd": 7
+      },
+      {
+        "token": "of",
+        "mode": "exact",
+        "picked": "of",
+        "corpusStart": 147,
+        "corpusEnd": 149
+      },
+      {
+        "token": "living",
+        "mode": "frag",
+        "picked": "living",
+        "corpusStart": 14,
+        "corpusEnd": 20
+      }
+    ],
+    "preview": "a very complex whole which was and remains the city to project it over the ground not without showing and signifying in this manner the society for which they provide an ideology and a practice Certainly suburbs were created under ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 0,
+    "clusterCharEnd": 800,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 28,
+    "line": "A cafe, a corner, a small centrality.",
+    "status": "weak",
+    "coverage": 0.43,
+    "soft_coverage": 1.0,
+    "token_count": 7,
+    "resolved_count": 3,
+    "fragment_count": 4,
+    "chunk_id": 59,
+    "chunk_words": [
+      5310,
+      5669
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 3777,
+        "corpusEnd": 3778
+      },
+      {
+        "token": "cafe",
+        "mode": "frag",
+        "picked": "ca",
+        "corpusStart": 3916,
+        "corpusEnd": 3925
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 3849,
+        "corpusEnd": 3850
+      },
+      {
+        "token": "corner",
+        "mode": "frag",
+        "picked": "ner",
+        "corpusStart": 4520,
+        "corpusEnd": 4525
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 4202,
+        "corpusEnd": 4203
+      },
+      {
+        "token": "small",
+        "mode": "frag",
+        "picked": "small",
+        "corpusStart": 3858,
+        "corpusEnd": 3867
+      },
+      {
+        "token": "centrality",
+        "mode": "frag",
+        "picked": "cen",
+        "corpusStart": 4458,
+        "corpusEnd": 4464
+      }
+    ],
+    "preview": "implications They were not proposing to demoralize the working classes but on the contrary to moralize it They considered it beneficial to involve the workers individuals and families into a hierarchy clearly distinct from that which rules in the firm ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 3777,
+    "clusterCharEnd": 4577,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 29,
+    "line": "A place consumed / a place reclaimed.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 4,
+    "chunk_id": 60,
+    "chunk_words": [
+      5400,
+      5759
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 5329,
+        "corpusEnd": 5330
+      },
+      {
+        "token": "place",
+        "mode": "frag",
+        "picked": "place",
+        "corpusStart": 5690,
+        "corpusEnd": 5698
+      },
+      {
+        "token": "consumed",
+        "mode": "frag",
+        "picked": "consumption",
+        "corpusStart": 5232,
+        "corpusEnd": 5245
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 5617,
+        "corpusEnd": 5618
+      },
+      {
+        "token": "place",
+        "mode": "frag",
+        "picked": "place",
+        "corpusStart": 5757,
+        "corpusEnd": 5764
+      },
+      {
+        "token": "reclaimed",
+        "mode": "frag",
+        "picked": "rec",
+        "corpusStart": 5794,
+        "corpusEnd": 5802
+      }
+    ],
+    "preview": "the role of owner occupied housing A remarkably successful operation although its political consequences were not always those anticipated by its promoters Nevertheless a result was achieved predicted or otherwise conscious or unconscious Society orients itself ideologically and practically towards ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 5232,
+    "clusterCharEnd": 6032,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 30,
+    "line": "The planner says coherence.",
+    "status": "weak",
+    "coverage": 0.25,
+    "soft_coverage": 1.0,
+    "token_count": 4,
+    "resolved_count": 1,
+    "fragment_count": 3,
+    "chunk_id": 61,
+    "chunk_words": [
+      5490,
+      5849
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 6451,
+        "corpusEnd": 6454
+      },
+      {
+        "token": "planner",
+        "mode": "frag",
+        "picked": "planner",
+        "corpusStart": 7243,
+        "corpusEnd": 7248
+      },
+      {
+        "token": "says",
+        "mode": "frag",
+        "picked": "ys",
+        "corpusStart": 6754,
+        "corpusEnd": 6761
+      },
+      {
+        "token": "coherence",
+        "mode": "frag",
+        "picked": "nce",
+        "corpusStart": 6885,
+        "corpusEnd": 6893
+      }
+    ],
+    "preview": "from places of production available from a sector of habitation for scattered firms the proletariat will allow its creative capacity to diminish in its conscience Urban consciousness will vanish In France the beginnings of the suburb are also the beginnings ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 6451,
+    "clusterCharEnd": 7251,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 31,
+    "line": "I keep contradiction alive.",
+    "status": "weak",
+    "coverage": 0.25,
+    "soft_coverage": 0.75,
+    "token_count": 4,
+    "resolved_count": 1,
+    "fragment_count": 2,
+    "chunk_id": 65,
+    "chunk_words": [
+      5850,
+      6209
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "keep",
+        "mode": "frag",
+        "picked": "keep",
+        "corpusStart": 41,
+        "corpusEnd": 47
+      },
+      {
+        "token": "contradiction",
+        "mode": "frag",
+        "picked": "ion",
+        "corpusStart": 555,
+        "corpusEnd": 566
+      },
+      {
+        "token": "alive",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      }
+    ],
+    "preview": "not necessarily become a public service It surfaces into social consciousness as a right It is acknowledged in fact by the indignation raised by dramatic cases and by the discontent engendered by the crisis Yet it is not formally or ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 41,
+    "clusterCharEnd": 841,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 32,
+    "line": "I move through isotopies and breaks.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 3,
+    "chunk_id": 66,
+    "chunk_words": [
+      5940,
+      6299
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "move",
+        "mode": "frag",
+        "picked": "ve",
+        "corpusStart": 189,
+        "corpusEnd": 193
+      },
+      {
+        "token": "through",
+        "mode": "exact",
+        "picked": "through",
+        "corpusStart": 775,
+        "corpusEnd": 782
+      },
+      {
+        "token": "isotopies",
+        "mode": "frag",
+        "picked": "ies",
+        "corpusStart": 593,
+        "corpusEnd": 606
+      },
+      {
+        "token": "and",
+        "mode": "exact",
+        "picked": "and",
+        "corpusStart": 92,
+        "corpusEnd": 95
+      },
+      {
+        "token": "breaks",
+        "mode": "frag",
+        "picked": "breaks",
+        "corpusStart": 708,
+        "corpusEnd": 713
+      }
+    ],
+    "preview": "the Left will be satisfied with demanding more housing Moreover what guides public and semi public initiatives is not a conception of urban planning it is simply the goal of providing as quickly as possible at the least cost the ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 92,
+    "clusterCharEnd": 892,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 33,
+    "line": "Meaning leaks at every border.",
+    "status": "weak",
+    "coverage": 0.0,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 0,
+    "fragment_count": 5,
+    "chunk_id": 67,
+    "chunk_words": [
+      6030,
+      6389
+    ],
+    "matches": [
+      {
+        "token": "meaning",
+        "mode": "frag",
+        "picked": "meaning",
+        "corpusStart": 14,
+        "corpusEnd": 20
+      },
+      {
+        "token": "leaks",
+        "mode": "frag",
+        "picked": "le",
+        "corpusStart": 29,
+        "corpusEnd": 37
+      },
+      {
+        "token": "at",
+        "mode": "frag",
+        "picked": "at",
+        "corpusStart": 8,
+        "corpusEnd": 13
+      },
+      {
+        "token": "every",
+        "mode": "frag",
+        "picked": "ry",
+        "corpusStart": 211,
+        "corpusEnd": 220
+      },
+      {
+        "token": "border",
+        "mode": "frag",
+        "picked": "der",
+        "corpusStart": 233,
+        "corpusEnd": 241
+      }
+    ],
+    "preview": "of habitat There is a sort of plasticity which allows for modifications and appropriations The space of the house fence garden various and available corners leaves a margin of initiative and freedom to inhabit limited but real State rationality is ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 8,
+    "clusterCharEnd": 808,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 34,
+    "line": "Urban language stutters, then sings.",
+    "status": "weak",
+    "coverage": 0.4,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 2,
+    "fragment_count": 3,
+    "chunk_id": 68,
+    "chunk_words": [
+      6120,
+      6479
+    ],
+    "matches": [
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban",
+        "corpusStart": 1404,
+        "corpusEnd": 1409
+      },
+      {
+        "token": "language",
+        "mode": "exact",
+        "picked": "language",
+        "corpusStart": 611,
+        "corpusEnd": 619
+      },
+      {
+        "token": "stutters",
+        "mode": "frag",
+        "picked": "ers",
+        "corpusStart": 1260,
+        "corpusEnd": 1267
+      },
+      {
+        "token": "then",
+        "mode": "frag",
+        "picked": "then",
+        "corpusStart": 689,
+        "corpusEnd": 693
+      },
+      {
+        "token": "sings",
+        "mode": "frag",
+        "picked": "si",
+        "corpusStart": 810,
+        "corpusEnd": 823
+      }
+    ],
+    "preview": "appropriation by groups and individuals of the conditions of their existence It is also a complete way of living functions prescriptions daily routine which is inscribed and signifies itself in this habitat The villa habitat has proliferated in the suburban ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 611,
+    "clusterCharEnd": 1411,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 35,
+    "line": "The system closes; I open.",
+    "status": "good",
+    "coverage": 0.8,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 4,
+    "fragment_count": 1,
+    "chunk_id": 69,
+    "chunk_words": [
+      6210,
+      6569
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "system",
+        "mode": "exact",
+        "picked": "system",
+        "corpusStart": 506,
+        "corpusEnd": 512
+      },
+      {
+        "token": "closes",
+        "mode": "frag",
+        "picked": "clo",
+        "corpusStart": 645,
+        "corpusEnd": 650
+      },
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "open",
+        "mode": "exact",
+        "picked": "open",
+        "corpusStart": 767,
+        "corpusEnd": 771
+      }
+    ],
+    "preview": "badly opposed was added speculation in apartments when these were in to ownership Thus housing entered into property wealth and urban land into exchange value Restrictions were disappearing If one defines urban reality by dependency vis a vis the centre ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 29,
+    "clusterCharEnd": 829,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 36,
+    "line": "The old core rots; desire persists.",
+    "status": "weak",
+    "coverage": 0.17,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 1,
+    "fragment_count": 5,
+    "chunk_id": 74,
+    "chunk_words": [
+      6660,
+      7019
+    ],
+    "matches": [
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 16669,
+        "corpusEnd": 16672
+      },
+      {
+        "token": "old",
+        "mode": "frag",
+        "picked": "old",
+        "corpusStart": 16673,
+        "corpusEnd": 16680
+      },
+      {
+        "token": "core",
+        "mode": "frag",
+        "picked": "co",
+        "corpusStart": 16776,
+        "corpusEnd": 16783
+      },
+      {
+        "token": "rots",
+        "mode": "frag",
+        "picked": "ts",
+        "corpusStart": 16896,
+        "corpusEnd": 16907
+      },
+      {
+        "token": "desire",
+        "mode": "frag",
+        "picked": "des",
+        "corpusStart": 17466,
+        "corpusEnd": 17472
+      },
+      {
+        "token": "persists",
+        "mode": "frag",
+        "picked": "persists",
+        "corpusStart": 16832,
+        "corpusEnd": 16840
+      }
+    ],
+    "preview": "cent of French people aspire to be owner occupiers of a house while a strong majority also declare themselves to be satisfied with social housing estates The outcome is not important here What should be noted is that consciousness of ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 16669,
+    "clusterCharEnd": 17469,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 37,
+    "line": "I learn to occupy with care.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 2,
+    "chunk_id": 75,
+    "chunk_words": [
+      6750,
+      7109
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "learn",
+        "mode": "frag",
+        "picked": "le",
+        "corpusStart": 29,
+        "corpusEnd": 37
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to",
+        "corpusStart": 200,
+        "corpusEnd": 202
+      },
+      {
+        "token": "occupy",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with",
+        "corpusStart": 54,
+        "corpusEnd": 58
+      },
+      {
+        "token": "care",
+        "mode": "frag",
+        "picked": "re",
+        "corpusStart": 0,
+        "corpusEnd": 7
+      }
+    ],
+    "preview": "analysis than the source of conflict expressed by the end of the city and by the extension of a mutilated and deteriorated but real urban society The suburbs are urban within a dissociated morphology the empire of separation and scission ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 0,
+    "clusterCharEnd": 800,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 38,
+    "line": "To occupy is to become legible.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 3,
+    "fragment_count": 3,
+    "chunk_id": 76,
+    "chunk_words": [
+      6840,
+      7199
+    ],
+    "matches": [
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to",
+        "corpusStart": 2503,
+        "corpusEnd": 2505
+      },
+      {
+        "token": "occupy",
+        "mode": "frag",
+        "picked": "occupy",
+        "corpusStart": 2978,
+        "corpusEnd": 2991
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 2431,
+        "corpusEnd": 2433
+      },
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to",
+        "corpusStart": 2826,
+        "corpusEnd": 2828
+      },
+      {
+        "token": "become",
+        "mode": "frag",
+        "picked": "ome",
+        "corpusStart": 3171,
+        "corpusEnd": 3178
+      },
+      {
+        "token": "legible",
+        "mode": "frag",
+        "picked": "legible",
+        "corpusStart": 2486,
+        "corpusEnd": 2494
+      }
+    ],
+    "preview": "ravage pre existing urban reality destroying it through practice and ideology to the point of extirpating it from reality and consciousness Led by a class strategy industrialization acts as a negative force over urban reality the urban social is denied ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 2431,
+    "clusterCharEnd": 3231,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 39,
+    "line": "To become legible is danger.",
+    "status": "weak",
+    "coverage": 0.4,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 2,
+    "fragment_count": 3,
+    "chunk_id": 78,
+    "chunk_words": [
+      7020,
+      7379
+    ],
+    "matches": [
+      {
+        "token": "to",
+        "mode": "exact",
+        "picked": "to",
+        "corpusStart": 6228,
+        "corpusEnd": 6230
+      },
+      {
+        "token": "become",
+        "mode": "frag",
+        "picked": "ome",
+        "corpusStart": 6455,
+        "corpusEnd": 6462
+      },
+      {
+        "token": "legible",
+        "mode": "frag",
+        "picked": "ble",
+        "corpusStart": 6930,
+        "corpusEnd": 6936
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 6281,
+        "corpusEnd": 6283
+      },
+      {
+        "token": "danger",
+        "mode": "frag",
+        "picked": "danger",
+        "corpusStart": 6287,
+        "corpusEnd": 6293
+      }
+    ],
+    "preview": "need for an urban theory to embellish their cities What sufficed was the pressure exercised by the people on their masters and the presence of a civilization and style which enabled the wealth derived from the labour of the people ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 6228,
+    "clusterCharEnd": 7028,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 40,
+    "line": "I blur, reappear, blur again.",
+    "status": "weak",
+    "coverage": 0.4,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 2,
+    "fragment_count": 3,
+    "chunk_id": 79,
+    "chunk_words": [
+      7110,
+      7469
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "blur",
+        "mode": "frag",
+        "picked": "bl",
+        "corpusStart": 344,
+        "corpusEnd": 355
+      },
+      {
+        "token": "reappear",
+        "mode": "frag",
+        "picked": "rea",
+        "corpusStart": 8,
+        "corpusEnd": 13
+      },
+      {
+        "token": "blur",
+        "mode": "frag",
+        "picked": "ur",
+        "corpusStart": 59,
+        "corpusEnd": 67
+      },
+      {
+        "token": "again",
+        "mode": "syn",
+        "picked": "in",
+        "corpusStart": 386,
+        "corpusEnd": 388
+      }
+    ],
+    "preview": "but also underpinned by reasonings which had been given shape Its democratic generalizations later gave way to a rationalism of opinions and attitudes Each citizen was expected to have a reasoned opinion on every fact and problem concerning him this ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 8,
+    "clusterCharEnd": 808,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 41,
+    "line": "Art is not ornament; it is claim.",
+    "status": "partial",
+    "coverage": 0.57,
+    "soft_coverage": 1.0,
+    "token_count": 7,
+    "resolved_count": 4,
+    "fragment_count": 3,
+    "chunk_id": 82,
+    "chunk_words": [
+      7380,
+      7739
+    ],
+    "matches": [
+      {
+        "token": "art",
+        "mode": "frag",
+        "picked": "art",
+        "corpusStart": 1235,
+        "corpusEnd": 1243
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 1022,
+        "corpusEnd": 1024
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not",
+        "corpusStart": 1422,
+        "corpusEnd": 1425
+      },
+      {
+        "token": "ornament",
+        "mode": "frag",
+        "picked": "ent",
+        "corpusStart": 1193,
+        "corpusEnd": 1198
+      },
+      {
+        "token": "it",
+        "mode": "exact",
+        "picked": "it",
+        "corpusStart": 1751,
+        "corpusEnd": 1753
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 1760,
+        "corpusEnd": 1762
+      },
+      {
+        "token": "claim",
+        "mode": "frag",
+        "picked": "cl",
+        "corpusStart": 1093,
+        "corpusEnd": 1100
+      }
+    ],
+    "preview": "strategy more or less justified by an ideology Rationalism which purports to extract from its own analyses the aim pursued by these analyses is itself an ideology The notion of system overlays that of strategy To critical analysis the system ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 1022,
+    "clusterCharEnd": 1822,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 42,
+    "line": "A claim is a relation, not a logo.",
+    "status": "good",
+    "coverage": 0.75,
+    "soft_coverage": 1.0,
+    "token_count": 8,
+    "resolved_count": 6,
+    "fragment_count": 2,
+    "chunk_id": 83,
+    "chunk_words": [
+      7470,
+      7829
+    ],
+    "matches": [
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 394,
+        "corpusEnd": 395
+      },
+      {
+        "token": "claim",
+        "mode": "exact",
+        "picked": "claim",
+        "corpusStart": 117,
+        "corpusEnd": 122
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 74,
+        "corpusEnd": 76
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 503,
+        "corpusEnd": 504
+      },
+      {
+        "token": "relation",
+        "mode": "frag",
+        "picked": "relation",
+        "corpusStart": 555,
+        "corpusEnd": 566
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not",
+        "corpusStart": 726,
+        "corpusEnd": 729
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 869,
+        "corpusEnd": 870
+      },
+      {
+        "token": "logo",
+        "mode": "frag",
+        "picked": "lo",
+        "corpusStart": 491,
+        "corpusEnd": 498
+      }
+    ],
+    "preview": "point of view of a technicist rationalism the results on the ground of the processes examined above represent only chaos In the reality which they critically observe suburbs urban fabric and surviving cores these rationalists do not recognize the conditions ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 74,
+    "clusterCharEnd": 874,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 43,
+    "line": "I gather others at the margin",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 0.83,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 3,
+    "chunk_id": 84,
+    "chunk_words": [
+      7560,
+      7919
+    ],
+    "matches": [
+      {
+        "token": "i",
+        "mode": "exact",
+        "picked": "i",
+        "corpusStart": 109,
+        "corpusEnd": 110
+      },
+      {
+        "token": "gather",
+        "mode": "frag",
+        "picked": "her",
+        "corpusStart": 744,
+        "corpusEnd": 751
+      },
+      {
+        "token": "others",
+        "mode": "miss",
+        "picked": "",
+        "corpusStart": null,
+        "corpusEnd": null
+      },
+      {
+        "token": "at",
+        "mode": "frag",
+        "picked": "at",
+        "corpusStart": 8,
+        "corpusEnd": 13
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 158,
+        "corpusEnd": 161
+      },
+      {
+        "token": "margin",
+        "mode": "frag",
+        "picked": "gin",
+        "corpusStart": 211,
+        "corpusEnd": 220
+      }
+    ],
+    "preview": "is not a normal disorder How can it be established as norm and normality This is unconceivable This disorder is unhealthy The physician of modern society see himself as the physician of a sick social space Finality The cure It ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 8,
+    "clusterCharEnd": 808,
+    "clusterCharSpan": 800,
+    "miss_count": 1,
+    "proximity800_resolved": false
+  },
+  {
+    "id": 44,
+    "line": "Margins turn centre for a minute.",
+    "status": "weak",
+    "coverage": 0.33,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 2,
+    "fragment_count": 4,
+    "chunk_id": 85,
+    "chunk_words": [
+      7650,
+      8009
+    ],
+    "matches": [
+      {
+        "token": "margins",
+        "mode": "frag",
+        "picked": "ins",
+        "corpusStart": 861,
+        "corpusEnd": 868
+      },
+      {
+        "token": "turn",
+        "mode": "frag",
+        "picked": "tu",
+        "corpusStart": 733,
+        "corpusEnd": 743
+      },
+      {
+        "token": "centre",
+        "mode": "frag",
+        "picked": "centre",
+        "corpusStart": 96,
+        "corpusEnd": 105
+      },
+      {
+        "token": "for",
+        "mode": "exact",
+        "picked": "for",
+        "corpusStart": 499,
+        "corpusEnd": 502
+      },
+      {
+        "token": "a",
+        "mode": "exact",
+        "picked": "a",
+        "corpusStart": 394,
+        "corpusEnd": 395
+      },
+      {
+        "token": "minute",
+        "mode": "frag",
+        "picked": "min",
+        "corpusStart": 389,
+        "corpusEnd": 393
+      }
+    ],
+    "preview": "the habitat underlying the disorder and apparent incoherence that he will take as point of departure towards the coherence of the real his coherent approaches There is in fact no single or unitary approach in planning thought but several tendencies ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 96,
+    "clusterCharEnd": 896,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 45,
+    "line": "In that minute, the city is ours.",
+    "status": "good",
+    "coverage": 0.71,
+    "soft_coverage": 1.0,
+    "token_count": 7,
+    "resolved_count": 5,
+    "fragment_count": 2,
+    "chunk_id": 86,
+    "chunk_words": [
+      7740,
+      8099
+    ],
+    "matches": [
+      {
+        "token": "in",
+        "mode": "exact",
+        "picked": "in",
+        "corpusStart": 1539,
+        "corpusEnd": 1541
+      },
+      {
+        "token": "that",
+        "mode": "exact",
+        "picked": "that",
+        "corpusStart": 1524,
+        "corpusEnd": 1528
+      },
+      {
+        "token": "minute",
+        "mode": "frag",
+        "picked": "min",
+        "corpusStart": 1079,
+        "corpusEnd": 1085
+      },
+      {
+        "token": "the",
+        "mode": "exact",
+        "picked": "the",
+        "corpusStart": 835,
+        "corpusEnd": 838
+      },
+      {
+        "token": "city",
+        "mode": "exact",
+        "picked": "city",
+        "corpusStart": 1392,
+        "corpusEnd": 1396
+      },
+      {
+        "token": "is",
+        "mode": "exact",
+        "picked": "is",
+        "corpusStart": 1022,
+        "corpusEnd": 1024
+      },
+      {
+        "token": "ours",
+        "mode": "frag",
+        "picked": "rs",
+        "corpusStart": 1260,
+        "corpusEnd": 1267
+      }
+    ],
+    "preview": "of a pencil drawing One can therefore identify the following The planning of men of good will architects and writers Their thinking and projects imply a certain philosophy Generally they associate themselves to an old classical and liberal humanism This ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 835,
+    "clusterCharEnd": 1635,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 46,
+    "line": "Then power writes over us again.",
+    "status": "partial",
+    "coverage": 0.67,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 4,
+    "fragment_count": 2,
+    "chunk_id": 88,
+    "chunk_words": [
+      7920,
+      8279
+    ],
+    "matches": [
+      {
+        "token": "then",
+        "mode": "syn",
+        "picked": "the",
+        "corpusStart": 6822,
+        "corpusEnd": 6825
+      },
+      {
+        "token": "power",
+        "mode": "exact",
+        "picked": "power",
+        "corpusStart": 7108,
+        "corpusEnd": 7113
+      },
+      {
+        "token": "writes",
+        "mode": "frag",
+        "picked": "writes",
+        "corpusStart": 7347,
+        "corpusEnd": 7359
+      },
+      {
+        "token": "over",
+        "mode": "exact",
+        "picked": "over",
+        "corpusStart": 7192,
+        "corpusEnd": 7196
+      },
+      {
+        "token": "us",
+        "mode": "frag",
+        "picked": "us",
+        "corpusStart": 7115,
+        "corpusEnd": 7120
+      },
+      {
+        "token": "again",
+        "mode": "syn",
+        "picked": "in",
+        "corpusStart": 7281,
+        "corpusEnd": 7283
+      }
+    ],
+    "preview": "then thrown as fodder to feed the appetites of consumers The planning of these administrators linked to the public State sector It sees itself as scientific It relies sometimes on a science sometimes on studies which call themselves synthetic pluri ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 6691,
+    "clusterCharEnd": 7491,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 47,
+    "line": "We answer with another writing.",
+    "status": "weak",
+    "coverage": 0.4,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 2,
+    "fragment_count": 3,
+    "chunk_id": 90,
+    "chunk_words": [
+      8100,
+      8459
+    ],
+    "matches": [
+      {
+        "token": "we",
+        "mode": "exact",
+        "picked": "we",
+        "corpusStart": 3475,
+        "corpusEnd": 3477
+      },
+      {
+        "token": "answer",
+        "mode": "frag",
+        "picked": "ans",
+        "corpusStart": 4271,
+        "corpusEnd": 4279
+      },
+      {
+        "token": "with",
+        "mode": "exact",
+        "picked": "with",
+        "corpusStart": 3715,
+        "corpusEnd": 3719
+      },
+      {
+        "token": "another",
+        "mode": "frag",
+        "picked": "another",
+        "corpusStart": 3520,
+        "corpusEnd": 3526
+      },
+      {
+        "token": "writing",
+        "mode": "frag",
+        "picked": "ing",
+        "corpusStart": 3830,
+        "corpusEnd": 3840
+      }
+    ],
+    "preview": "and analytical knowledge coming from different sciences are oriented towards a synthetic finality For all that one should not conceive an urban life having at its disposal information provided by the sciences of society These two aspects are confounded in ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 3475,
+    "clusterCharEnd": 4275,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 48,
+    "line": "Not final: urban becoming.",
+    "status": "partial",
+    "coverage": 0.5,
+    "soft_coverage": 1.0,
+    "token_count": 4,
+    "resolved_count": 2,
+    "fragment_count": 2,
+    "chunk_id": 92,
+    "chunk_words": [
+      8280,
+      8639
+    ],
+    "matches": [
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not",
+        "corpusStart": 726,
+        "corpusEnd": 729
+      },
+      {
+        "token": "final",
+        "mode": "frag",
+        "picked": "al",
+        "corpusStart": 625,
+        "corpusEnd": 628
+      },
+      {
+        "token": "urban",
+        "mode": "exact",
+        "picked": "urban",
+        "corpusStart": 1404,
+        "corpusEnd": 1409
+      },
+      {
+        "token": "becoming",
+        "mode": "frag",
+        "picked": "becoming",
+        "corpusStart": 1324,
+        "corpusEnd": 1331
+      }
+    ],
+    "preview": "posterity because publicity itself becomes ideology Parly II a new development gives birth to a new an of living a new lifestyle Daily life resembles a fairy tale Leave your coat in the cloakroom and feeling lighter do your shopping ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 625,
+    "clusterCharEnd": 1425,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 49,
+    "line": "Right as practice, not gift.",
+    "status": "partial",
+    "coverage": 0.6,
+    "soft_coverage": 1.0,
+    "token_count": 5,
+    "resolved_count": 3,
+    "fragment_count": 2,
+    "chunk_id": 93,
+    "chunk_words": [
+      8370,
+      8729
+    ],
+    "matches": [
+      {
+        "token": "right",
+        "mode": "frag",
+        "picked": "right",
+        "corpusStart": 680,
+        "corpusEnd": 687
+      },
+      {
+        "token": "as",
+        "mode": "exact",
+        "picked": "as",
+        "corpusStart": 568,
+        "corpusEnd": 570
+      },
+      {
+        "token": "practice",
+        "mode": "exact",
+        "picked": "practice",
+        "corpusStart": 1345,
+        "corpusEnd": 1353
+      },
+      {
+        "token": "not",
+        "mode": "exact",
+        "picked": "not",
+        "corpusStart": 726,
+        "corpusEnd": 729
+      },
+      {
+        "token": "gift",
+        "mode": "frag",
+        "picked": "gi",
+        "corpusStart": 593,
+        "corpusEnd": 606
+      }
+    ],
+    "preview": "be happy Here is the context the setting the means of your happiness If you do not know how to grasp the happiness offered so as to make it your own don t insist A global strategy that is what ...",
+    "manual_curated": false,
+    "manual_note": "Preserved from phase2.5 auto record.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 568,
+    "clusterCharEnd": 1368,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  },
+  {
+    "id": 50,
+    "line": "Page for page: we still connect.",
+    "status": "weak",
+    "coverage": 0.17,
+    "soft_coverage": 1.0,
+    "token_count": 6,
+    "resolved_count": 1,
+    "fragment_count": 5,
+    "chunk_id": 94,
+    "chunk_words": [
+      8460,
+      8819
+    ],
+    "matches": [
+      {
+        "token": "page",
+        "mode": "frag",
+        "picked": "ge",
+        "corpusStart": 4228,
+        "corpusEnd": 4239
+      },
+      {
+        "token": "for",
+        "mode": "exact",
+        "picked": "for",
+        "corpusStart": 4608,
+        "corpusEnd": 4611
+      },
+      {
+        "token": "page",
+        "mode": "frag",
+        "picked": "ge",
+        "corpusStart": 4629,
+        "corpusEnd": 4637
+      },
+      {
+        "token": "we",
+        "mode": "frag",
+        "picked": "we",
+        "corpusStart": 4271,
+        "corpusEnd": 4279
+      },
+      {
+        "token": "still",
+        "mode": "frag",
+        "picked": "still",
+        "corpusStart": 3830,
+        "corpusEnd": 3840
+      },
+      {
+        "token": "connect",
+        "mode": "frag",
+        "picked": "ect",
+        "corpusStart": 4447,
+        "corpusEnd": 4454
+      }
+    ],
+    "preview": "happiness through consumption joy by planning adapted to its new mission This planning programmes a daily life generating satisfactions especially for receptive and participating women A programmed and computerized consumption will become the rule and norm for the whole society ...",
+    "manual_curated": true,
+    "manual_note": "Hand-curated token preferences applied.",
+    "proximity500_resolved": true,
+    "clusterCharStart": 3830,
+    "clusterCharEnd": 4630,
+    "clusterCharSpan": 800,
+    "miss_count": 0,
+    "proximity800_resolved": true
+  }
+]

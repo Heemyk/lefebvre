@@ -1,0 +1,7 @@
+{
+  "good": 2,
+  "partial": 10,
+  "weak": 38,
+  "avg_coverage": 0.397,
+  "avg_miss_count": 2.64
+}
