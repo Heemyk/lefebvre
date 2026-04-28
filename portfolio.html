@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GRF//FITI — PORTFOLIO</title>
+<title>Margins Turn Centre — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=VT323&display=swap" rel="stylesheet">
 <style>
@@ -195,6 +195,71 @@ html,body{
 }
 #mode-toggle:focus-visible{outline:2px solid oklch(78% .28 215);outline-offset:2px}
 
+#colophon-screen{
+  position:fixed;inset:0;z-index:520;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#0a0907 0%, #090806 60%, #080705 100%);
+  padding:8vh 8vw;
+}
+#colophon-inner{
+  width:min(980px,84vw);
+  color:rgba(222,198,164,.9);
+  font-family:'Crimson Pro', Georgia, serif;
+  display:flex;flex-direction:column;gap:14px;
+}
+#colophon-title{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  font-family:'FiveCent',cursive;
+  font-size:clamp(54px,9vw,148px);
+  line-height:.88;
+  color:oklch(78% .28 215);
+  text-shadow:0 0 22px oklch(78% .28 215 / .62), 0 0 60px oklch(78% .28 215 / .28);
+  opacity:1;
+  transition:opacity .35s ease, transform .35s ease;
+  pointer-events:none;
+  z-index:2;
+}
+#colophon-title.off{
+  opacity:0;
+  transform:translate(-50%,-54%);
+}
+#colophon-reading{
+  opacity:0;
+  transition:opacity .35s ease;
+}
+#colophon-reading.on{
+  opacity:1;
+}
+.colophon-line{
+  font-size:clamp(18px,2.1vw,30px);
+  line-height:1.32;
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .35s ease, transform .35s ease;
+}
+.colophon-line.on{
+  opacity:1;
+  transform:translateY(0);
+}
+#colophon-progress{
+  margin-top:12px;
+  height:2px;
+  width:100%;
+  background:rgba(140,120,92,.25);
+  position:relative;
+}
+#colophon-progress::after{
+  content:'';
+  position:absolute;left:0;top:0;height:100%;
+  width:calc(var(--colophon-progress, 0) * 100%);
+  background:oklch(78% .28 215);
+  box-shadow:0 0 10px oklch(78% .28 215 / .55);
+}
+
 body.light-mode{
   background:#f4eddc;
   cursor:default;
@@ -246,6 +311,16 @@ body.light-mode #mode-toggle{
 </style>
 </head>
 <body>
+
+<section id="colophon-screen" aria-label="Project colophon">
+  <div id="colophon-title">MARGINS<br>TURN CENTRE</div>
+  <div id="colophon-inner">
+    <div id="colophon-reading">
+      <div id="colophon-lines"></div>
+      <div id="colophon-progress"></div>
+    </div>
+  </div>
+</section>
 
 <div id="viewport">
   <div id="wall-track">
@@ -330,6 +405,10 @@ const overlay = document.getElementById('overlay');
 const track = document.getElementById('wall-track');
 const progressBar = document.getElementById('progress');
 const hint = document.getElementById('hint');
+const colophonScreen = document.getElementById('colophon-screen');
+const colophonTitleEl = document.getElementById('colophon-title');
+const colophonReadingEl = document.getElementById('colophon-reading');
+const colophonLinesEl = document.getElementById('colophon-lines');
 const flashlightOcclusion = document.getElementById('flashlight-occlusion');
 
 let vw = window.innerWidth;
@@ -353,6 +432,8 @@ let targetCamTy = 0;
 let holdPanX = 0;
 let holdPanY = 0;
 let lightMode = false;
+let introActive = true;
+let colophonProgress = 0;
 let torchBrightness = 1;
 let wallCache = document.createElement('canvas');
 let wallCacheCtx = wallCache.getContext('2d');
@@ -369,6 +450,14 @@ let CORPUS_WORD_LOOKUP = new Map();
 const STRICT_PHASE_SAMPLES_PER_LINE = 13;
 const STRICT_GLOBAL_PHASE_SAMPLES = 420;
 const STRICT_MAX_FRAGMENTS_PER_LINE = 1;
+const COLOPHON_TEXT = [
+  'I spent my youth writing on walls across London, learning the city as a surface that answers back. Graffiti taught me space as dialogue before it taught me style.',
+  'This work returns to Henri Lefebvre and The Right to the City: urban space is produced, not given; lived, not merely administered.',
+  'Tom Phillips\' A Humument is crucial here: a book made by rewriting another book, where selection, erasure, and framing produce a second narrative without denying the first.',
+  'Its method shapes this wall. So do the references beneath the marks: Mead and Blumer on interaction, Saussure and Stoicheff on sign systems and margins, de Certeau on tactical movement, Drucker\'s Graphesis on form as argument, Barthes on writerly text, Harvey on urban commoning.',
+  'Thesis: urban art is storytelling in installments. Graffiti behaves like marginalia—a layered, interstitial communication system where meaning compounds by return, overlap, and citation.',
+  'What follows is a wall read as a book, and a book read as a wall.',
+];
 /** Reused offscreen buffer for brick fBm noise (dimension sw×sh). */
 let _brickNoiseOff = null;
 
@@ -383,6 +472,33 @@ function resizeWall() {
   track.style.cssText = `position:absolute;inset:0;height:${vh}px;width:${vw}px;`;
   overlay.style.cssText = `position:absolute;inset:0;height:${vh}px;width:${vw}px;pointer-events:none;`;
   drawBrickVeil();
+}
+
+function renderColophon() {
+  if (!colophonLinesEl) return;
+  const titleFrac = Math.min(1, colophonProgress / 0.16);
+  const readingProgress = Math.max(0, Math.min(1, (colophonProgress - 0.16) / 0.84));
+  if (colophonTitleEl) colophonTitleEl.classList.toggle('off', titleFrac > 0.96);
+  if (colophonReadingEl) colophonReadingEl.classList.toggle('on', readingProgress > 0.01);
+  const n = COLOPHON_TEXT.length;
+  const reveal = readingProgress * n;
+  colophonLinesEl.innerHTML = COLOPHON_TEXT.map((line, i) => {
+    const on = reveal > i + 0.08;
+    return `<p class="colophon-line ${on ? 'on' : ''}">${line}</p>`;
+  }).join('');
+  document.documentElement.style.setProperty('--colophon-progress', String(readingProgress.toFixed(3)));
+}
+
+function finishColophon() {
+  introActive = false;
+  colophonProgress = 1;
+  renderColophon();
+  if (colophonScreen) {
+    colophonScreen.style.transition = 'opacity .6s ease';
+    colophonScreen.style.opacity = '0';
+    colophonScreen.style.pointerEvents = 'none';
+  }
+  hint.textContent = '← SCROLL TO PHASE-SHIFT THE WALL TEXT →';
 }
 
 function updateBrickMetrics() {
@@ -1828,6 +1944,13 @@ function bumpScrollActivity() {
 
 window.addEventListener('wheel', e => {
   e.preventDefault();
+  if (introActive) {
+    const d = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    colophonProgress = Math.max(0, Math.min(1, colophonProgress + d * 0.00115));
+    renderColophon();
+    if (colophonProgress >= 0.995) finishColophon();
+    return;
+  }
   if (lightMode) {
     bumpScrollActivity();
   const d = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
@@ -1841,6 +1964,7 @@ window.addEventListener('wheel', e => {
 }, { passive: false });
 
 window.addEventListener('pointerdown', e => {
+  if (introActive) return;
   if (lightMode) return;
   if (e.button !== 0) return;
   if (e.target instanceof Element && e.target.closest('#mode-toggle')) return;
@@ -1856,6 +1980,7 @@ window.addEventListener('pointerdown', e => {
 });
 
 window.addEventListener('pointerup', e => {
+  if (introActive) return;
   if (lightMode) return;
   if (!holdZoomActive && !releaseAnimating) return;
   holdZoomActive = false;
@@ -1865,6 +1990,7 @@ window.addEventListener('pointerup', e => {
 });
 
 window.addEventListener('pointercancel', () => {
+  if (introActive) return;
   if (lightMode) return;
   holdZoomActive = false;
   releaseAnimating = true;
@@ -2007,7 +2133,8 @@ async function init() {
   alignGraffitiKeywordsToSpindles();
   wallCacheValid = false;
   lastPaintedPhase = null;
-  hint.textContent = '← SCROLL TO PHASE-SHIFT THE WALL TEXT →';
+  hint.textContent = '← SCROLL TO ENTER THE WALL →';
+  renderColophon();
   updateGraffitiVisibility(wrap(phase, PHASE_CYCLE) / PHASE_CYCLE);
   requestAnimationFrame(loop);
 }
