@@ -234,6 +234,51 @@ html,body{
 #colophon-reading.on{
   opacity:1;
 }
+#colophon-author-tag{
+  position:absolute;
+  inset:0;
+  z-index:6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+  opacity:0;
+  transform:scale(.96);
+  transition:opacity .45s ease, transform .45s ease;
+}
+#colophon-author-tag.on{
+  opacity:1;
+  transform:scale(1);
+}
+#colophon-author-tag-main{
+  font-family:'WildBasic',cursive;
+  font-size:clamp(140px,28vw,520px);
+  line-height:.78;
+  letter-spacing:.01em;
+  color:oklch(78% .28 215);
+  text-shadow:
+    0 0 24px oklch(78% .28 215 / .72),
+    0 0 64px oklch(78% .28 215 / .44),
+    0 0 120px oklch(78% .28 215 / .28);
+  mix-blend-mode:screen;
+  opacity:.95;
+}
+#colophon-author-note{
+  position:fixed;
+  bottom:6.5vh;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:'Crimson Pro',Georgia,serif;
+  font-size:clamp(14px,1.4vw,20px);
+  color:rgba(240,226,202,.9);
+  letter-spacing:.03em;
+  text-shadow:0 0 10px rgba(210,188,150,.32);
+  opacity:0;
+  transition:opacity .35s ease;
+}
+#colophon-author-note.on{
+  opacity:1;
+}
 .colophon-line{
   font-size:clamp(18px,2.1vw,30px);
   line-height:1.32;
@@ -314,12 +359,16 @@ body.light-mode #mode-toggle{
 
 <section id="colophon-screen" aria-label="Project colophon">
   <div id="colophon-title">MARGINS<br>TURN CENTRE</div>
+  <div id="colophon-author-tag" aria-hidden="true">
+    <div id="colophon-author-tag-main">H2K</div>
+  </div>
   <div id="colophon-inner">
     <div id="colophon-reading">
       <div id="colophon-lines"></div>
       <div id="colophon-progress"></div>
     </div>
   </div>
+  <div id="colophon-author-note">H2K, my street alias</div>
 </section>
 
 <div id="viewport">
@@ -407,6 +456,8 @@ const progressBar = document.getElementById('progress');
 const hint = document.getElementById('hint');
 const colophonScreen = document.getElementById('colophon-screen');
 const colophonTitleEl = document.getElementById('colophon-title');
+const colophonAuthorTagEl = document.getElementById('colophon-author-tag');
+const colophonAuthorNoteEl = document.getElementById('colophon-author-note');
 const colophonReadingEl = document.getElementById('colophon-reading');
 const colophonLinesEl = document.getElementById('colophon-lines');
 const flashlightOcclusion = document.getElementById('flashlight-occlusion');
@@ -480,6 +531,9 @@ function renderColophon() {
   const readingProgress = Math.max(0, Math.min(1, (colophonProgress - 0.16) / 0.84));
   if (colophonTitleEl) colophonTitleEl.classList.toggle('off', titleFrac > 0.96);
   if (colophonReadingEl) colophonReadingEl.classList.toggle('on', readingProgress > 0.01);
+  const tagOn = readingProgress >= 0.78 && readingProgress < 0.999;
+  if (colophonAuthorTagEl) colophonAuthorTagEl.classList.toggle('on', tagOn);
+  if (colophonAuthorNoteEl) colophonAuthorNoteEl.classList.toggle('on', readingProgress >= 0.86 && readingProgress < 0.999);
   const n = COLOPHON_TEXT.length;
   const reveal = readingProgress * n;
   colophonLinesEl.innerHTML = COLOPHON_TEXT.map((line, i) => {
@@ -1948,7 +2002,7 @@ window.addEventListener('wheel', e => {
     const d = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
     colophonProgress = Math.max(0, Math.min(1, colophonProgress + d * 0.00115));
     renderColophon();
-    if (colophonProgress >= 0.995) finishColophon();
+    if (colophonProgress >= 0.999) finishColophon();
     return;
   }
   if (lightMode) {
